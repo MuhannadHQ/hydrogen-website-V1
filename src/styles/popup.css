@@ -1,0 +1,16 @@
+.popup-alert {
+    @apply fixed bottom-20 left-20 opacity-0 transition-opacity duration-300 z-50;
+}
+
+.popup-alert.active {
+    @apply block opacity-100;
+}
+
+.popup-content {
+    @apply bg-white p-5 rounded-lg shadow-lg relative max-w-sm w-full text-center;
+
+}
+
+.close-btn {
+    @apply absolute top-1 right-1 cursor-pointer;
+}

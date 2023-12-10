@@ -1,9 +1,9 @@
 // Accordion.js
 import { Arrow } from "assets/icons/Arrow"
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Transition } from 'react-transition-group';
 
-const Accordion = ({ title, content }) => {
+const Accordion = ({ title, content, line, bg }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -11,7 +11,7 @@ const Accordion = ({ title, content }) => {
   };
 
   return (
-    <section className="border-b text-start">
+    <section className={` text-start ${!line && "border-b"}`}>
       <div
         className="p-4 cursor-pointer"
         onClick={toggleAccordion}
@@ -24,7 +24,7 @@ const Accordion = ({ title, content }) => {
       <Transition in={isOpen} timeout={300} unmountOnExit>
         {state => (
           <div
-            className={`px-4 bg-white overflow-hidden transition-height duration-200 transform-gpu ${
+            className={`px-4 bg-white ${bg} overflow-hidden transition-height duration-200 transform-gpu ${
               state === 'entered' ? 'h-auto py-4' : 'h-0'
             }`}
           >

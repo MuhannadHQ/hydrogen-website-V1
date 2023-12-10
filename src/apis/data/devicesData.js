@@ -119,7 +119,7 @@ export const devices = {
     buy_path: "/cart",
     title: "جهاز ألفــا",
     description: "راقب خزان الماء بكل سهولة",
-    price: "299 ر.س",
+    price: "99 ر.س  لكل شهر",
     images: [
       {
         src: alphaApp.src,
@@ -209,22 +209,26 @@ export const devices = {
     guideBook: alphaBook.src,
     packages: [
       {
-        title: "الباقة البدائية",
-        name: "جهاز + شريحة بيانات شهرية (٣٩ ريال/ شهر) ",
-        price: 299,
-        features: {
-          // MonthlySubscription: "39 ر.س",
-          // DeliveryAndInstallation: "✔️",
-          // LowWaterAlerts: "✔️",
-          // WaterLevelStatistics: "✔️",
-          // CubicMeterReadings: "✔️",
-          //
-          // NumberOfUsers: 3,
-        },
+        id: "package-1",
+        title: "باقة التقسيط",
+        type: "installment",
+        name: "جهاز + شريحة بيانات شهرية (99 ريال/ شهر) لمدة 12 شهر",
+        price: 99,
+      //   features: {
+      //     // MonthlySubscription: "39 ر.س",
+      //     // DeliveryAndInstallation: "✔️",
+      //     // LowWaterAlerts: "✔️",
+      //     // WaterLevelStatistics: "✔️",
+      //     // CubicMeterReadings: "✔️",
+      //     //
+      //     // NumberOfUsers: 3,
+      //   },
       },
       {
+        id: "package-2",
         title: "الباقة الأساسية",
         name: "جهاز + شريحة بيانات مفتوحة",
+        type: "one-time",
         price: 799,
         features: {
           // MonthlySubscription: "بدون اشتراك",

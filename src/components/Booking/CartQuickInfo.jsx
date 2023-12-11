@@ -24,7 +24,7 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
                 </td>
                 <td>
 
-                  { item.price } ر.س{ type === "installment" && "/شهر" }
+                  { item.price } ر.س { type === "installment" && "/شهر" }
                 </td>
               </tr>
             )) }
@@ -44,7 +44,7 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
             <span className="text-primary  ">
               {
                 type === "installment" ? total * 12 : total -
-                  ( coupon?.discount || 0 ) }
+                  ( coupon?.discount || 0 ) }{" "}
               ر.س
             </span>
           </div>

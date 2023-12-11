@@ -21,7 +21,7 @@ export const InstallmentsPlan = ({ total, callbackUrl }) =>
             <div
               className={ `flex gap-2 flex-col  items-center justify-center rounded-md shadow w-48 p-2 bg-primary text-white` }>
               <div>
-                يبدأ أول دفعة في
+               تبدأ في
               </div>
               <div>
                 { getInstallmentDate(0).toLocaleDateString() }
@@ -30,7 +30,7 @@ export const InstallmentsPlan = ({ total, callbackUrl }) =>
             <div
               className={ `flex gap-2 flex-col items-center justify-center rounded-md shadow w-48 p-2 bg-primary text-white` }>
               <div>
-                تنتهي الدفعة الأخيرة في
+                تنتهي في
               </div>
               <div>
                 { getInstallmentDate(11).toLocaleDateString() }

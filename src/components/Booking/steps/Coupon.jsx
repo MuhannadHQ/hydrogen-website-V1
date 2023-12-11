@@ -17,7 +17,7 @@ const classes = {
   success: "text-green-500",
   error: "text-red-500",
 }
-export const Coupon = ({ setCoupon }) =>
+export const Coupon = ({ setCoupon, disabled }) =>
 {
   const [couponCode, setCouponCode] = useState("")
   const [status, setStatus] = useState("")
@@ -45,13 +45,16 @@ export const Coupon = ({ setCoupon }) =>
   return (
     <div>
       <div className="flex">
-        <div className="relative">
+        <div className={`relative ${disabled && "opacity-50 cursor-not-allowed"}`}>
           <button
+            disabled={ disabled }
+
             onClick={ handleSetCoupon }
             className="absolute top-3 left-4 text-primary cursor-pointer">
             استخدم
           </button>
           <input
+            disabled={ disabled }
             className="border-2 border-primary w-56 px-2 rounded-xl py-3 pl-20 focus:outline-none focus:border-primary"
             placeholder="اكتب الرمز الترويجي"
             onChange={ handleSetCouponCode }

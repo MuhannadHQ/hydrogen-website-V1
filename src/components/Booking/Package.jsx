@@ -1,9 +1,9 @@
 
-export const Package = ({ picked, name, title, price, features, setItemPlan, index, packagesFeaturesTitles }) =>
+export const Package = ({ picked, name, title, price, features, setItemPlan, index, packagesFeaturesTitles, type }) =>
 {
   return (
     <li
-      onClick={ () => setItemPlan(index, name, price) }
+      onClick={ () => setItemPlan(index, name, price, type ) }
       className={ `bg-secondary w-64 rounded ${ picked === name &&
     "border border-primary" }` }>
       <div className={ `h-32  py-5 px-3 flex flex-col justify-center ${ picked === name &&

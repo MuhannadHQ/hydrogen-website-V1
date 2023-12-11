@@ -1,6 +1,4 @@
-
-
-export const CartQuickInfo = ({cart, total, coupon}) =>
+export const CartQuickInfo = ({ cart, total, coupon, type }) =>
 {
   return (
     <div className="px-10 md:px-20">
@@ -16,34 +14,38 @@ export const CartQuickInfo = ({cart, total, coupon}) =>
             </tr>
             </thead>
             <tbody>
-            {cart.map((item, index) => (
-              <tr key={index} className="h-10 text-primary">
-                <td >
-                  {item.title}
+            { cart.map((item, index) => (
+              <tr key={ index } className="h-10 text-primary">
+                <td>
+                  { item.title }
                 </td>
-                <td >
-                  {item.quantity}
+                <td>
+                  { item.quantity }
                 </td>
-                <td >
-                  {item.price} ر.س
+                <td>
+
+                  { item.price } ر.س/شهر { type === "installment" && "/شهر" }
                 </td>
               </tr>
-            ))}
+            )) }
             {
-              coupon?.code && (  <tr className="h-10 text-primary">
+              coupon?.code && ( <tr className="h-10 text-primary">
                 <td>الخصم</td>
                 <td></td>
                 <td>
-                  {coupon?.discount} ر.س
+                  { coupon?.discount } ر.س
                 </td>
-              </tr>)
+              </tr> )
             }
             </tbody>
           </table>
           <div>
-           <span className="w-24 inline-block">  إجمالي السعر: </span>
+            <span className="w-24 inline-block">  إجمالي السعر: </span>
             <span className="text-primary  ">
-              {total - (coupon?.discount || 0)} ر.س
+              {
+                type === "installment" ? total * 12 : total -
+                  ( coupon?.discount || 0 ) }{" "}
+              ر.س
             </span>
           </div>
 

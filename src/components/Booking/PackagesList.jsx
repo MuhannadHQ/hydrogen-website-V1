@@ -37,6 +37,7 @@ export const PackagesList = ({
               title={ item.title }
               price={ item.price }
               features={ item.features }
+              type={ item.type }
               key={ i }/>,
           )
         }

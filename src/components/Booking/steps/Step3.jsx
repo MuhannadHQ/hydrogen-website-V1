@@ -5,12 +5,14 @@ import { useEffect, useState } from "react"
 
 const calculateTotalPrice = (bookingCart) => bookingCart.reduce(
   (acc, item) => acc + item.price || 0, 0)
+const getType = (bookingCart = []) =>( bookingCart[0]?.type )
 export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
 {
   const [userInfo, setUserInfo] = useState({})
   const [paymentMethod, setPaymentMethod] = useState("")
   const [currentStep, setCurrentStep] = useState(0)
   const total = calculateTotalPrice(bookingCart)
+  console.log("bookingCart", total)
   const orderData = {
     ...userInfo,
     phoneNumber: userInfo?.phoneNumber?.replace("966", ""),
@@ -19,12 +21,13 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
     discount: coupon?.discount,
     installationCompany: "",
     scSCi: "",
-    orderTotal: total - ( coupon?.discount || 0 ),
+    orderTotal: paymentMethod === "installment" ? total * 12 : total,
     products: bookingCart.map(item => ( {
       package: item.plan,
       tankType: item.tankType || "none",
+
       qty: 1,
-      price: item.price,
+      price: paymentMethod === "installment" ? item.price * 12 : item.price,
     } )),
     utm: localStorage.getItem('UTM'),
   }
@@ -34,13 +37,13 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
   {
     window.scrollTo(0, 0)
   }, []);
+  console.log("orderData", bookingCart)
   return (
     <>
       <UserInfoForm
         setUserInfo={ setUserInfo }
         phone={ userInfo.phoneNumber }
         disablePayment={ disablePayment }
-
         currentStep={ currentStep }
         setCurrentStep={ setCurrentStep }
       />
@@ -48,6 +51,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         paymentMethod={ paymentMethod }
         currentStep={ currentStep }
         setCurrentStep={ setCurrentStep }
+        type={ getType(bookingCart) }
         // disablePayment={ disablePayment }
         setCoupon={ setCoupon }
         orderData={ orderData }

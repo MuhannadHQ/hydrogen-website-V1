@@ -1,5 +1,5 @@
 
-export const Package = ({ picked, name, title, price, features, setItemPlan, index, packagesFeaturesTitles, type }) =>
+export const Package = ({ picked, name, title, price,priceTitle, features, setItemPlan, index, packagesFeaturesTitles, type }) =>
 {
   return (
     <li
@@ -15,7 +15,7 @@ export const Package = ({ picked, name, title, price, features, setItemPlan, ind
         </p>
         <p className={`text-sm ${picked === name &&
           "text-white bg-primary "}`}>
-          { price }  ر.س
+          { priceTitle }
         </p>
       </div>
       {/*<ul className="p-4 divide-y">*/}

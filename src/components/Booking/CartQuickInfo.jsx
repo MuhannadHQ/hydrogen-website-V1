@@ -24,7 +24,7 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
                 </td>
                 <td>
 
-                  { item.price } ر.س { type === "installment" && "/شهر" }
+                  { item.price } ر.س { type === "installment" && " / شهر" }
                 </td>
               </tr>
             )) }

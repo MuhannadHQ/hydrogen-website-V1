@@ -212,7 +212,8 @@ export const devices = {
         id: "package-1",
         title: "باقة التقسيط",
         type: "installment",
-        name: "أقساط لمدة 12 شهر - 99 ريال / شهر ",
+        name: "أقساط لمدة 12 شهر",
+        priceTitle: "99 ريال / شهر",
         price: 99,
         //   features: {
         //     // MonthlySubscription: "39 ر.س",
@@ -229,6 +230,7 @@ export const devices = {
         title: "الباقة الأساسية",
         name: "دفعة واحدة",
         type: "one-time",
+        priceTitle: "799 ريال",
         price: 799,
         features: {
           // MonthlySubscription: "بدون اشتراك",

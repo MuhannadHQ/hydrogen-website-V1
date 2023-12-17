@@ -4,7 +4,7 @@ const fetch_payment = async ( { formData } ) =>
 {
   try
   {
-    const res = await api.post( `v1/product-orders/create-payment`, formData )
+    const res = await api.post( `v1/product-orders/order-payment`, formData )
     return res.data
   }
   catch ( error )

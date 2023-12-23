@@ -1,6 +1,8 @@
+import create_order from "apis/create_order"
 import { CartQuickInfo } from "components/Booking/CartQuickInfo"
 import { Coupon } from "components/Booking/steps/Coupon"
-import { useEffect } from "react"
+import { Loader } from "components/global/Loader"
+import { useEffect, useState } from "react"
 
 const paymentOptions = [
   {
@@ -15,10 +17,11 @@ const paymentOptions = [
 ]
 const installmentOptions = [
   {
-    title: "أقساط (  12 دفعة )",
+    title: "الدفع أقساط ( على 12 دفعة )",
     name: "installment",
   },
 ]
+
 export const PaymentOptions = ({
   cart,
   total,
@@ -29,13 +32,27 @@ export const PaymentOptions = ({
   orderData,
   setCurrentStep,
   currentStep,
-  type
+  type,
 }) =>
 {
-  const paymentMethods = type === "installment" ? installmentOptions : paymentOptions
+  const paymentMethods = type === "installment"
+    ? installmentOptions
+    : paymentOptions
+
+  const handleCreateOrder = async() =>
+  {
+    window.dataLayer.push({
+      firstName: orderData.firstName,
+      lastName: orderData.lastName,
+      email: orderData.email,
+      phoneNumber: orderData.phoneNumber,
+      city: orderData.city,
+      source: orderData.source,
+    })
+  }
   useEffect(() =>
   {
-    setPaymentMethod(paymentMethods[0].name)
+    setPaymentMethod(paymentMethods[ 0 ].name)
   }, []);
   return (
     <section className="bg-secondary rounded-lg shadow py-8 my-5 ">
@@ -54,7 +71,8 @@ export const PaymentOptions = ({
             <Coupon setCoupon={ setCoupon }
                     disabled={ paymentMethod === "installment" }/>
           </div>
-          <CartQuickInfo cart={ cart } total={ total } coupon={ coupon } type={type}/>
+          <CartQuickInfo cart={ cart } total={ total } coupon={ coupon }
+                         type={ type }/>
           <div className={ `relative px-10 md:px-20 mt-16` }>
 
             <h3 className="text-start mb-2">
@@ -65,7 +83,7 @@ export const PaymentOptions = ({
                 paymentMethods.map((item, index) => (
                   <li key={ index } className="flex gap-2 items-center">
                     <input
-                      checked={ paymentMethod === item.name}
+                      checked={ paymentMethod === item.name }
                       onChange={ () =>
                       {
                         setPaymentMethod(item.name)
@@ -78,38 +96,29 @@ export const PaymentOptions = ({
                 ))
               }
             </ul>
+
             <button
               type="button"
               id="start-checkout"
-              onClick={ () =>
-              {
-                window.dataLayer.push({
-                  firstName: orderData.firstName,
-                  lastName: orderData.lastName,
-                  email: orderData.email,
-                  phoneNumber: orderData.phoneNumber,
-                  city: orderData.city,
-                  source: orderData.source,
-                })
-
-                setCurrentStep(currentStep + 1)
-              } }
+              onClick={ handleCreateOrder }
               disabled={ paymentMethod === "" }
               className={ `btn btn-primary-contained w-28 mt-5 ${ !paymentMethod &&
               "opacity-50 cursor-not-allowed" }` }
             >
               متابعة
-
             </button>
 
           </div>
+
         </>
-        : <button className="btn btn-primary-contained w-28 mt-5"
-                  onClick={ () => setCurrentStep(1) }>
+        : <button
+          className="btn btn-primary-contained w-28 mt-5"
+          onClick={ () => setCurrentStep(1) }>
           تعديل
         </button>
 
       }
+
     </section>
   )
 }

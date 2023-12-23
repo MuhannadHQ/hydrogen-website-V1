@@ -5,14 +5,14 @@ import { useEffect, useState } from "react"
 
 const calculateTotalPrice = (bookingCart) => bookingCart.reduce(
   (acc, item) => acc + item.price || 0, 0)
-const getType = (bookingCart = []) =>( bookingCart[0]?.type )
+const getType = (bookingCart = []) => ( bookingCart[ 0 ]?.type )
 export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
 {
+  const [orderId, setOrderId] = useState("")
   const [userInfo, setUserInfo] = useState({})
   const [paymentMethod, setPaymentMethod] = useState("")
   const [currentStep, setCurrentStep] = useState(0)
   const total = calculateTotalPrice(bookingCart)
-  console.log("bookingCart", total)
   const orderData = {
     ...userInfo,
     phoneNumber: userInfo?.phoneNumber?.replace("966", ""),
@@ -25,11 +25,10 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
     products: bookingCart.map(item => ( {
       package: item.plan,
       tankType: item.tankType || "none",
-
       qty: 1,
       price: paymentMethod === "installment" ? item.price * 12 : item.price,
     } )),
-    utm: localStorage.getItem('UTM'),
+    utm: localStorage.getItem("UTM"),
   }
   const disablePayment = !userInfo.firstName || !userInfo.lastName ||
     !userInfo.email || userInfo?.phoneNumber?.length < 12 || !userInfo.city
@@ -37,7 +36,6 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
   {
     window.scrollTo(0, 0)
   }, []);
-  console.log("orderData", bookingCart)
   return (
     <>
       <UserInfoForm
@@ -46,6 +44,9 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         disablePayment={ disablePayment }
         currentStep={ currentStep }
         setCurrentStep={ setCurrentStep }
+        qty={ bookingCart.length }
+        userInfo={ userInfo }
+        setOrderId={ setOrderId }
       />
       <PaymentOptions
         paymentMethod={ paymentMethod }
@@ -71,7 +72,9 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         currentStep={ currentStep }
         setCurrentStep={ setCurrentStep }
         paymentMethod={ paymentMethod }
+        orderID={ orderId }
         orderData={ orderData }
+        total={ total }
         disablePayment={ disablePayment }/>
     </>
   )

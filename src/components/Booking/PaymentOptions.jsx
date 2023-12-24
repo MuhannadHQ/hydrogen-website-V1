@@ -49,6 +49,7 @@ export const PaymentOptions = ({
       city: orderData.city,
       source: orderData.source,
     })
+    setCurrentStep(currentStep + 1)
   }
   useEffect(() =>
   {

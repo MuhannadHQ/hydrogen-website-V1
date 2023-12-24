@@ -1,4 +1,5 @@
 "use client";
+import create_order from "apis/create_order"
 import create_payment from "apis/create_payment"
 import { Loader } from "components/global/Loader"
 import LzString from "lz-string"
@@ -31,7 +32,7 @@ function Payment ()
         formData.paymentMessage = message
         formData.installationCompany = "ODA"
 
-        await create_payment({ formData }).then(response =>
+        await create_order({ formData }).then(response =>
           {
             redirect = `/order/success?order_id=${ response?.orderID }`
           },

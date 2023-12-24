@@ -44,9 +44,11 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         disablePayment={ disablePayment }
         currentStep={ currentStep }
         setCurrentStep={ setCurrentStep }
+        qty={ bookingCart.length }
+        userInfo={ userInfo }
+        setOrderId={ setOrderId }
       />
       <PaymentOptions
-        setOrderId={ setOrderId }
         paymentMethod={ paymentMethod }
         currentStep={ currentStep }
         setCurrentStep={ setCurrentStep }

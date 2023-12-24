@@ -4,18 +4,6 @@ import { Coupon } from "components/Booking/steps/Coupon"
 import { Loader } from "components/global/Loader"
 import { useEffect, useState } from "react"
 
-const responseStatus = {
-  loading: <Loader/>,
-  success: "✔",
-  error: "✘",
-}
-
-const messages = {
-  success: "تم انشاء الطلب بنجاح الرجاء التقدم الى الخطوة التالية ",
-  error: "حدث خطأ أثناء إنشاء الطلب الرجاء المحاولة مرة أخرى",
-
-}
-
 const paymentOptions = [
   {
     title: "الدفع عند الاستلام",
@@ -33,10 +21,7 @@ const installmentOptions = [
     name: "installment",
   },
 ]
-const classes = {
-  success: "text-green-500",
-  error: "text-red-500",
-}
+
 export const PaymentOptions = ({
   cart,
   total,
@@ -48,13 +33,12 @@ export const PaymentOptions = ({
   setCurrentStep,
   currentStep,
   type,
-  setOrderId,
 }) =>
 {
   const paymentMethods = type === "installment"
     ? installmentOptions
     : paymentOptions
-  const [status, setStatus] = useState(false)
+
   const handleCreateOrder = async() =>
   {
     window.dataLayer.push({
@@ -64,18 +48,6 @@ export const PaymentOptions = ({
       phoneNumber: orderData.phoneNumber,
       city: orderData.city,
       source: orderData.source,
-    })
-    setStatus("loading")
-    create_order({ formData: orderData }).then(response =>
-      {
-        setOrderId(response?.orderID)
-        setCurrentStep(currentStep + 1)
-        setStatus("success")
-      },
-    ).catch(error =>
-    {
-
-      setStatus("error")
     })
   }
   useEffect(() =>
@@ -124,23 +96,20 @@ export const PaymentOptions = ({
                 ))
               }
             </ul>
-            <div className="flex items-center justify-center mt-5 gap-2">
+
             <button
               type="button"
               id="start-checkout"
               onClick={ handleCreateOrder }
               disabled={ paymentMethod === "" }
-              className={ `btn btn-primary-contained w-28  ${ !paymentMethod &&
+              className={ `btn btn-primary-contained w-28 mt-5 ${ !paymentMethod &&
               "opacity-50 cursor-not-allowed" }` }
             >
               متابعة
             </button>
-            <div
-              className={ `text-2xl  ${ classes[ status ] }` }>
-              { responseStatus[ status ] }
-            </div>
-            </div>
+
           </div>
+
         </>
         : <button
           className="btn btn-primary-contained w-28 mt-5"
@@ -149,9 +118,7 @@ export const PaymentOptions = ({
         </button>
 
       }
-      <p className={ `text-sm mt-1 h-6 ${ classes[ status ] }` }>
-        { messages[ status ] }
-      </p>
+
     </section>
   )
 }

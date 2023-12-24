@@ -1,10 +1,10 @@
 import api from "apis/baseAPI"
 
-const fetch_payment = async ( { formData } ) =>
+const createCart = async ( { formData } ) =>
 {
   try
   {
-    const res = await api.post( `v1/product-orders/order-payment`, formData )
+    const res = await api.post( `v1/product-orders/cart`, formData )
     return res.data
   }
   catch ( error )
@@ -13,5 +13,5 @@ const fetch_payment = async ( { formData } ) =>
   }
 }
 
-export default fetch_payment
+export default createCart
 

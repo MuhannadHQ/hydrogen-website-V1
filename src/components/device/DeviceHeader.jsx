@@ -9,11 +9,11 @@ export const DeviceHeader = ({  device }) =>
         { title }
       </h3>
       <div className="flex gap-5 items-center">
-      <div>
+      {/* <div>
        <span className="text-xs"> ابتداء من</span>
         <br/>
         { price }
-      </div>
+      </div> */}
       <BuyBtn device={ device } type={ "btn-secondary" }/>
     </div>
     </div>

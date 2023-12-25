@@ -4,7 +4,7 @@ import { Coupon } from "components/Booking/steps/Coupon"
 import { Loader } from "components/global/Loader"
 import { useEffect, useState } from "react"
 
-const paymentOptions = [
+const subscriptionPaymentOptions = [
   {
     title: "الدفع عند الاستلام",
     name: "cod",
@@ -15,9 +15,17 @@ const paymentOptions = [
   },
 
 ]
-const installmentOptions = [
+const paymentOptions = [
   {
-    title: "الدفع على 24 دفعة",
+    title: "الدفع عند الاستلام",
+    name: "cod",
+  }, 
+  {
+    title: "الدفع عبر مدى / ابل باي",
+    name: "creditCard",
+  },
+  {
+    title: "الدفع على 3 دفعات",
     name: "installment",
   },
 ]
@@ -35,9 +43,9 @@ export const PaymentOptions = ({
   type,
 }) =>
 {
-  const paymentMethods = type === "installment"
-    ? installmentOptions
-    : paymentOptions
+  const paymentMethods = type === "subscription"
+    ? subscriptionPaymentOptions
+    : paymentOptions 
 
   const handleCreateOrder = async() =>
   {

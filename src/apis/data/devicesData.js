@@ -181,11 +181,11 @@ export const devices = {
       title: "ألفا - جهاز ذكي لمراقبة و تحليل مستوى الماء في الخزان: "
     },
     technicalSpecifications: [
-    {
+      {
         title: "الجهد التشغيلي",
         value: "110 - 240 فولت",
       },
-       {
+      {
         title: "التيار",
         value: "الى 0.5 أمبير",
       },
@@ -210,26 +210,28 @@ export const devices = {
     packages: [
       {
         id: "package-1",
-        title: "باقة التقسيط",
-        type: "installment",
-        name: "جهاز + شريحة بيانات شهرية (39 ريال/ شهر) لمدة 24 شهر",
-        price: 39,
-      //   features: {
-      //     // MonthlySubscription: "39 ر.س",
-      //     // DeliveryAndInstallation: "✔️",
-      //     // LowWaterAlerts: "✔️",
-      //     // WaterLevelStatistics: "✔️",
-      //     // CubicMeterReadings: "✔️",
-      //     //
-      //     // NumberOfUsers: 3,
-      //   },
+        title: "باقة الاشتراك",
+        type: "subscription",
+        name: "باقة اشتراك شهري لمدة سنتين",
+        price: 399,
+        priceDescription: "399 ريال (سعر الجهاز) + 39 ريال / شهر( لمدة سنتين )"
+        //   features: {
+        //     // MonthlySubscription: "39 ر.س",
+        //     // DeliveryAndInstallation: "✔️", 
+        //     // LowWaterAlerts: "✔️",
+        //     // WaterLevelStatistics: "✔️",
+        //     // CubicMeterReadings: "✔️",
+        //     //
+        //     // NumberOfUsers: 3,
+        //   },
       },
       {
         id: "package-2",
         title: "الباقة الأساسية",
         name: "جهاز + شريحة بيانات مفتوحة",
         type: "one-time",
-        price: 399,
+        price: 799,
+        priceDescription: "799 ريال",
         features: {
           // MonthlySubscription: "بدون اشتراك",
           // DeliveryAndInstallation: "✔️",

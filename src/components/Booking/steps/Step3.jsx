@@ -21,12 +21,12 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
     discount: coupon?.discount,
     installationCompany: "",
     scSCi: "",
-    orderTotal: paymentMethod === "installment" ? total * 12 : total,
+    orderTotal: paymentMethod === "installment" ? total * 24 : total,
     products: bookingCart.map(item => ( {
       package: item.plan,
       tankType: item.tankType || "none",
       qty: 1,
-      price: paymentMethod === "installment" ? item.price * 12 : item.price,
+      price: paymentMethod === "installment" ? item.price * 24 : item.price,
     } )),
     utm: localStorage.getItem("UTM"),
   }

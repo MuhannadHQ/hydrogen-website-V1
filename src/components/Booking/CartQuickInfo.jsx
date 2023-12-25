@@ -43,7 +43,7 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
             <span className="w-24 inline-block">  إجمالي السعر: </span>
             <span className="text-primary  ">
               {
-                type === "installment" ? total * 12 : total -
+                type === "installment" ? total * 24 : total -
                   ( coupon?.discount || 0 ) }
               ر.س
             </span>

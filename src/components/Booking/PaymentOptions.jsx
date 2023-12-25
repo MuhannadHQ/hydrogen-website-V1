@@ -17,7 +17,7 @@ const paymentOptions = [
 ]
 const installmentOptions = [
   {
-    title: "الدفع أقساط ( على 12 دفعة )",
+    title: "الدفع على 24 دفعة",
     name: "installment",
   },
 ]

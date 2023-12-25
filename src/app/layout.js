@@ -73,7 +73,7 @@ export default function RootLayout ( { children } )
             <WhattsappFloat />
           </a>
         </div>
-        <GoogleTagManager gtmId="GTM-XYZ" />
+        <GoogleTagManager gtmId="GTM-NS6MLSG" />
         <Footer />
       </body>
 

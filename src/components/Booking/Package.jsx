@@ -10,9 +10,11 @@ export const Package = ({ picked, item, setItemPlan, index, title }) =>
         className={ `h-32  py-5 px-3 flex flex-col justify-center ${ picked ===
         name &&
         "text-white bg-primary" } p-4 rounded` }>
-
+        <h3>
+          { title }
+        </h3>
         <p className={ `text-sm text-black py-2 ${ picked === name &&
-        "text-white bg-primary " } ${title && "font-bold text-lg"}` }>
+        "text-white bg-primary " } ` }>
           { name }
         </p>
         <p className={ `text-sm ${ picked === name &&

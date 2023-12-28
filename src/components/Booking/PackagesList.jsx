@@ -14,10 +14,10 @@ export const PackagesList = ({
     </h3>
     <div className="flex items-center justify-center">
       <Package
-        picked={ "ألفــا" }
+        picked={itemData.deviceDescription}
         title= "ألفــا"
         item={{
-          name: "ألفــا",
+          name: itemData.deviceDescription,
           priceDescription: itemData.priceDescription,
         }}
       />

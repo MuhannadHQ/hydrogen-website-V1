@@ -118,8 +118,11 @@ export const devices = {
     path: "/alpha",
     buy_path: "/cart",
     title: "جهاز ألفــا",
+
     description: "راقب خزان الماء بكل سهولة",
-    priceDescription: "جهاز + توصيل وتركيب مجاني ٤٩٩ ريال",
+
+    deviceDescription: "جهاز + توصيل وتركيب مجاني",
+    priceDescription: "٤٩٩ ريال",
     devicePrice: 499,
     price: "39 ر.س  لكل شهر",
     images: [
@@ -215,7 +218,8 @@ export const devices = {
         id: "package-1",
         title: "باقة الاشتراك",
         type: "one-time",
-        name:  "اشتراك بيانات لمدة ٥ سنوات" ,
+        name:  `اشتراك بيانات لمدة 
+        ٥ سنوات`,
         price: 399,
         priceDescription: "٣٩٩ ريال"
         //   features: {

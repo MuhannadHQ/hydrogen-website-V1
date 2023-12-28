@@ -1,9 +1,7 @@
 import { Package } from "components/Booking/Package"
 
 export const PackagesList = ({
-  packages,
-  packagesFeaturesTitles,
-  title,
+  itemData,
   index,
   plan,
   setItemPlan,
@@ -11,6 +9,19 @@ export const PackagesList = ({
 {
   return (
     <section className="">
+      <h3 className="text-center  my-10 ">
+      الجهاز
+    </h3>
+    <div className="flex items-center justify-center">
+      <Package
+        picked={ "ألفــا" }
+        title= "ألفــا"
+        item={{
+          name: "ألفــا",
+          priceDescription: itemData.priceDescription,
+        }}
+      />
+    </div>
       <h2 className="text-center text-2xl my-10 ">
         الباقات
       </h2>
@@ -27,18 +38,12 @@ export const PackagesList = ({
         {/*  </ul>*/}
         {/*</li>*/}
         {
-          packages.map((item, i) =>
+        itemData.packages.map((item, i) =>
             <Package
-              packagesFeaturesTitles={ packagesFeaturesTitles }
               setItemPlan={ setItemPlan }
               index={ index }
-              name={ item.name }
-              picked={ plan }
-              title={ item.title }
-              price={ item.price } 
-              priceDescription= {item.priceDescription}
-              features={ item.features }
-              type={ item.type }
+              item={ item }
+              picked={ itemData.plan }
               key={ i }/>,
           )
         }

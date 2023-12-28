@@ -3,8 +3,8 @@ import { PaymentOptions } from "components/Booking/PaymentOptions"
 import { UserInfoForm } from "components/Booking/UserInfoForm"
 import { useEffect, useState } from "react"
 
-const calculateTotalPrice = (bookingCart) => bookingCart.reduce(
-  (acc, item) => acc + item.price || 0, 0)
+const calculateTotalPrice = (bookingCart) =>bookingCart.reduce(
+  (acc, item) => acc + (item.price + item.devicePrice )|| 0, 0)
 const getType = (bookingCart = []) => ( bookingCart[ 0 ]?.type )
 export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
 {
@@ -21,12 +21,14 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
     discount: coupon?.discount,
     installationCompany: "",
     scSCi: "",
-    orderTotal: paymentMethod === "installment" ? total : total,
+
+    orderTotal: total ,
     products: bookingCart.map(item => ( {
       package: item.plan,
       tankType: item.tankType || "none", 
       qty: 1,
-      price: paymentMethod === "installment" ? item.price : item.price,
+      price: item.price,
+      devicePrice: item.devicePrice,
     } )),
     utm: localStorage.getItem("UTM"),
   }
@@ -60,6 +62,9 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         cart={ cart.map(item => ( {
           title: item.data.title,
           quantity: item.quantity,
+          devicePrice: bookingCart.filter(
+            (cartItem) => cartItem._id === item.data._id).
+          reduce((acc, item) => acc + item.devicePrice, 0),
           price: bookingCart.filter(
             (cartItem) => cartItem._id === item.data._id).
           reduce((acc, item) => acc + item.price, 0),

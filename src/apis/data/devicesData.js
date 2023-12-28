@@ -119,6 +119,8 @@ export const devices = {
     buy_path: "/cart",
     title: "جهاز ألفــا",
     description: "راقب خزان الماء بكل سهولة",
+    priceDescription: "جهاز + توصيل وتركيب مجاني ٤٩٩ ريال",
+    devicePrice: 499,
     price: "39 ر.س  لكل شهر",
     images: [
       {
@@ -208,13 +210,14 @@ export const devices = {
     ],
     guideBook: alphaBook.src,
     packages: [
+
       {
         id: "package-1",
         title: "باقة الاشتراك",
-        type: "subscription",
-        name: "باقة اشتراك شهري لمدة سنتين",
+        type: "one-time",
+        name:  "اشتراك بيانات لمدة ٥ سنوات" ,
         price: 399,
-        priceDescription: "399 ريال (سعر الجهاز) + 39 ريال / شهر( لمدة سنتين )"
+        priceDescription: "٣٩٩ ريال"
         //   features: {
         //     // MonthlySubscription: "39 ر.س",
         //     // DeliveryAndInstallation: "✔️", 
@@ -228,10 +231,10 @@ export const devices = {
       {
         id: "package-2",
         title: "الباقة الأساسية",
-        name: "جهاز + شريحة بيانات مفتوحة",
-        type: "one-time",
-        price: 799,
-        priceDescription: "799 ريال",
+        name: "اشتراك بيانات شهري",
+        type: "subscription",
+        price: 39,
+        priceDescription: "٣٩ ريال/شهر",
         features: {
           // MonthlySubscription: "بدون اشتراك",
           // DeliveryAndInstallation: "✔️",

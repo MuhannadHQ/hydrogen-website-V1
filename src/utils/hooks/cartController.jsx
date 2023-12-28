@@ -20,6 +20,8 @@ const cloneToBookingCart = (cart) =>
       title: item.data.title,
       packages: item.data.packages,
       tankType: "",
+      devicePrice: item.data.devicePrice,
+      priceDescription: item.data.priceDescription,
       packagesFeaturesTitles: item.data.packagesFeaturesTitles,
       plan: item.data.packages[1]?.name || item.data.packages[0]?.name,
       price: item.data.packages[1]?.price || item.data.packages[0]?.price,

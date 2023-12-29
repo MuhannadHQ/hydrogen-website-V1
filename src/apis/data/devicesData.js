@@ -214,24 +214,7 @@ export const devices = {
     guideBook: alphaBook.src,
     packages: [
 
-      {
-        id: "package-1",
-        title: "باقة الاشتراك",
-        type: "one-time",
-        name:  `اشتراك بيانات لمدة 
-        ٥ سنوات`,
-        price: 399,
-        priceDescription: "٣٩٩ ريال"
-        //   features: {
-        //     // MonthlySubscription: "39 ر.س",
-        //     // DeliveryAndInstallation: "✔️", 
-        //     // LowWaterAlerts: "✔️",
-        //     // WaterLevelStatistics: "✔️",
-        //     // CubicMeterReadings: "✔️",
-        //     //
-        //     // NumberOfUsers: 3,
-        //   },
-      },
+
       {
         id: "package-2",
         title: "الباقة الأساسية",
@@ -250,6 +233,24 @@ export const devices = {
           // ControlOfTheFloat: "❌",
           // NumberOfUsers: 3,
         },
+      },
+      {
+        id: "package-1",
+        title: "باقة الاشتراك",
+        type: "one-time",
+        name: `اشتراك بيانات لمدة 
+        ٥ سنوات`,
+        price: 399,
+        priceDescription: "٣٩٩ ريال"
+        //   features: {
+        //     // MonthlySubscription: "39 ر.س",
+        //     // DeliveryAndInstallation: "✔️", 
+        //     // LowWaterAlerts: "✔️",
+        //     // WaterLevelStatistics: "✔️",
+        //     // CubicMeterReadings: "✔️",
+        //     //
+        //     // NumberOfUsers: 3,
+        //   },
       },
       // {
       //   title: "الباقة الإحترافية",

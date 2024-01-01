@@ -92,7 +92,7 @@ const reducer = (state, action) =>
       const newBookingCart = state.bookingCart.map((item, index) =>
           ({ ...item, plan: action.payload.plan, price: action.payload.price, type: action.payload.type }))
       return {
-        ...state,
+        ...state, 
         bookingCart: newBookingCart,
       }
     case "SET_COUPON":

@@ -121,7 +121,7 @@ export const devices = {
 
     description: "راقب خزان الماء بكل سهولة",
 
-    deviceDescription: "جهاز + توصيل وتركيب مجاني",
+    deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
     priceDescription: "٤٩٩ ريال",
     devicePrice: 499,
     price: "39 ر.س  لكل شهر",
@@ -216,12 +216,12 @@ export const devices = {
 
 
       {
-        id: "package-2",
+        id: "basic",
         title: "الباقة الأساسية",
         name: "اشتراك بيانات شهري",
         type: "subscription",
         price: 39,
-        priceDescription: "٣٩ ريال/شهر",
+        priceDescription: "39 ريال/شهر",
         features: {
           // MonthlySubscription: "بدون اشتراك",
           // DeliveryAndInstallation: "✔️",
@@ -235,13 +235,13 @@ export const devices = {
         },
       },
       {
-        id: "package-1",
+        id: "regular",
         title: "باقة الاشتراك",
         type: "one-time",
         name: `اشتراك بيانات لمدة 
-        ٥ سنوات`,
+        5 سنوات`,
         price: 399,
-        priceDescription: "٣٩٩ ريال"
+        priceDescription: "399 ريال"
         //   features: {
         //     // MonthlySubscription: "39 ر.س",
         //     // DeliveryAndInstallation: "✔️", 

@@ -122,7 +122,7 @@ export const devices = {
     description: "راقب خزان الماء بكل سهولة",
 
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "٤٩٩ ريال",
+    priceDescription: "499 ريال",
     devicePrice: 499,
     price: "39 ر.س  لكل شهر",
     images: [

@@ -2,6 +2,7 @@ import { CompleteBooking } from "components/Booking/CompleteBooking"
 import { PaymentOptions } from "components/Booking/PaymentOptions"
 import { UserInfoForm } from "components/Booking/UserInfoForm"
 import { useEffect, useState } from "react"
+import { setCallbackUrl } from "utils/helpers/helpers"
 
 const calculateTotalPrice = (bookingCart) =>bookingCart.reduce(
   (acc, item) => acc + (item.price + item.devicePrice )|| 0, 0)
@@ -21,7 +22,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
     discount: coupon?.discount,
     installationCompany: "",
     scSCi: "",
-
+    packageID: bookingCart[ 0 ]?.id,
     orderTotal: total ,
     products: bookingCart.map(item => ( {
       package: item.plan,
@@ -29,15 +30,19 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
       qty: 1,
       price: item.price,
       devicePrice: item.devicePrice,
+      id: item.id,
     } )),
     utm: localStorage.getItem("UTM"),
   }
   const disablePayment = !userInfo.firstName || !userInfo.lastName ||
     !userInfo.email || userInfo?.phoneNumber?.length < 12 || !userInfo.city
+
+  const callbackUrl = setCallbackUrl(orderData, orderId);
   useEffect(() =>
   {
     window.scrollTo(0, 0)
   }, []);
+
   return (
     <>
       <UserInfoForm
@@ -57,7 +62,6 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         type={ getType(bookingCart) }
         // disablePayment={ disablePayment }
         setCoupon={ setCoupon }
-        orderData={ orderData }
         setPaymentMethod={ setPaymentMethod }
         cart={ cart.map(item => ( {
           title: item.data.title,
@@ -69,7 +73,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
             (cartItem) => cartItem._id === item.data._id).
           reduce((acc, item) => acc + item.price, 0),
         } )) }
-
+        callbackUrl={ callbackUrl }
         coupon={ coupon }
         total={ total }
       />

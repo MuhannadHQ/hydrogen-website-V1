@@ -2,6 +2,7 @@ import create_order from "apis/create_order"
 import { CartQuickInfo } from "components/Booking/CartQuickInfo"
 import { Coupon } from "components/Booking/steps/Coupon"
 import { Loader } from "components/global/Loader"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
 const subscriptionPaymentOptions = [
@@ -30,6 +31,9 @@ const paymentOptions = [
   },
 ]
 
+const responseStatus = {
+  loading: <Loader/>,
+}
 export const PaymentOptions = ({
   cart,
   total,
@@ -37,26 +41,20 @@ export const PaymentOptions = ({
   setPaymentMethod,
   paymentMethod,
   setCoupon,
-  orderData,
   setCurrentStep,
   currentStep,
+  callbackUrl,
   type,
 }) =>
 {
   const paymentMethods = type === "subscription"
     ? subscriptionPaymentOptions
-    : paymentOptions 
+    : paymentOptions
+  const [status, setStatus] = useState("")
 
   const handleCreateOrder = async() =>
   {
-    window.dataLayer.push({
-      firstName: orderData.firstName,
-      lastName: orderData.lastName,
-      email: orderData.email,
-      phoneNumber: orderData.phoneNumber,
-      city: orderData.city,
-      source: orderData.source,
-    })
+
     setCurrentStep(currentStep + 1)
   }
   useEffect(() =>
@@ -106,7 +104,24 @@ export const PaymentOptions = ({
               }
             </ul>
 
-            <button
+
+
+          </div>
+          { paymentMethod === "cod" ?
+            <div className="px-5 flex justify-center items-center gap-4 mt-5">
+              <Link href={ `${ callbackUrl }&&status=paid` }>
+                <button
+                  id="purchase"
+                  onClick={ () => setStatus("loading") }
+                  className="btn btn-primary w-64 ">
+                  إتمام الطلب
+                </button>
+              </Link>
+              <div className={ `text-2xl  top-0 -left-8 pt-1 ` }>
+                { responseStatus[ status ] }
+              </div>
+            </div>
+            : <button
               type="button"
               id="start-checkout"
               onClick={ handleCreateOrder }
@@ -116,9 +131,7 @@ export const PaymentOptions = ({
             >
               متابعة
             </button>
-
-          </div>
-
+          }
         </>
         : <button
           className="btn btn-primary-contained w-28 mt-5"

@@ -87,6 +87,9 @@ export const UserInfoForm = ({
     {
       setStatus("error")
     })
+    window.dataLayer.push({
+    ...userInfo,
+    })
     setCurrentStep(currentStep + 1)
   }
   return (

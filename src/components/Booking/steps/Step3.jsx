@@ -42,7 +42,6 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
   {
     window.scrollTo(0, 0)
   }, []);
-
   return (
     <>
       <UserInfoForm
@@ -55,6 +54,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         userInfo={ userInfo }
         setOrderId={ setOrderId }
       />
+
       <PaymentOptions
         paymentMethod={ paymentMethod }
         currentStep={ currentStep }
@@ -66,12 +66,14 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         cart={ cart.map(item => ( {
           title: item.data.title,
           quantity: item.quantity,
-          devicePrice: bookingCart.filter(
-            (cartItem) => cartItem._id === item.data._id).
-          reduce((acc, item) => acc + item.devicePrice, 0),
-          price: bookingCart.filter(
-            (cartItem) => cartItem._id === item.data._id).
-          reduce((acc, item) => acc + item.price, 0),
+          devicePrice: bookingCart[ 0 ]?.devicePrice,
+          // .filter(
+          //   (cartItem) => cartItem._id === item.data._id).
+          // reduce((acc, item) => acc + item.devicePrice, 0),
+          price: bookingCart[ 0 ]?.price,
+          // .filter(
+          //   (cartItem) => cartItem._id === item.data._id).
+          // reduce((acc, item) => acc + item.price, 0),
         } )) }
         callbackUrl={ callbackUrl }
         coupon={ coupon }

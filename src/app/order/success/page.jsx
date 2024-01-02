@@ -25,11 +25,10 @@ const Page = () =>
         </span>
       </p>
      <p className="text-xl my-3">
-        اسم الباقة
-       <br/>
-       <span className="text-2xl text-primary">
-        {package_id }
-        </span>
+        {/*اسم الباقة*/}
+       {/*<span className="text-2xl text-primary">*/}
+       {/* {package_id }*/}
+       {/* </span>*/}
      </p>
    </div>
 

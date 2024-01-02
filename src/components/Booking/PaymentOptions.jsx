@@ -51,7 +51,6 @@ export const PaymentOptions = ({
     ? subscriptionPaymentOptions
     : paymentOptions
   const [status, setStatus] = useState("")
-
   const handleCreateOrder = async() =>
   {
 

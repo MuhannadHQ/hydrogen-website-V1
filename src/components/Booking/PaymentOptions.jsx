@@ -45,6 +45,7 @@ export const PaymentOptions = ({
   currentStep,
   callbackUrl,
   type,
+  disablePayment
 }) =>
 {
   const paymentMethods = type === "subscription"
@@ -71,7 +72,7 @@ export const PaymentOptions = ({
         >2</span>
         خيارات الدفع
       </h3>
-      { currentStep === 1 ?
+      { currentStep === 1 &&
         <>
           <div className="flex justify-center mt-5">
             <Coupon setCoupon={ setCoupon }
@@ -103,36 +104,38 @@ export const PaymentOptions = ({
               }
             </ul>
 
-
+            { paymentMethod === "cod" ?
+              <div className="px-5 flex justify-center items-center gap-4 mt-5">
+                <Link href={ `${ callbackUrl }&&status=paid` }>
+                  <button
+                    id="purchase"
+                    onClick={ () => setStatus("loading") }
+                    className="btn btn-primary w-64 ">
+                    إتمام الطلب
+                  </button>
+                </Link>
+                <div className={ `text-2xl  top-0 -left-8 pt-1 ` }>
+                  { responseStatus[ status ] }
+                </div>
+              </div>
+              : <button
+                type="button"
+                id="start-checkout"
+                onClick={ handleCreateOrder }
+                disabled={ paymentMethod === ""   }
+                className={ `btn btn-primary-contained w-28 mt-5 ${ !paymentMethod &&
+                "opacity-50 cursor-not-allowed" }` }
+              >
+                متابعة
+              </button>
+            }
 
           </div>
-          { paymentMethod === "cod" ?
-            <div className="px-5 flex justify-center items-center gap-4 mt-5">
-              <Link href={ `${ callbackUrl }&&status=paid` }>
-                <button
-                  id="purchase"
-                  onClick={ () => setStatus("loading") }
-                  className="btn btn-primary w-64 ">
-                  إتمام الطلب
-                </button>
-              </Link>
-              <div className={ `text-2xl  top-0 -left-8 pt-1 ` }>
-                { responseStatus[ status ] }
-              </div>
-            </div>
-            : <button
-              type="button"
-              id="start-checkout"
-              onClick={ handleCreateOrder }
-              disabled={ paymentMethod === "" }
-              className={ `btn btn-primary-contained w-28 mt-5 ${ !paymentMethod &&
-              "opacity-50 cursor-not-allowed" }` }
-            >
-              متابعة
-            </button>
-          }
+
         </>
-        : <button
+      }
+      { currentStep === 2 &&
+         <button
           className="btn btn-primary-contained w-28 mt-5"
           onClick={ () => setCurrentStep(1) }>
           تعديل

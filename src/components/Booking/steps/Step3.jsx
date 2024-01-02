@@ -38,6 +38,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
     !userInfo.email || userInfo?.phoneNumber?.length < 12 || !userInfo.city
 
   const callbackUrl = setCallbackUrl(orderData, orderId);
+
   useEffect(() =>
   {
     window.scrollTo(0, 0)
@@ -75,6 +76,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
           //   (cartItem) => cartItem._id === item.data._id).
           // reduce((acc, item) => acc + item.price, 0),
         } )) }
+        disablePayment={ disablePayment }
         callbackUrl={ callbackUrl }
         coupon={ coupon }
         total={ total }

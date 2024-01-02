@@ -7,7 +7,7 @@ const Page = () =>
 {
   const searchParams = useSearchParams()
   const order_id = searchParams.get("order_id")
-
+  const package_id = searchParams.get("package_id")
 
   return (<main className="">
     <div className="my-5 general-padding">
@@ -24,7 +24,12 @@ const Page = () =>
         {order_id }
         </span>
       </p>
-
+     <p className="text-xl my-3">
+        {/*اسم الباقة*/}
+       {/*<span className="text-2xl text-primary">*/}
+       {/* {package_id }*/}
+       {/* </span>*/}
+     </p>
    </div>
 
 <p className="text-xl my-5 text-black leading-relaxed ">

@@ -4,8 +4,8 @@ import Accordion from "components/global/Accordion"
 
 export const InstallmentsPlan = ({ total, callbackUrl }) =>
 {
-  const amount = total
-  const installmentAmount = Math.round(amount / 12)
+  const amount = total 
+  const installmentAmount = Math.round(amount / 3) 
   const now = new Date()
   const getInstallmentDate = (month) => new Date(now.getFullYear(),
     now.getMonth() + month, now.getDate())
@@ -21,7 +21,7 @@ export const InstallmentsPlan = ({ total, callbackUrl }) =>
             <div
               className={ `flex gap-2 flex-col  items-center justify-center rounded-md shadow w-48 p-2 bg-primary text-white` }>
               <div>
-               تبدأ في
+                يبدأ أول دفعة في
               </div>
               <div>
                 { getInstallmentDate(0).toLocaleDateString() }
@@ -30,10 +30,10 @@ export const InstallmentsPlan = ({ total, callbackUrl }) =>
             <div
               className={ `flex gap-2 flex-col items-center justify-center rounded-md shadow w-48 p-2 bg-primary text-white` }>
               <div>
-                تنتهي في
+                تنتهي الدفعة الأخيرة في
               </div>
               <div>
-                { getInstallmentDate(11).toLocaleDateString() }
+                { getInstallmentDate(2).toLocaleDateString() }
               </div>
             </div>
             {/*{*/ }
@@ -52,20 +52,20 @@ export const InstallmentsPlan = ({ total, callbackUrl }) =>
           </div>
         </div>
 
-<div className="md:px-7">
+        <div className="md:px-7">
   <MoyasarForm callbackUrl={ callbackUrl } amount={ installmentAmount }/>
 
 </div>
       </div>
       <div className="mx-3">
-        <Accordion
+        {/* <Accordion
           line={ true}
           bg={ "bg-transparent" }
           title={ " خطة الأقساط" }
           content={
             <div className="flex flex-wrap gap-4 max-w-5xl justify-center ">
               {
-                new Array(12).fill(0).map((item, index) =>
+                new Array(3).fill(0).map((item, index) =>
                   <div
                     key={ index }
                     className={ `flex gap-2  items-center justify-center rounded-md shadow w-48 p-2 ${ index ===
@@ -80,7 +80,7 @@ export const InstallmentsPlan = ({ total, callbackUrl }) =>
                 ) }
             </div>
           }
-        />
+        /> */}
       </div>
     </div>
   )

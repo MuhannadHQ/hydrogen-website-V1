@@ -128,3 +128,6 @@ p{
 .mysr-form-footer{
     display: none !important;
 }
+li{
+    list-style: none;
+}

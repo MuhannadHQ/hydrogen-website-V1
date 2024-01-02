@@ -2,9 +2,10 @@ import create_order from "apis/create_order"
 import { CartQuickInfo } from "components/Booking/CartQuickInfo"
 import { Coupon } from "components/Booking/steps/Coupon"
 import { Loader } from "components/global/Loader"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
-const paymentOptions = [
+const subscriptionPaymentOptions = [
   {
     title: "الدفع عند الاستلام",
     name: "cod",
@@ -15,13 +16,24 @@ const paymentOptions = [
   },
 
 ]
-const installmentOptions = [
+const paymentOptions = [
   {
-    title: "الدفع أقساط ( على 12 دفعة )",
+    title: "الدفع عند الاستلام",
+    name: "cod",
+  }, 
+  {
+    title: "الدفع عبر مدى / ابل باي",
+    name: "creditCard",
+  },
+  {
+    title: "الدفع على 3 دفعات",
     name: "installment",
   },
 ]
 
+const responseStatus = {
+  loading: <Loader/>,
+}
 export const PaymentOptions = ({
   cart,
   total,
@@ -29,26 +41,21 @@ export const PaymentOptions = ({
   setPaymentMethod,
   paymentMethod,
   setCoupon,
-  orderData,
   setCurrentStep,
   currentStep,
+  callbackUrl,
   type,
+  disablePayment
 }) =>
 {
-  const paymentMethods = type === "installment"
-    ? installmentOptions
+  const paymentMethods = type === "subscription"
+    ? subscriptionPaymentOptions
     : paymentOptions
-
+  const [status, setStatus] = useState("")
   const handleCreateOrder = async() =>
   {
-    window.dataLayer.push({
-      firstName: orderData.firstName,
-      lastName: orderData.lastName,
-      email: orderData.email,
-      phoneNumber: orderData.phoneNumber,
-      city: orderData.city,
-      source: orderData.source,
-    })
+
+    setCurrentStep(currentStep + 1)
   }
   useEffect(() =>
   {
@@ -65,7 +72,7 @@ export const PaymentOptions = ({
         >2</span>
         خيارات الدفع
       </h3>
-      { currentStep === 1 ?
+      { currentStep === 1 &&
         <>
           <div className="flex justify-center mt-5">
             <Coupon setCoupon={ setCoupon }
@@ -97,21 +104,38 @@ export const PaymentOptions = ({
               }
             </ul>
 
-            <button
-              type="button"
-              id="start-checkout"
-              onClick={ handleCreateOrder }
-              disabled={ paymentMethod === "" }
-              className={ `btn btn-primary-contained w-28 mt-5 ${ !paymentMethod &&
-              "opacity-50 cursor-not-allowed" }` }
-            >
-              متابعة
-            </button>
+            { paymentMethod === "cod" ?
+              <div className="px-5 flex justify-center items-center gap-4 mt-5">
+                <Link href={ `${ callbackUrl }&&status=paid` }>
+                  <button
+                    id="purchase"
+                    onClick={ () => setStatus("loading") }
+                    className="btn btn-primary w-64 ">
+                    إتمام الطلب
+                  </button>
+                </Link>
+                <div className={ `text-2xl  top-0 -left-8 pt-1 ` }>
+                  { responseStatus[ status ] }
+                </div>
+              </div>
+              : <button
+                type="button"
+                id="start-checkout"
+                onClick={ handleCreateOrder }
+                disabled={ paymentMethod === ""   }
+                className={ `btn btn-primary-contained w-28 mt-5 ${ !paymentMethod &&
+                "opacity-50 cursor-not-allowed" }` }
+              >
+                متابعة
+              </button>
+            }
 
           </div>
 
         </>
-        : <button
+      }
+      { currentStep === 2 &&
+         <button
           className="btn btn-primary-contained w-28 mt-5"
           onClick={ () => setCurrentStep(1) }>
           تعديل

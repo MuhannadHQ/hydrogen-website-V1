@@ -118,8 +118,13 @@ export const devices = {
     path: "/alpha",
     buy_path: "/cart",
     title: "جهاز ألفــا",
+
     description: "راقب خزان الماء بكل سهولة",
-    price: "99 ر.س  لكل شهر",
+
+    deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
+    priceDescription: "499 ريال",
+    devicePrice: 499,
+    price: "39 ر.س  لكل شهر",
     images: [
       {
         src: alphaApp.src,
@@ -208,30 +213,15 @@ export const devices = {
     ],
     guideBook: alphaBook.src,
     packages: [
+
+
       {
-        id: "package-1",
-        title: "باقة التقسيط",
-        type: "installment",
-        name: "أقساط لمدة 12 شهر",
-        priceTitle: "99 ريال / شهر",
-        price: 99,
-        //   features: {
-        //     // MonthlySubscription: "39 ر.س",
-        //     // DeliveryAndInstallation: "✔️",
-        //     // LowWaterAlerts: "✔️",
-        //     // WaterLevelStatistics: "✔️",
-        //     // CubicMeterReadings: "✔️",
-        //     //
-        //     // NumberOfUsers: 3,
-        //   },
-      },
-      {
-        id: "package-2",
+        id: "basic",
         title: "الباقة الأساسية",
-        name: "دفعة واحدة",
-        type: "one-time",
-        priceTitle: "799 ريال",
-        price: 799,
+        name: "اشتراك بيانات شهري",
+        type: "subscription",
+        price: 39,
+        priceDescription: "39 ريال/شهر",
         features: {
           // MonthlySubscription: "بدون اشتراك",
           // DeliveryAndInstallation: "✔️",
@@ -243,6 +233,24 @@ export const devices = {
           // ControlOfTheFloat: "❌",
           // NumberOfUsers: 3,
         },
+      },
+      {
+        id: "regular",
+        title: "باقة الاشتراك",
+        type: "one-time",
+        name: `اشتراك بيانات لمدة 
+        5 سنوات`,
+        price: 399,
+        priceDescription: "399 ريال"
+        //   features: {
+        //     // MonthlySubscription: "39 ر.س",
+        //     // DeliveryAndInstallation: "✔️", 
+        //     // LowWaterAlerts: "✔️",
+        //     // WaterLevelStatistics: "✔️",
+        //     // CubicMeterReadings: "✔️",
+        //     //
+        //     // NumberOfUsers: 3,
+        //   },
       },
       // {
       //   title: "الباقة الإحترافية",

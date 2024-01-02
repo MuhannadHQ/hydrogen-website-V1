@@ -2,9 +2,10 @@ import { CompleteBooking } from "components/Booking/CompleteBooking"
 import { PaymentOptions } from "components/Booking/PaymentOptions"
 import { UserInfoForm } from "components/Booking/UserInfoForm"
 import { useEffect, useState } from "react"
+import { setCallbackUrl } from "utils/helpers/helpers"
 
-const calculateTotalPrice = (bookingCart) => bookingCart.reduce(
-  (acc, item) => acc + item.price || 0, 0)
+const calculateTotalPrice = (bookingCart) =>bookingCart.reduce(
+  (acc, item) => acc + (item.price + item.devicePrice )|| 0, 0)
 const getType = (bookingCart = []) => ( bookingCart[ 0 ]?.type )
 export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
 {
@@ -21,17 +22,23 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
     discount: coupon?.discount,
     installationCompany: "",
     scSCi: "",
-    orderTotal: paymentMethod === "installment" ? total * 12 : total,
+    packageID: bookingCart[ 0 ]?.id,
+    orderTotal: total ,
     products: bookingCart.map(item => ( {
       package: item.plan,
-      tankType: item.tankType || "none",
+      tankType: item.tankType || "none", 
       qty: 1,
-      price: paymentMethod === "installment" ? item.price * 12 : item.price,
+      price: item.price,
+      devicePrice: item.devicePrice,
+      id: item.id,
     } )),
     utm: localStorage.getItem("UTM"),
   }
   const disablePayment = !userInfo.firstName || !userInfo.lastName ||
     !userInfo.email || userInfo?.phoneNumber?.length < 12 || !userInfo.city
+
+  const callbackUrl = setCallbackUrl(orderData, orderId);
+
   useEffect(() =>
   {
     window.scrollTo(0, 0)
@@ -48,6 +55,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         userInfo={ userInfo }
         setOrderId={ setOrderId }
       />
+
       <PaymentOptions
         paymentMethod={ paymentMethod }
         currentStep={ currentStep }
@@ -55,16 +63,21 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         type={ getType(bookingCart) }
         // disablePayment={ disablePayment }
         setCoupon={ setCoupon }
-        orderData={ orderData }
         setPaymentMethod={ setPaymentMethod }
         cart={ cart.map(item => ( {
           title: item.data.title,
           quantity: item.quantity,
-          price: bookingCart.filter(
-            (cartItem) => cartItem._id === item.data._id).
-          reduce((acc, item) => acc + item.price, 0),
+          devicePrice: bookingCart[ 0 ]?.devicePrice,
+          // .filter(
+          //   (cartItem) => cartItem._id === item.data._id).
+          // reduce((acc, item) => acc + item.devicePrice, 0),
+          price: bookingCart[ 0 ]?.price,
+          // .filter(
+          //   (cartItem) => cartItem._id === item.data._id).
+          // reduce((acc, item) => acc + item.price, 0),
         } )) }
-
+        disablePayment={ disablePayment }
+        callbackUrl={ callbackUrl }
         coupon={ coupon }
         total={ total }
       />

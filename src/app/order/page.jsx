@@ -34,7 +34,7 @@ function Payment ()
 
         await create_order({ formData }).then(response =>
           {
-            redirect = `/order/success?order_id=${ response?.orderID }`
+            redirect = `/order/success?order_id=${ response?.orderID }&package_id=${ formData?.packageID }`
           },
         ).catch(error =>
           {

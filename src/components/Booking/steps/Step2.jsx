@@ -10,7 +10,6 @@ export const Step2 = ({
 
 }) =>
 {
-
   useEffect(() =>
   {
     window.scrollTo(0, 0)
@@ -22,15 +21,13 @@ export const Step2 = ({
           index === 0 ?
           <PackagesList
             key={ index }
-            packagesFeaturesTitles={ item?.packagesFeaturesTitles }
-            packages={ item.packages }
-            title={ item.title }
-            plan={ item.plan }
+           itemData={ item }
             setItemPlan={ setItemPlan }
             index={ index }
           /> : null
         )
       }
+
       {/*<p className="text-primary">*/}
       {/*  خدمة التركيب متاحة داخل مدينة الرياض ومكة المكرمة وجدة والمنطقة الشرقية*/}
       {/*</p>*/}

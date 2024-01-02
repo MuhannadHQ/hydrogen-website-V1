@@ -10,7 +10,10 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
             <tr className="border-t h-10">
               <th className="text-start">اسم المنتج</th>
               <th className="text-start">العدد</th>
-              <th className="text-start">السعر</th>
+              <th className="text-start">سعر الجهاز</th>
+              <th className="text-start">
+                سعر الباقة
+              </th>
             </tr>
             </thead>
             <tbody>
@@ -23,8 +26,10 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
                   { item.quantity }
                 </td>
                 <td>
-
-                  { item.price } ر.س { type === "installment" && " / شهر" }
+                  { item.devicePrice } ر.س
+                </td>
+                <td>
+                  { item.price } ر.س{ type === "subscription" && "/شهر" }
                 </td>
               </tr>
             )) }
@@ -43,8 +48,8 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
             <span className="w-24 inline-block">  إجمالي السعر: </span>
             <span className="text-primary  ">
               {
-                type === "installment" ? total * 12 : total -
-                  ( coupon?.discount || 0 ) }{" "}
+                type === "installment" ? total  : total -
+                  ( coupon?.discount || 0 ) }
               ر.س
             </span>
           </div>

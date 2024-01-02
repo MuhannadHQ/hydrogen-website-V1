@@ -10,10 +10,10 @@ const responseStatus = {
 }
 
 const messages = {
-  success: "تم انشاء الطلب بنجاح الرجاء التقدم الى الخطوة التالية ",
+  success: "",  
   error: "حدث خطأ أثناء إنشاء الطلب الرجاء المحاولة مرة أخرى",
-
 }
+
 const classes = {
   success: "text-green-500",
   error: "text-red-500",
@@ -86,6 +86,9 @@ export const UserInfoForm = ({
     ).catch(error =>
     {
       setStatus("error")
+    })
+    window.dataLayer.push({
+    ...userInfo,
     })
     setCurrentStep(currentStep + 1)
   }

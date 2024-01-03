@@ -124,7 +124,7 @@ export const devices = {
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
     priceDescription: "499 ريال",
     devicePrice: 499,
-    price: "39 ر.س  لكل شهر",
+    price: "499 ريال",
     images: [
       {
         src: alphaApp.src,
@@ -220,8 +220,8 @@ export const devices = {
         title: "الباقة الأساسية",
         name: "اشتراك بيانات شهري",
         type: "subscription",
-        price: 39,
-        priceDescription: "39 ريال/شهر",
+        price: 0,
+        packagePriceDescription: "39 ريال / شهر",
         features: {
           // MonthlySubscription: "بدون اشتراك",
           // DeliveryAndInstallation: "✔️",
@@ -241,7 +241,7 @@ export const devices = {
         name: `اشتراك بيانات لمدة 
         5 سنوات`,
         price: 399,
-        priceDescription: "399 ريال"
+        packagePriceDescription: "399 ريال"
         //   features: {
         //     // MonthlySubscription: "39 ر.س",
         //     // DeliveryAndInstallation: "✔️", 

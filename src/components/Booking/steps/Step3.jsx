@@ -14,7 +14,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
   const [paymentMethod, setPaymentMethod] = useState("")
   const [currentStep, setCurrentStep] = useState(0)
   const total = calculateTotalPrice(bookingCart)
-  const orderData = {
+  const orderData = { 
     ...userInfo,
     phoneNumber: userInfo?.phoneNumber?.replace("966", ""),
     paymentMethod,
@@ -55,19 +55,20 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         userInfo={ userInfo }
         setOrderId={ setOrderId }
       />
-
+   
       <PaymentOptions
         paymentMethod={ paymentMethod }
         currentStep={ currentStep }
         setCurrentStep={ setCurrentStep }
-        type={ getType(bookingCart) }
+        type={ getType(bookingCart) } 
         // disablePayment={ disablePayment }
         setCoupon={ setCoupon }
         setPaymentMethod={ setPaymentMethod }
-        cart={ cart.map(item => ( {
+        cart={ cart.map(item => ( { 
           title: item.data.title,
           quantity: item.quantity,
           devicePrice: bookingCart[ 0 ]?.devicePrice,
+          packagePriceDescription: bookingCart[ 0 ]?.packagePriceDescription,
           // .filter(
           //   (cartItem) => cartItem._id === item.data._id).
           // reduce((acc, item) => acc + item.devicePrice, 0),

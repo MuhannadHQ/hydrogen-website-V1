@@ -24,10 +24,11 @@ const cloneToBookingCart = (cart) =>
       devicePrice: item.data.devicePrice,
       deviceDescription: item.data.deviceDescription,
       priceDescription: item.data.priceDescription,
-      packagesFeaturesTitles: item.data.packagesFeaturesTitles,
+      packagesFeaturesTitles: item.data.packagesFeaturesTitles, 
       id: item.data.packages[1]?.id || item.data.packages[0]?.id,
       plan: item.data.packages[1]?.name || item.data.packages[0]?.name,
-      price: item.data.packages[1]?.price || item.data.packages[0]?.price,
+      price: item.data.packages[1]?.price || item.data.packages[0]?.price, 
+      packagePriceDescription: item.data.packages[1]?.packagePriceDescription || item.data.packages[0]?.packagePriceDescription,
       type: item.data.packages[1]?.type || item.data.packages[0]?.type,
     })
     bookingCart = [...bookingCart, ...arr]
@@ -89,10 +90,10 @@ const reducer = (state, action) =>
       return {
         ...state,
         bookingCart,
-      }
-    case "SET_ITEM_PLAN":
+      } 
+    case "SET_ITEM_PLAN": 
       const newBookingCart = state.bookingCart.map((item, index) =>
-          ({ ...item, plan: action.payload.plan, price: action.payload.price, type: action.payload.type, id: action.payload.id }))
+          ({ ...item, plan: action.payload.plan, price:  action.payload.price, type: action.payload.type, id: action.payload.id,packagePriceDescription:action.payload.packagePriceDescription }))
       return {
         ...state, 
         bookingCart: newBookingCart,
@@ -131,9 +132,9 @@ const useCart = () =>
 
   const cloneBookingCart = () => { dispatch({ type: "CLONE_BOOKING_CART" }) }
 
-  const setItemPlan = (index, plan, price, type, id) =>
+  const setItemPlan = (index, plan, price, type, id,packagePriceDescription) =>
   {
-    dispatch({ type: "SET_ITEM_PLAN", payload: { index, plan, price, type, id } })
+    dispatch({ type: "SET_ITEM_PLAN", payload: { index, plan, price, type, id,packagePriceDescription } })
   }
 
   const setCoupon = (coupon) =>

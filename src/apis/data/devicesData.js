@@ -221,7 +221,7 @@ export const devices = {
         name: "اشتراك بيانات شهري",
         type: "subscription",
         price: 0,
-        priceDescription: "39 ريال / شهر",
+        packagePriceDescription: "39 ريال / شهر",
         features: {
           // MonthlySubscription: "بدون اشتراك",
           // DeliveryAndInstallation: "✔️",
@@ -241,7 +241,7 @@ export const devices = {
         name: `اشتراك بيانات لمدة 
         5 سنوات`,
         price: 399,
-        priceDescription: "399 ريال"
+        packagePriceDescription: "399 ريال"
         //   features: {
         //     // MonthlySubscription: "39 ر.س",
         //     // DeliveryAndInstallation: "✔️", 

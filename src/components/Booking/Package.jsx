@@ -1,9 +1,9 @@
 export const Package = ({ picked, item, setItemPlan, index, title }) =>
 {
-  const { name, price, priceDescription, type, id } = item
+  const { name, price, type, id,packagePriceDescription } = item
   return (
     <li
-      onClick={ () => setItemPlan && setItemPlan(index, name, price, type, id) }
+      onClick={ () => setItemPlan && setItemPlan(index, name, price, type, id, packagePriceDescription) }
       className={ `bg-secondary w-64 rounded ${ picked === name &&
       "border border-primary" }` }>
       <div
@@ -19,7 +19,7 @@ export const Package = ({ picked, item, setItemPlan, index, title }) =>
         </p>
         <p className={ `text-sm ${ picked === name &&
         "text-white bg-primary " }` }>
-          { priceDescription }
+          { packagePriceDescription }
         </p>
       </div>
       {/*<ul className="p-4 divide-y">*/ }

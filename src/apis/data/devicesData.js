@@ -164,10 +164,10 @@ export const devices = {
         id: "regular",
         title: "باقة الاشتراك",
         type: "one-time",
-        name: `اشتراك بيانات لمدة 
-        5 سنوات`,
-        price: 399,
-        packagePriceDescription: "399 ريال",
+        name: `اشتراك بيانات مفتوحه 
+         مدى الحياة`,
+        price: 299,
+        packagePriceDescription: "299 ريال",
 
       },
       {

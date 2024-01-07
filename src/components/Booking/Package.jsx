@@ -33,7 +33,7 @@ export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
         {/*</ul>*/ }
       </div>
       {
-         options && <div className="w-64 rounded my-3">
+        name === picked && options && <div className="w-64 rounded my-3">
           <ul className="">
             <label htmlFor={ "option" } className="text-sm text-black text-start ">
               ما هى شريحه البيانات التى ستقوم بإستخدامها مع الجهاز؟

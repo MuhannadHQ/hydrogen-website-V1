@@ -17,7 +17,7 @@ export const Cart = () =>
     addToCart,
     removeFromCart,
     editQuantity,
-    clearCart,
+    setItemOption,
     cloneBookingCart,
     setItemPlan,
     setCoupon,
@@ -36,6 +36,7 @@ export const Cart = () =>
       setStep={ setStep }
       bookingCart={ bookingCart }
       setItemPlan={ setItemPlan }
+      setItemOption={ setItemOption }
     />,
     <Step3
       key={ 2 }

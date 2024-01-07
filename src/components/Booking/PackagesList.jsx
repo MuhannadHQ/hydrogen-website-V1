@@ -5,6 +5,7 @@ export const PackagesList = ({
   index,
   plan,
   setItemPlan,
+  setItemOption,
 }) =>
 {
   return (
@@ -26,7 +27,7 @@ export const PackagesList = ({
         الباقات
       </h2>
       <ul
-        className="flex items-end gap-2  sm:gap-5 md:gap-10 my-5 justify-center">
+        className="flex flex-col md:flex-row items-center md:items-start gap-2  sm:gap-5 md:gap-10 my-5 justify-center">
         {/*<li className=" text-center w-1/4">*/}
         {/*  <ul className="divide-y p-4 text-sm">*/}
         {/*    {*/}
@@ -41,6 +42,7 @@ export const PackagesList = ({
         itemData.packages.map((item, i) =>
             <Package
               setItemPlan={ setItemPlan }
+              setItemOption={ setItemOption }
               index={ index }
               item={ item }
               picked={ itemData.plan }

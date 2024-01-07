@@ -31,9 +31,12 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
       price: item.price,
       devicePrice: item.devicePrice,
       id: item.id,
+      option: item.option,
     } )),
     utm: localStorage.getItem("UTM"),
   }
+  console.log(orderData)
+
   const disablePayment = !userInfo.firstName || !userInfo.lastName ||
     !userInfo.email || userInfo?.phoneNumber?.length < 12 || !userInfo.city
 

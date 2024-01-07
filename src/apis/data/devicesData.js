@@ -58,9 +58,10 @@ export const devices = {
     description: "راقب خزان الماء بكل سهولة",
 
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "499 ريال",
-    devicePrice: 499,
-    price: "499 ريال",
+    priceDescription: "599 ريال",
+    packagePriceDescription: "599 ريال",
+    devicePrice: 599,
+    price: "599 ريال",
     images: [
       {
         src: alphaApp.src,
@@ -83,27 +84,27 @@ export const devices = {
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
-        icon: <WaterLevel/>,
+        icon: <WaterLevel />,
         description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
       },
       {
         title: "تنبيه عند انخفاض مستوى الماء",
-        icon: <Notification/>,
+        icon: <Notification />,
         description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
       },
       {
         title: "إمكانية طلب صهريج مياه",
-        icon: <TankCar/>,
+        icon: <TankCar />,
         description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
       },
       {
         title: "تنبيه عند عطل العوامة",
-        icon: <Warning/>,
+        icon: <Warning />,
         description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي",
       },
       {
         title: "مراقبة عدة أجهزة من حساب واحد",
-        icon: <Devices/>,
+        icon: <Devices />,
         description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق",
       },
     ],
@@ -175,8 +176,8 @@ export const devices = {
         title: "بدون شريحة بيانات",
         type: "one-time",
         name: `بدون شريحة بيانات`,
-        price: 599,
-        packagePriceDescription: "599 ريال",
+        price: 0,
+        packagePriceDescription: "0 ريال",
         options: [
           {
             title: "STC",
@@ -207,9 +208,9 @@ export const devices = {
 
 }
 
-export const paths = Object.keys(devices).map((device) => ( {
+export const paths = Object.keys( devices ).map( ( device ) => ( {
   href: devices[ device ].path,
   name: devices[ device ].name,
   title: devices[ device ].title,
-} ))
+} ) )
 

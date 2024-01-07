@@ -20,6 +20,7 @@ export const PackagesList = ({
         item={{
           name: itemData.deviceDescription,
           priceDescription: itemData.priceDescription,
+          packagePriceDescription: itemData.priceDescription
         }}
       />
     </div>

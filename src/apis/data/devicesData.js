@@ -1,16 +1,11 @@
-import { ControlPump } from "assets/icons/ControlPump"
-import { ControlWaterStream } from "assets/icons/ControlWaterStream"
 import { Devices } from "assets/icons/Devices"
-import { LeakDetection } from "assets/icons/LeakDetection"
 import { Notification } from "assets/icons/Notification"
 import { TankCar } from "assets/icons/TankCar"
 import { Warning } from "assets/icons/Warning"
 import { WaterLevel } from "assets/icons/WaterLevel"
 import alphaApp from "assets/images/alpha-1.png"
-import alphaBook from "assets/images/alpha-guide.png"
 import alpha from "assets/images/alpha-2.png"
-import lamdaApp from "assets/images/lamda-app.png"
-import lamda from "assets/images/lamda.png"
+import alphaBook from "assets/images/alpha-guide.png"
 
 export const lastDateUpdated = "10/2/2023"
 
@@ -42,76 +37,17 @@ export const devices = {
   //     {
   //       title: "مراقبة لمستوى ماء الخزان",
   //       icon: <WaterLevel />,
-  //       description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
-  //     },
-  //     {
-  //       title: "تحكم بتدفق ماء الخزان",
-  //       icon: <ControlWaterStream />,
-  //       description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين",
-  //     },
-  //     {
-  //       title: "تنبيه عند انخفاض مستوى الماء",
-  //       icon: <Notification />,
-  //       description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
-  //     },
-  //     {
-  //       title: "إمكانية طلب صهريج مياه",
-  //       icon: <TankCar />,
-  //       description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
-  //     },
-  //     {
-  //       title: "كشف التسريبات",
-  //       icon: <LeakDetection />,
-  //       description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج",
-  //     },
-  //     {
-  //       title: "تحكم في المضخة",
-  //       icon: <ControlPump />,
-  //       description: "بإمكانك التحكم بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين",
-  //     },
-  //     {
-  //       title: "تنبيه عند عطل العوامة",
-  //       icon: <Warning />,
-  //       description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي",
-  //     },
-  //     {
-  //       title: "مراقبة عدة أجهزة من حساب واحد",
-  //       icon: <Devices />,
-  //       description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق",
-  //     },
-  //   ],
-  //   packages: [
-  //     {
-  //       title: "الباقة الأساسية",
-  //       name: "لامدا - الأساسية (بدون اشتراك)",
-  //
-  //       price: 1299,
-  //       features: {
-  //         MonthlySubscription: "بدون اشتراك",
-  //         DeliveryAndInstallation: "✔️",
-  //         LowWaterAlerts: "✔️",
-  //         WaterLevelStatistics: "✔️",
-  //         CubicMeterReadings: "✔️",
-  //         LeakDetection: "✔️",
-  //         ControlOfThePump: "✔️",
-  //         ControlOfTheFloat: "✔️",
-  //         NumberOfUsers: "+5",
-  //       },
-  //     }
-  //   ],
-  //   packagesFeaturesTitles: {
-  //     MonthlySubscription: "الاشتراك الشهري",
-  //     DeliveryAndInstallation: "التوصيل والتركيب",
-  //     LowWaterAlerts: "تنبيهات بإنخفاض الماء",
-  //     WaterLevelStatistics: "إحصائيات لمستوى الماء",
-  //     CubicMeterReadings: "قراءات بالمتر المكعب",
-  //     ControlOfThePump: "التحكم بالمضخة",
-  //     ControlOfTheFloat: "التحكم بالعوامة",
-  //     LeakDetection: "كشف التسريب داخل الخزان",
-  //     NumberOfUsers: "عدد المستخدمين",
-  //
-  //   }
-  // },
+  //       description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق
+  // الجوال", }, { title: "تحكم بتدفق ماء الخزان", icon: <ControlWaterStream
+  // />, description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق
+  // هيدروجين", }, { title: "تنبيه عند انخفاض مستوى الماء", icon: <Notification
+  // />, description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله
+  // إليه", }, { title: "إمكانية طلب صهريج مياه", icon: <TankCar />,
+  // description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين", }, {
+  // title: "كشف التسريبات", icon: <LeakDetection />, description: "يمكنك عبر
+  // التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج", }, { title:
+  // "تحكم في المضخة", icon: <ControlPump />, description: "بإمكانك التحكم
+  // بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين", }, { title: "تنبيه عند عطل العوامة", icon: <Warning />, description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي", }, { title: "مراقبة عدة أجهزة من حساب واحد", icon: <Devices />, description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق", }, ], packages: [ { title: "الباقة الأساسية", name: "لامدا - الأساسية (بدون اشتراك)",  price: 1299, features: { MonthlySubscription: "بدون اشتراك", DeliveryAndInstallation: "✔️", LowWaterAlerts: "✔️", WaterLevelStatistics: "✔️", CubicMeterReadings: "✔️", LeakDetection: "✔️", ControlOfThePump: "✔️", ControlOfTheFloat: "✔️", NumberOfUsers: "+5", }, } ], packagesFeaturesTitles: { MonthlySubscription: "الاشتراك الشهري", DeliveryAndInstallation: "التوصيل والتركيب", LowWaterAlerts: "تنبيهات بإنخفاض الماء", WaterLevelStatistics: "إحصائيات لمستوى الماء", CubicMeterReadings: "قراءات بالمتر المكعب", ControlOfThePump: "التحكم بالمضخة", ControlOfTheFloat: "التحكم بالعوامة", LeakDetection: "كشف التسريب داخل الخزان", NumberOfUsers: "عدد المستخدمين",  } },
   alpha: {
     _id: "device-1",
     name: "alpha",
@@ -122,9 +58,10 @@ export const devices = {
     description: "راقب خزان الماء بكل سهولة",
 
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "499 ريال",
-    devicePrice: 499,
-    price: "499 ريال",
+    priceDescription: "599 ريال",
+    packagePriceDescription: "599 ريال",
+    devicePrice: 599,
+    price: "599 ريال",
     images: [
       {
         src: alphaApp.src,
@@ -179,11 +116,11 @@ export const devices = {
       {
         title: "طريقة تركيب جهاز ألفا - الخزان العلوي",
         link: "https://www.youtube.com/embed/mwtmKsYEZZA",
-      }
+      },
     ],
     banner: {
       link: "https://www.youtube.com/embed/ncn0yfey5j8",
-      title: "ألفا - جهاز ذكي لمراقبة و تحليل مستوى الماء في الخزان: "
+      title: "ألفا - جهاز ذكي لمراقبة و تحليل مستوى الماء في الخزان: ",
     },
     technicalSpecifications: [
       {
@@ -209,11 +146,10 @@ export const devices = {
       {
         title: "طول السلك",
         value: "8 امتار",
-      }
+      },
     ],
     guideBook: alphaBook.src,
     packages: [
-
 
       {
         id: "basic",
@@ -222,49 +158,41 @@ export const devices = {
         type: "subscription",
         price: 0,
         packagePriceDescription: "39 ريال / شهر",
-        features: {
-          // MonthlySubscription: "بدون اشتراك",
-          // DeliveryAndInstallation: "✔️",
-          // LowWaterAlerts: "✔️",
-          // WaterLevelStatistics: "✔️",
-          // CubicMeterReadings: "✔️",
-          // LeakDetection: "❌",
-          // ControlOfThePump: "❌",
-          // ControlOfTheFloat: "❌",
-          // NumberOfUsers: 3,
-        },
+
       },
+
       {
         id: "regular",
         title: "باقة الاشتراك",
         type: "one-time",
-        name: `اشتراك بيانات لمدة 
-        5 سنوات`,
-        price: 399,
-        packagePriceDescription: "399 ريال"
-        //   features: {
-        //     // MonthlySubscription: "39 ر.س",
-        //     // DeliveryAndInstallation: "✔️", 
-        //     // LowWaterAlerts: "✔️",
-        //     // WaterLevelStatistics: "✔️",
-        //     // CubicMeterReadings: "✔️",
-        //     //
-        //     // NumberOfUsers: 3,
-        //   },
+        name: `اشتراك بيانات مفتوحه 
+         مدى الحياة`,
+        price: 299,
+        packagePriceDescription: "299 ريال",
+
       },
-      // {
-      //   title: "الباقة الإحترافية",
-      //   name: "ألفا - الاحترافية (بدون اشتراك)",
-      //   price: 999,
-      //   features: {
-      //     MonthlySubscription: "بدون اشتراك",
-      //     DeliveryAndInstallation: "✔️",
-      //     LowWaterAlerts: "✔️",
-      //     WaterLevelStatistics: "✔️",
-      //     CubicMeterReadings: "✔️",
-      //     NumberOfUsers: "+5",
-      //   },
-      // },
+      {
+        id: "withoutSIM",
+        title: "بدون شريحة بيانات",
+        type: "one-time",
+        name: `بدون شريحة بيانات`,
+        price: 0,
+        packagePriceDescription: "0 ريال",
+        options: [
+          {
+            title: "STC",
+            value: "stc",
+          },
+          {
+            title: "زين",
+            value: "zain",
+          },
+          {
+            title: "موبايلي",
+            value: "mobily",
+          },
+        ],
+      },
     ],
     packagesFeaturesTitles: {
       MonthlySubscription: "اشتراك شريحة الاتصال",
@@ -274,10 +202,9 @@ export const devices = {
       // CubicMeterReadings: "قراءات بالمتر المكعب",
       // NumberOfUsers: "عدد المستخدمين",
 
-    }
+    },
 
   },
-
 
 }
 

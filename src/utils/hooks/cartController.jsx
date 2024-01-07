@@ -17,19 +17,21 @@ const cloneToBookingCart = (cart) =>
   {
     const arr = new Array(parseInt(item.quantity)).fill({
       _id: item.data.id,
-
       title: item.data.title,
       packages: item.data.packages,
       tankType: "",
       devicePrice: item.data.devicePrice,
       deviceDescription: item.data.deviceDescription,
       priceDescription: item.data.priceDescription,
-      packagesFeaturesTitles: item.data.packagesFeaturesTitles, 
-      id: item.data.packages[1]?.id || item.data.packages[0]?.id,
-      plan: item.data.packages[1]?.name || item.data.packages[0]?.name,
-      price: item.data.packages[1]?.price || item.data.packages[0]?.price, 
-      packagePriceDescription: item.data.packages[1]?.packagePriceDescription || item.data.packages[0]?.packagePriceDescription,
-      type: item.data.packages[1]?.type || item.data.packages[0]?.type,
+      packagesFeaturesTitles: item.data.packagesFeaturesTitles,
+      id: item.data.packages[ 1 ]?.id || item.data.packages[ 0 ]?.id,
+      plan: item.data.packages[ 1 ]?.name || item.data.packages[ 0 ]?.name,
+      price: item.data.packages[ 1 ]?.price || item.data.packages[ 0 ]?.price,
+      packagePriceDescription: item.data.packages[ 1 ]?.packagePriceDescription ||
+        item.data.packages[ 0 ]?.packagePriceDescription,
+      type: item.data.packages[ 1 ]?.type || item.data.packages[ 0 ]?.type,
+      option: item.data.packages[ 1 ]?.options?.[ 0 ]?.value ||
+        item.data.packages[ 0 ]?.options?.[ 0 ]?.value,
     })
     bookingCart = [...bookingCart, ...arr]
   })
@@ -90,13 +92,28 @@ const reducer = (state, action) =>
       return {
         ...state,
         bookingCart,
-      } 
-    case "SET_ITEM_PLAN": 
+      }
+    case "SET_ITEM_PLAN":
       const newBookingCart = state.bookingCart.map((item, index) =>
-          ({ ...item, plan: action.payload.plan, price:  action.payload.price, type: action.payload.type, id: action.payload.id,packagePriceDescription:action.payload.packagePriceDescription }))
+        ( {
+          ...item,
+          plan: action.payload.plan,
+          price: action.payload.price,
+          type: action.payload.type,
+          id: action.payload.id,
+          packagePriceDescription: action.payload.packagePriceDescription,
+          option: item.options?.[ 0 ]?.value || "",
+        } ))
       return {
-        ...state, 
+        ...state,
         bookingCart: newBookingCart,
+      }
+    case "SET_ITEM_OPTION":
+      const newBookingCart2 = state.bookingCart.map((item, index) =>
+        ( { ...item, option: action.payload.option } ))
+      return {
+        ...state,
+        bookingCart: newBookingCart2,
       }
     case "SET_COUPON":
       return {
@@ -124,19 +141,27 @@ const useCart = () =>
 
   const editQuantity = (id, quantity) =>
   {
-    if (quantity === ""){}
-   else if (quantity <= 0) return
+    if (quantity === "")
+    {}
+    else if (quantity <= 0) return
     dispatch({ type: "EDIT_QUANTITY", payload: { id, quantity } })
   }
   const clearCart = () => { dispatch({ type: "CLEAR_CART" }) }
 
   const cloneBookingCart = () => { dispatch({ type: "CLONE_BOOKING_CART" }) }
 
-  const setItemPlan = (index, plan, price, type, id,packagePriceDescription) =>
+  const setItemPlan = (index, plan, price, type, id, packagePriceDescription) =>
   {
-    dispatch({ type: "SET_ITEM_PLAN", payload: { index, plan, price, type, id,packagePriceDescription } })
+    dispatch({
+      type: "SET_ITEM_PLAN",
+      payload: { index, plan, price, type, id, packagePriceDescription },
+    })
   }
 
+  const setItemOption = (option) =>
+  {
+    dispatch({ type: "SET_ITEM_OPTION", payload: { option } })
+  }
   const setCoupon = (coupon) =>
   {
     dispatch({ type: "SET_COUPON", payload: coupon })
@@ -159,6 +184,7 @@ const useCart = () =>
     cloneBookingCart,
     setItemPlan,
     setCoupon,
+    setItemOption,
   }
 
 }

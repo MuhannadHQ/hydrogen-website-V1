@@ -7,7 +7,7 @@ export const Step2 = ({
   setStep,
   bookingCart,
   setItemPlan,
-
+setItemOption,
 }) =>
 {
   useEffect(() =>
@@ -24,6 +24,7 @@ export const Step2 = ({
            itemData={ item }
             setItemPlan={ setItemPlan }
             index={ index }
+            setItemOption={ setItemOption }
           /> : null
         )
       }

@@ -47,7 +47,17 @@ export const devices = {
   // title: "كشف التسريبات", icon: <LeakDetection />, description: "يمكنك عبر
   // التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج", }, { title:
   // "تحكم في المضخة", icon: <ControlPump />, description: "بإمكانك التحكم
-  // بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين", }, { title: "تنبيه عند عطل العوامة", icon: <Warning />, description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي", }, { title: "مراقبة عدة أجهزة من حساب واحد", icon: <Devices />, description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق", }, ], packages: [ { title: "الباقة الأساسية", name: "لامدا - الأساسية (بدون اشتراك)",  price: 1299, features: { MonthlySubscription: "بدون اشتراك", DeliveryAndInstallation: "✔️", LowWaterAlerts: "✔️", WaterLevelStatistics: "✔️", CubicMeterReadings: "✔️", LeakDetection: "✔️", ControlOfThePump: "✔️", ControlOfTheFloat: "✔️", NumberOfUsers: "+5", }, } ], packagesFeaturesTitles: { MonthlySubscription: "الاشتراك الشهري", DeliveryAndInstallation: "التوصيل والتركيب", LowWaterAlerts: "تنبيهات بإنخفاض الماء", WaterLevelStatistics: "إحصائيات لمستوى الماء", CubicMeterReadings: "قراءات بالمتر المكعب", ControlOfThePump: "التحكم بالمضخة", ControlOfTheFloat: "التحكم بالعوامة", LeakDetection: "كشف التسريب داخل الخزان", NumberOfUsers: "عدد المستخدمين",  } },
+  // بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين", }, { title:
+  // "تنبيه عند عطل العوامة", icon: <Warning />, description: "سيصلك تنبيه على
+  // التطبيق عند عطل عوامة الخزان الأرضي", }, { title: "مراقبة عدة أجهزة من
+  // حساب واحد", icon: <Devices />, description: "باستطاعتك مراقبة أكثر من جهاز
+  // من حساب واحد على التطبيق", }, ], packages: [ { title: "الباقة الأساسية",
+  // name: "لامدا - الأساسية (بدون اشتراك)",  price: 1299, features: {
+  // MonthlySubscription: "بدون اشتراك", DeliveryAndInstallation: "✓️",
+  // LowWaterAlerts: "✓️", WaterLevelStatistics: "✓️", CubicMeterReadings:
+  // "✓️", LeakDetection: "✓️", ControlOfThePump: "✓️", ControlOfTheFloat:
+  // "✓️", NumberOfUsers: "+5", }, } ], packagesFeaturesTitles: {
+  // MonthlySubscription: "الاشتراك الشهري", DeliveryAndInstallation: "التوصيل والتركيب", LowWaterAlerts: "تنبيهات بإنخفاض الماء", WaterLevelStatistics: "إحصائيات لمستوى الماء", CubicMeterReadings: "قراءات بالمتر المكعب", ControlOfThePump: "التحكم بالمضخة", ControlOfTheFloat: "التحكم بالعوامة", LeakDetection: "كشف التسريب داخل الخزان", NumberOfUsers: "عدد المستخدمين",  } },
   alpha: {
     _id: "device-1",
     name: "alpha",
@@ -84,27 +94,27 @@ export const devices = {
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
-        icon: <WaterLevel />,
+        icon: <WaterLevel/>,
         description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
       },
       {
         title: "تنبيه عند انخفاض مستوى الماء",
-        icon: <Notification />,
+        icon: <Notification/>,
         description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
       },
       {
         title: "إمكانية طلب صهريج مياه",
-        icon: <TankCar />,
+        icon: <TankCar/>,
         description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
       },
       {
         title: "تنبيه عند عطل العوامة",
-        icon: <Warning />,
+        icon: <Warning/>,
         description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي",
       },
       {
         title: "مراقبة عدة أجهزة من حساب واحد",
-        icon: <Devices />,
+        icon: <Devices/>,
         description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق",
       },
     ],
@@ -158,7 +168,16 @@ export const devices = {
         type: "subscription",
         price: 0,
         packagePriceDescription: "39 ريال / شهر",
+        features: {
+          DeliveryAndInstallation: "بدون تركيب",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
+          deviceWatch: "❌",
+          NumberOfUsers: "1",
 
+        },
       },
 
       {
@@ -169,7 +188,16 @@ export const devices = {
          مدى الحياة`,
         price: 299,
         packagePriceDescription: "299 ريال",
+        features: {
+          DeliveryAndInstallation: "✓️",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
 
+          deviceWatch: "❌",
+          NumberOfUsers: "3",
+        },
       },
       {
         id: "withoutSIM",
@@ -192,25 +220,32 @@ export const devices = {
             value: "mobily",
           },
         ],
+        features: {
+          DeliveryAndInstallation: "✓️",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
+          deviceWatch: "✓️",
+          NumberOfUsers: "+5",
+        },
       },
     ],
-    packagesFeaturesTitles: {
-      MonthlySubscription: "اشتراك شريحة الاتصال",
-      // DeliveryAndInstallation: "التوصيل والتركيب",
-      // LowWaterAlerts: "تنبيهات بإنخفاض الماء",
-      // WaterLevelStatistics: "إحصائيات لمستوى الماء",
-      // CubicMeterReadings: "قراءات بالمتر المكعب",
-      // NumberOfUsers: "عدد المستخدمين",
-
-    },
 
   },
 
 }
-
-export const paths = Object.keys( devices ).map( ( device ) => ( {
+export const packagesFeaturesTitles = {
+  waterLevelMonitoring: "مراقبه مستوى الماء",
+  DeliveryAndInstallation: "التوصيل والتركيب",
+  LowWaterAlerts: "تنبيهات بإنخفاض الماء",
+  WaterLevelStatistics: "إحصائيات لمستوى الماء",
+  NumberOfUsers: "عدد المستخدمين",
+  deviceWatch: "مراقبه الجهاز عبر الحاسب الشخصي",
+}
+export const paths = Object.keys(devices).map((device) => ( {
   href: devices[ device ].path,
   name: devices[ device ].name,
   title: devices[ device ].title,
-} ) )
+} ))
 

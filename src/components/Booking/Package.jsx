@@ -1,12 +1,14 @@
+import { packagesFeaturesTitles } from "apis/data/devicesData"
+
 export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
 {
-  const { name, price, type, id, packagePriceDescription, options } = item
+  const { name, price, type, id, packagePriceDescription, options, features } = item
   return (
     <li>
       <div
         onClick={ () => setItemPlan &&
           setItemPlan(index, name, price, type, id, packagePriceDescription) }
-        className={ `bg-secondary w-64 rounded ${ picked === name &&
+        className={ `bg-secondary w-48 rounded ${ picked === name &&
         "border border-primary" }` }>
         <div
           className={ `h-32  py-5 px-3 flex flex-col justify-center ${ picked ===
@@ -24,16 +26,17 @@ export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
             { packagePriceDescription }
           </p>
         </div>
-        {/*<ul className="p-4 divide-y">*/ }
-        {/*  { Object.keys(packagesFeaturesTitles).map((featureKey, i) => (*/ }
-        {/*    <li*/ }
-        {/*      className="h-20 flex items-center justify-center text-sm"*/ }
-        {/*      key={ i }>{ features[featureKey]  }</li>*/ }
-        {/*  )) }*/ }
-        {/*</ul>*/ }
+        {features && <ul className="p-3 divide-y">
+          { Object.keys(packagesFeaturesTitles).map((featureKey, i) => (
+            <li
+              className={`h-16 flex items-center justify-center text-sm ${features[ featureKey ] === "✓️" && "text-green-500 text-xl"}`}
+              key={ i }>
+              { features[ featureKey ] }</li>
+          )) }
+        </ul> }
       </div>
       {
-        name === picked && options && <div className="w-64 rounded my-3">
+        name === picked && options && <div className="w-42 rounded my-3">
           <ul className="">
             <label htmlFor={ "option" } className="text-sm text-black text-start ">
               ما هى شريحه البيانات التى ستقوم بإستخدامها مع الجهاز؟

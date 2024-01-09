@@ -57,7 +57,6 @@ setItemOption,
           className="btn btn-secondary">
           الرجوع
         </button>
-        {console.log(bookingCart)}
         <button
           disabled={ bookingCart.length === 0 || ( bookingCart[0].id === "withoutSIM" && !bookingCart[0].option) }
           onClick={ () => setStep(2) }

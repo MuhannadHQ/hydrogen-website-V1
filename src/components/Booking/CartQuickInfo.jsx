@@ -11,9 +11,9 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
               <th className="text-start">اسم المنتج</th>
               <th className="text-start">العدد</th>
               <th className="text-start">سعر الجهاز</th>
-              <th className="text-start">
-                سعر الباقة
-              </th>
+              {/*<th className="text-start">*/}
+              {/*  سعر الباقة*/}
+              {/*</th>*/}
             </tr>
             </thead>
             <tbody>
@@ -23,11 +23,11 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
                   { item.title }
                 </td>
                 <td>
-                  { item.quantity }
+                  { item.quantity + item.devicePrice || 0 }
                 </td>
-                <td>
-                  { item.devicePrice } ر.س
-                </td>
+                {/*<td>*/}
+                {/*  { item.devicePrice } ر.س*/}
+                {/*</td>*/}
                 <td>
                   { item.packagePriceDescription }
                 </td>

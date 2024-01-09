@@ -2,7 +2,7 @@ import { packagesFeaturesTitles } from "apis/data/devicesData"
 
 export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
 {
-  const { name, price, type, id, packagePriceDescription, options, features } = item
+  const {title, name, price, type, id, packagePriceDescription, options, features } = item
   return (
     <li>
       <div
@@ -19,7 +19,7 @@ export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
            </h3> */ }
           <p className={ `text-sm text-black py-2 ${ picked === name &&
           "text-white bg-primary " } ` }>
-            { name }
+            { title }
           </p>
           <p className={ `text-sm ${ picked === name &&
           "text-white bg-primary " }` }>

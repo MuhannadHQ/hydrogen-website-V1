@@ -163,7 +163,7 @@ export const devices = {
 
       {
         id: "basic",
-        title: "الباقة الأساسية",
+        title: "الباقة البدائية",
         name: "اشتراك بيانات شهري",
         type: "subscription",
         price: 0,
@@ -182,7 +182,7 @@ export const devices = {
 
       {
         id: "regular",
-        title: "باقة الاشتراك",
+        title: "الباقة الاساسية",
         type: "one-time",
         name: `اشتراك بيانات مفتوحه 
          مدى الحياة`,
@@ -201,7 +201,7 @@ export const devices = {
       },
       {
         id: "withoutSIM",
-        title: "بدون شريحة بيانات",
+        title: "الباقة الاحترافية",
         type: "one-time",
         name: `بدون شريحة بيانات`,
         price: 0,

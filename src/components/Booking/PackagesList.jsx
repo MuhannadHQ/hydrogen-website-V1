@@ -10,20 +10,20 @@ export const PackagesList = ({
 {
   return (
     <section className="">
-      <h3 className="text-center text-2xl my-10 ">
-      الجهاز
-    </h3>
-    <div className="flex items-center justify-center">
-      <Package
-        picked={itemData.deviceDescription}
-        title= "ألفــا"
-        item={{
-          name: itemData.deviceDescription,
-          priceDescription: itemData.priceDescription,
-          packagePriceDescription: itemData.priceDescription
-        }}
-      />
-    </div>
+    {/*  <h3 className="text-center text-2xl my-10 ">*/}
+    {/*  الجهاز*/}
+    {/*</h3>*/}
+    {/*<div className="flex items-center justify-center">*/}
+    {/*  <Package*/}
+    {/*    picked={itemData.deviceDescription}*/}
+    {/*    title= "ألفــا"*/}
+    {/*    item={{*/}
+    {/*      name: itemData.deviceDescription,*/}
+    {/*      priceDescription: itemData.priceDescription,*/}
+    {/*      packagePriceDescription: itemData.priceDescription*/}
+    {/*    }}*/}
+    {/*  />*/}
+    {/*</div>*/}
       <h2 className="text-center text-2xl my-10 ">
         الباقات
       </h2>

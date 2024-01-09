@@ -68,10 +68,10 @@ export const devices = {
     description: "راقب خزان الماء بكل سهولة",
 
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "599 ريال",
-    packagePriceDescription: "599 ريال",
-    devicePrice: 599,
-    price: "599 ريال",
+    priceDescription: "849 ريال",
+    packagePriceDescription: "849 ريال",
+    devicePrice: 0,
+    price: "849 ريال",
     images: [
       {
         src: alphaApp.src,
@@ -166,8 +166,8 @@ export const devices = {
         title: "الباقة البدائية",
         name: "اشتراك بيانات شهري",
         type: "subscription",
-        price: 0,
-        packagePriceDescription: "39 ريال / شهر",
+        price: 849,
+        packagePriceDescription: "849",
         features: {
           DeliveryAndInstallation: "بدون تركيب",
           LowWaterAlerts: "✓️",
@@ -186,8 +186,8 @@ export const devices = {
         type: "one-time",
         name: `اشتراك بيانات مفتوحه 
          مدى الحياة`,
-        price: 299,
-        packagePriceDescription: "299 ريال",
+        price: 899,
+        packagePriceDescription: "899 ريال",
         features: {
           DeliveryAndInstallation: "✓️",
           LowWaterAlerts: "✓️",
@@ -204,8 +204,8 @@ export const devices = {
         title: "الباقة الاحترافية",
         type: "one-time",
         name: `بدون شريحة بيانات`,
-        price: 0,
-        packagePriceDescription: "0 ريال",
+        price: 1199,
+        packagePriceDescription: "1199 ريال",
         options: [
           {
             title: "STC",

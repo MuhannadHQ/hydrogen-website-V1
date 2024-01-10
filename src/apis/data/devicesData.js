@@ -239,8 +239,8 @@ export const packagesFeaturesTitles = {
   waterLevelMonitoring: "مراقبه مستوى الماء",
   LowWaterAlerts: "تنبيهات بإنخفاض الماء",
   WaterLevelStatistics: "إحصائيات لمستوى الماء",
-  NumberOfUsers: "عدد المستخدمين",
   deviceWatch: "مراقبه الجهاز عبر الحاسب الشخصي",
+  NumberOfUsers: "عدد المستخدمين"
 }
 export const paths = Object.keys( devices ).map( ( device ) => ( {
   href: devices[ device ].path,

@@ -58,9 +58,9 @@ setItemOption,
           الرجوع
         </button>
         <button
-          disabled={ bookingCart.length === 0 }
+          disabled={ bookingCart.length === 0  }
           onClick={ () => setStep(2) }
-          className="btn btn-primary-contained w-60">
+          className={`btn btn-primary-contained w-60 `}>
           استمرار
         </button>
       </div>

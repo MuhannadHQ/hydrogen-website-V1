@@ -58,9 +58,9 @@ setItemOption,
           الرجوع
         </button>
         <button
-          disabled={ bookingCart.length === 0 || ( bookingCart[0].id === "withoutSIM" && !bookingCart[0].option) }
+          disabled={ bookingCart.length === 0  }
           onClick={ () => setStep(2) }
-          className={`btn btn-primary-contained w-60 ${ bookingCart.length === 0 || ( bookingCart[0].id === "withoutSIM" && !bookingCart[0].option) && "opacity-50 cursor-not-allowed" }`}>
+          className={`btn btn-primary-contained w-60 `}>
           استمرار
         </button>
       </div>

@@ -30,7 +30,7 @@ export const PackagesList = ({
       <ul
         className="flex overflow-x-auto items-start gap-3 sm:gap-5 md:gap-10 my-5 ">
         <li className="text-center ">
-          <ul className="divide-y w-36 text-sm pt-36">
+          <ul className="divide-y w-24 text-sm pt-36">
             {
               Object.values(packagesFeaturesTitles).map((item, i) =>
                 <li key={ i }

@@ -171,7 +171,7 @@ export const devices = {
         features: {
           DeliveryAndInstallation: "بدون تركيب",
           LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "✓️",
+          WaterLevelStatistics: "❌",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
           deviceWatch: "❌",

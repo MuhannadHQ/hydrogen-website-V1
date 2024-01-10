@@ -94,27 +94,27 @@ export const devices = {
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
-        icon: <WaterLevel/>,
+        icon: <WaterLevel />,
         description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
       },
       {
         title: "تنبيه عند انخفاض مستوى الماء",
-        icon: <Notification/>,
+        icon: <Notification />,
         description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
       },
       {
         title: "إمكانية طلب صهريج مياه",
-        icon: <TankCar/>,
+        icon: <TankCar />,
         description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
       },
       {
         title: "تنبيه عند عطل العوامة",
-        icon: <Warning/>,
+        icon: <Warning />,
         description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي",
       },
       {
         title: "مراقبة عدة أجهزة من حساب واحد",
-        icon: <Devices/>,
+        icon: <Devices />,
         description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق",
       },
     ],
@@ -194,7 +194,6 @@ export const devices = {
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
-
           deviceWatch: "❌",
           NumberOfUsers: "3",
         },
@@ -236,16 +235,16 @@ export const devices = {
 
 }
 export const packagesFeaturesTitles = {
-  waterLevelMonitoring: "مراقبه مستوى الماء",
   DeliveryAndInstallation: "التوصيل والتركيب",
+  waterLevelMonitoring: "مراقبه مستوى الماء",
   LowWaterAlerts: "تنبيهات بإنخفاض الماء",
   WaterLevelStatistics: "إحصائيات لمستوى الماء",
   NumberOfUsers: "عدد المستخدمين",
   deviceWatch: "مراقبه الجهاز عبر الحاسب الشخصي",
 }
-export const paths = Object.keys(devices).map((device) => ( {
+export const paths = Object.keys( devices ).map( ( device ) => ( {
   href: devices[ device ].path,
   name: devices[ device ].name,
   title: devices[ device ].title,
-} ))
+} ) )
 

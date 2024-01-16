@@ -71,7 +71,7 @@ export const devices = {
     priceDescription: "849 ريال",
     packagePriceDescription: "849 ريال",
     devicePrice: 0,
-    price: "849 ريال",
+    price: "499 ريال",
     images: [
       {
         src: alphaApp.src,
@@ -166,7 +166,7 @@ export const devices = {
         title: "الباقة البدائية",
         name: "اشتراك بيانات شهري",
         type: "subscription",
-        price: 849,
+        price: 499,
         packagePriceDescription: "499",
         features: {
           DeliveryAndInstallation: "✓️",
@@ -187,7 +187,7 @@ export const devices = {
         type: "one-time",
         name: `اشتراك بيانات مفتوحه 
          مدى الحياة`,
-        price: 899,
+        price: 699,
         packagePriceDescription: "699 ريال",
         features: {
           DeliveryAndInstallation: "✓️",

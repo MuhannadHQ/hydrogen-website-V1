@@ -68,10 +68,10 @@ export const devices = {
     description: "راقب خزان الماء بكل سهولة",
 
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "849 ريال",
-    packagePriceDescription: "849 ريال",
+    priceDescription: "499 ريال",
+    packagePriceDescription: "499 ريال",
     devicePrice: 0,
-    price: "849 ريال",
+    price: "499 ريال",
     images: [
       {
         src: alphaApp.src,
@@ -166,12 +166,13 @@ export const devices = {
         title: "الباقة البدائية",
         name: "اشتراك بيانات شهري",
         type: "subscription",
-        price: 849,
-        packagePriceDescription: "849",
+        price: 499,
+        packagePriceDescription: "499",
         features: {
-          DeliveryAndInstallation: "بدون تركيب",
+          DeliveryAndInstallation: "✓️",
+          Subscription: "٢٩ ريال/الشهر",
           LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "❌",
+          WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
           deviceWatch: "❌",
@@ -186,10 +187,11 @@ export const devices = {
         type: "one-time",
         name: `اشتراك بيانات مفتوحه 
          مدى الحياة`,
-        price: 899,
-        packagePriceDescription: "899 ريال",
+        price: 699,
+        packagePriceDescription: "699 ريال",
         features: {
           DeliveryAndInstallation: "✓️",
+          Subscription: "بدون أي اشتراك",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
@@ -202,25 +204,12 @@ export const devices = {
         id: "withoutSIM",
         title: "الباقة الاحترافية",
         type: "one-time",
-        name: `بدون شريحة بيانات`,
+        name: `الباقة الاحترافية`,
         price: 1199,
         packagePriceDescription: "1199 ريال",
-        options: [
-          {
-            title: "STC",
-            value: "stc",
-          },
-          {
-            title: "زين",
-            value: "zain",
-          },
-          {
-            title: "موبايلي",
-            value: "mobily",
-          },
-        ],
         features: {
           DeliveryAndInstallation: "✓️",
+          Subscription: "بدون أي اشتراك",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
@@ -236,6 +225,7 @@ export const devices = {
 }
 export const packagesFeaturesTitles = {
   DeliveryAndInstallation: "التوصيل والتركيب",
+  Subscription: "اشتراك شهري",
   waterLevelMonitoring: "مراقبه مستوى الماء",
   LowWaterAlerts: "تنبيهات بإنخفاض الماء",
   WaterLevelStatistics: "إحصائيات لمستوى الماء",

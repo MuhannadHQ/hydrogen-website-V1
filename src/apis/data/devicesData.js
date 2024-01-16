@@ -172,7 +172,7 @@ export const devices = {
           DeliveryAndInstallation: "✓️",
           Subscription: "٢٩ ريال/الشهر",
           LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "❌",
+          WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
           deviceWatch: "❌",
@@ -204,7 +204,7 @@ export const devices = {
         id: "withoutSIM",
         title: "الباقة الاحترافية",
         type: "one-time",
-        name: `بدون شريحة بيانات`,
+        name: `الباقة الاحترافية`,
         price: 1199,
         packagePriceDescription: "1199 ريال",
         features: {

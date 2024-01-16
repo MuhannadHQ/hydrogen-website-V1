@@ -167,9 +167,10 @@ export const devices = {
         name: "اشتراك بيانات شهري",
         type: "subscription",
         price: 849,
-        packagePriceDescription: "849",
+        packagePriceDescription: "499",
         features: {
-          DeliveryAndInstallation: "بدون تركيب",
+          DeliveryAndInstallation: "✓️",
+          Subscription: "٢٩ ريال/الشهر",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "❌",
           waterLevelMonitoring: "✓️",
@@ -187,9 +188,10 @@ export const devices = {
         name: `اشتراك بيانات مفتوحه 
          مدى الحياة`,
         price: 899,
-        packagePriceDescription: "899 ريال",
+        packagePriceDescription: "699 ريال",
         features: {
           DeliveryAndInstallation: "✓️",
+          Subscription: "بدون أي اشتراك",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
@@ -205,22 +207,9 @@ export const devices = {
         name: `بدون شريحة بيانات`,
         price: 1199,
         packagePriceDescription: "1199 ريال",
-        options: [
-          {
-            title: "STC",
-            value: "stc",
-          },
-          {
-            title: "زين",
-            value: "zain",
-          },
-          {
-            title: "موبايلي",
-            value: "mobily",
-          },
-        ],
         features: {
           DeliveryAndInstallation: "✓️",
+          Subscription: "بدون أي اشتراك",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
@@ -236,6 +225,7 @@ export const devices = {
 }
 export const packagesFeaturesTitles = {
   DeliveryAndInstallation: "التوصيل والتركيب",
+  Subscription: "اشتراك شهري",
   waterLevelMonitoring: "مراقبه مستوى الماء",
   LowWaterAlerts: "تنبيهات بإنخفاض الماء",
   WaterLevelStatistics: "إحصائيات لمستوى الماء",

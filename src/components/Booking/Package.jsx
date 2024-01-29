@@ -8,7 +8,7 @@ export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
       <div
         onClick={ () => setItemPlan &&
           setItemPlan(index, name, price, type, id, packagePriceDescription) }
-        className={ `bg-secondary w-18 rounded ${ picked === name &&
+        className={ `bg-secondary w-44 rounded ${ picked === name &&
         "border border-primary" }` }>
         <div
           className={ `h-32  py-5 px-3 flex flex-col justify-center ${ picked ===

@@ -9,7 +9,7 @@ export const PackagesList = ({
 }) =>
 {
   return (
-    <section className="">
+    <section className="flex flex-col justify-center items-center">
     {/*  <h3 className="text-center text-2xl my-10 ">*/}
     {/*  الجهاز*/}
     {/*</h3>*/}

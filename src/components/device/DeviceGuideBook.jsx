@@ -1,5 +1,5 @@
 import Image from "next/image"
-export const DeviceGuideBook = ({ title, guideBook }) =>
+export const DeviceGuideBook = ({ title, guideBook, file }) =>
 {
   return (
     <section className="general-padding my-10">
@@ -11,8 +11,15 @@ export const DeviceGuideBook = ({ title, guideBook }) =>
         height={250}
           src={guideBook} alt={title}/>
       <div className="flex sm:flex-col justify-center gap-5">
-        <button className="btn btn-primary ">الخزان السفلي</button>
-        <button className="btn btn-primary ">الخزان العلوي</button>
+        <button className="btn btn-primary ">
+          <a
+          href={"assets/guide-book.pdf"}
+            download={"assets/guide-book.pdf"}
+            className="">
+            تحميل
+          </a>
+        </button>
+
       </div>
       </div>
     </section>

@@ -6,7 +6,8 @@ export const DeviceHeader = ({  device }) =>
   return (
     <div className="flex general-padding justify-between py-2 bg-black text-white items-center">
       <h3>
-        { title } 
+        { title }
+
       </h3>
       <div className="flex gap-5 items-center">
        <div>

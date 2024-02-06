@@ -9,26 +9,26 @@ export const PackagesList = ({
 }) =>
 {
   return (
-    <section className="flex flex-col justify-center items-center">
-    {/*  <h3 className="text-center text-2xl my-10 ">*/}
-    {/*  الجهاز*/}
-    {/*</h3>*/}
-    {/*<div className="flex items-center justify-center">*/}
-    {/*  <Package*/}
-    {/*    picked={itemData.deviceDescription}*/}
-    {/*    title= "ألفــا"*/}
-    {/*    item={{*/}
-    {/*      name: itemData.deviceDescription,*/}
-    {/*      priceDescription: itemData.priceDescription,*/}
-    {/*      packagePriceDescription: itemData.priceDescription*/}
-    {/*    }}*/}
-    {/*  />*/}
-    {/*</div>*/}
+    <section className="">
+      {/*  <h3 className="text-center text-2xl my-10 ">*/}
+      {/*  الجهاز*/}
+      {/*</h3>*/}
+      {/*<div className="flex items-center justify-center">*/}
+      {/*  <Package*/}
+      {/*    picked={itemData.deviceDescription}*/}
+      {/*    title= "ألفــا"*/}
+      {/*    item={{*/}
+      {/*      name: itemData.deviceDescription,*/}
+      {/*      priceDescription: itemData.priceDescription,*/}
+      {/*      packagePriceDescription: itemData.priceDescription*/}
+      {/*    }}*/}
+      {/*  />*/}
+      {/*</div>*/}
       <h2 className="text-center text-2xl my-10 ">
         الباقات
       </h2>
       <ul
-        className="flex overflow-x-auto items-start gap-3 sm:gap-5 md:gap-10 my-5 ">
+        className="flex overflow-x-auto items-start justify-center gap-3 sm:gap-5 md:gap-10 my-5 ">
         <li className="text-center ">
           <ul className="divide-y w-24 text-sm pt-36">
             {
@@ -40,7 +40,7 @@ export const PackagesList = ({
           </ul>
         </li>
         {
-        itemData.packages.map((item, i) =>
+          itemData.packages.map((item, i) =>
             <Package
               setItemPlan={ setItemPlan }
               setItemOption={ setItemOption }

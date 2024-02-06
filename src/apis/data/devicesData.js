@@ -6,7 +6,7 @@ import { WaterLevel } from "assets/icons/WaterLevel"
 import alphaApp from "assets/images/alpha-1.png"
 import alpha from "assets/images/alpha-2.png"
 import alphaBook from "assets/images/alpha-guide.png"
-
+// import guideBookFile from "assets/guide-book.pdf"
 export const lastDateUpdated = "10/2/2023"
 
 export const devices = {
@@ -125,9 +125,11 @@ export const devices = {
       },
       {
         title: "طريقة تركيب جهاز ألفا - الخزان العلوي",
+
         link: "https://www.youtube.com/embed/mwtmKsYEZZA",
       },
     ],
+
     banner: {
       link: "https://www.youtube.com/embed/ncn0yfey5j8",
       title: "ألفا - جهاز ذكي لمراقبة و تحليل مستوى الماء في الخزان: ",
@@ -170,7 +172,7 @@ export const devices = {
         packagePriceDescription: "499",
         features: {
           DeliveryAndInstallation: "✓️",
-          Subscription: "٢٩ ريال/الشهر",
+          Subscription: "29 ريال/الشهر",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
@@ -187,8 +189,8 @@ export const devices = {
         type: "one-time",
         name: `اشتراك بيانات مفتوحه 
          مدى الحياة`,
-        price: 699,
-        packagePriceDescription: "699 ريال",
+        price: 899,
+        packagePriceDescription: "899 ريال",
         features: {
           DeliveryAndInstallation: "✓️",
           Subscription: "بدون أي اشتراك",

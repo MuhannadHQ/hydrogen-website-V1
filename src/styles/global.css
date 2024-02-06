@@ -47,6 +47,9 @@ html{
     @apply text-primary border-primary transition-colors
 }
 
+.btn-primary-contained {
+    @apply bg-primary text-white border-0 transition-colors hover:bg-primary-hover
+}
 .btn-primary:hover {
     @apply bg-primary-hover text-white
 }

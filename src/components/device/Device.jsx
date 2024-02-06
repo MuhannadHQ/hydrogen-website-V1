@@ -2,6 +2,7 @@ import { DeviceFeatures } from "components/device/DeviceFeatures"
 import { DeviceGuideBook } from "components/device/DeviceGuideBook"
 import { DeviceGuildeVideo } from "components/device/DeviceGuildeVideo"
 import { DeviceHeader } from "components/device/DeviceHeader"
+import DeviceLeft from "components/device/DeviceLeft"
 import { DeviceMain } from "components/device/DeviceMain"
 import {
   TechnicalSpecifications
@@ -15,9 +16,11 @@ export const Device = ({ device }) =>
     guideBook,
     guideVideos,
     banner,
+    guideBookFile
   } = device || {}
   return (
     <>
+      <DeviceLeft />
       <DeviceHeader device={ device }/>
       <DeviceMain
         moreLink={ false }
@@ -32,7 +35,8 @@ export const Device = ({ device }) =>
       {/*    title={ title }/>*/}
       {/*}*/}
       {/*{*/}
-      {/*  guideBook && <DeviceGuideBook title={ title } guideBook={ guideBook }/>*/}
+      { guideBook &&
+        <DeviceGuideBook title={ title } guideBook={ guideBook } file={ guideBookFile }/>}
       {/*}*/}
     </>
   )

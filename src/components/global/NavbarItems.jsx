@@ -17,7 +17,7 @@ export const NavbarItems = ({setMenuOpen= ()=>{}}) =>
         onClick={()=>setMenuOpen(false)}
         className="hover:text-primary transition-colors">
         <Link href={ "/alpha" }>
-          جهاز الفا
+          جهاز ألفا
         </Link>
       </li>
       {/*<li>*/}

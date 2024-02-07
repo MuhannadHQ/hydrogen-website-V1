@@ -121,12 +121,12 @@ export const devices = {
     guideVideos: [
       {
         title: "طريقة تركيب جهاز ألفا - الخزان السفلي",
-        link: "https://www.youtube.com/embed/jQmshQVnSHc",
+        link: "https://www.youtube.com/embed/7GeIGsEoltU",
       },
       {
         title: "طريقة تركيب جهاز ألفا - الخزان العلوي",
 
-        link: "https://www.youtube.com/embed/mwtmKsYEZZA",
+        link: "https://www.youtube.com/embed/2g__q2PSc3k",
       },
     ],
 

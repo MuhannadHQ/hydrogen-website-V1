@@ -28,12 +28,12 @@ export const Device = ({ device }) =>
       <DeviceFeatures
         features={ features } title={ title }/>
       <TechnicalSpecifications technicalSpecifications={ device.technicalSpecifications }/>
-      {/*{*/}
-      {/*  guideVideos &&*/}
-      {/*  <DeviceGuildeVideo*/}
-      {/*    banner={ banner } guideVideos={ guideVideos }*/}
-      {/*    title={ title }/>*/}
-      {/*}*/}
+      {
+        guideVideos &&
+        <DeviceGuildeVideo
+          banner={ banner } guideVideos={ guideVideos }
+          title={ title }/>
+      }
       {/*{*/}
       { guideBook &&
         <DeviceGuideBook title={ title } guideBook={ guideBook } file={ guideBookFile }/>}

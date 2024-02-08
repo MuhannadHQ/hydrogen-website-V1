@@ -13,6 +13,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
   const [userInfo, setUserInfo] = useState({})
   const [paymentMethod, setPaymentMethod] = useState("")
   const [currentStep, setCurrentStep] = useState(0)
+  const [checked, setChecked] = useState(false)
   const total = calculateTotalPrice(bookingCart)
   const orderData = { 
     ...userInfo,
@@ -66,6 +67,8 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         // disablePayment={ disablePayment }
         setCoupon={ setCoupon }
         setPaymentMethod={ setPaymentMethod }
+        setChecked={ setChecked }
+        checked={ checked }
         cart={ cart.map(item => ( { 
           title: item.data.title,
           quantity: item.quantity,
@@ -85,6 +88,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
         total={ total }
       />
       <CompleteBooking
+        setChecked={ setChecked }
         currentStep={ currentStep }
         setCurrentStep={ setCurrentStep }
         paymentMethod={ paymentMethod }

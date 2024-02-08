@@ -1,4 +1,5 @@
 import create_order from "apis/create_order"
+import Agreement from "components/Booking/Agreement"
 import { CartQuickInfo } from "components/Booking/CartQuickInfo"
 import { Coupon } from "components/Booking/steps/Coupon"
 import { Loader } from "components/global/Loader"
@@ -45,6 +46,8 @@ export const PaymentOptions = ({
   currentStep,
   callbackUrl,
   type,
+  setChecked,
+  checked,
   disablePayment
 }) =>
 {
@@ -103,14 +106,17 @@ export const PaymentOptions = ({
                 ))
               }
             </ul>
-
+            <Agreement setChecked={setChecked} checked={checked}/>
             { paymentMethod === "cod" ?
-              <div className="px-5 flex justify-center items-center gap-4 mt-5">
+              <>
+
+              <div className="px-5 flex justify-center items-center gap-4 mt-2">
                 <Link href={ `${ callbackUrl }&&status=paid` }>
                   <button
                     id="purchase"
+                    disabled={ !checked }
                     onClick={ () => setStatus("loading") }
-                    className="btn btn-primary w-64 ">
+                    className={`btn btn-primary w-64 ${ !checked && "opacity-50 cursor-not-allowed" }`}>
                     إتمام الطلب
                   </button>
                 </Link>
@@ -118,18 +124,18 @@ export const PaymentOptions = ({
                   { responseStatus[ status ] }
                 </div>
               </div>
+              </>
               : <button
                 type="button"
                 id="start-checkout"
                 onClick={ handleCreateOrder }
                 disabled={ paymentMethod === ""   }
-                className={ `btn btn-primary-contained w-28 mt-5 ${ !paymentMethod &&
+                className={ `btn btn-primary-contained w-28 mt-2 ${ (!paymentMethod || !checked) &&
                 "opacity-50 cursor-not-allowed" }` }
               >
                 متابعة
               </button>
             }
-
           </div>
 
         </>

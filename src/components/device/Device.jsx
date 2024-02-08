@@ -21,7 +21,7 @@ export const Device = ({ device }) =>
   return (
     <>
       <DeviceLeft />
-      <DeviceHeader device={ device }/>
+      {/*<DeviceHeader device={ device }/>*/}
       <DeviceMain
         moreLink={ false }
         device={ device }/>

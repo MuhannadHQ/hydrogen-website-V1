@@ -7,7 +7,7 @@ const DeviceLeft = () =>
   const leftLength = String(devicesLeft).length
   return (
     <div
-      className="flex general-padding justify-between py-2 bg-black text-white items-center border-b pb-5 border-white">
+      className="flex general-padding justify-between py-8 bg-black text-white items-center  border-b pb-5 border-white">
       <div className="flex flex-col items-center">
         <h3>
           عدد الأجهزة المتبقية للطلب

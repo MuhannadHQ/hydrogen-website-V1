@@ -15,13 +15,11 @@ export default function Home ()
     <>
       <div className="bg-linear">
         <Navbar show={ true }/>
-        <DeviceLeft/>
+
         {/*<DeviceMain device={ devices.lamda } bg={ true }/>*/ }
         <DeviceMain device={ devices.alpha } bg={ true }/>
       </div>
-      <div className=" relative sm:h-559 h-fit my-10">
-        <YoutubeIframe link={devices.alpha.banner.link } title={ devices.alpha.banner.title }/>
-      </div>
+      
       <AboutUs/>
       <Features/>
       <Testimonials/>

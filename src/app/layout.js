@@ -59,6 +59,7 @@ export default function RootLayout ( { children } )
         {/*<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS6MLSG"*/}
         {/*  style={ { display: 'none', visibility: 'hidden' } }></iframe></noscript>*/}
         <Navbar />
+        
         <main style={ {
           minHeight: "calc(100vh - 306px)",
 

@@ -2,6 +2,7 @@
 import conversionView from "apis/conversion-view"
 import { Hydrogen } from "assets/icons/Hydrogen"
 import { Store } from "assets/icons/Store"
+import DeviceLeft from "components/device/DeviceLeft"
 import { CartCount } from "components/global/CartCount"
 import { NavbarItems } from "components/global/NavbarItems"
 import Link from "next/link"
@@ -42,6 +43,7 @@ export const Navbar = ({ show }) =>
 
 
   return ( isHome && !show ) ? null : (
+    <>
     <header className="h-20">
       <nav
         className={ `flex items-center justify-between px-4 sm:px-12 fixed z-50 top-0 w-full h-20 ${ bg
@@ -107,6 +109,8 @@ export const Navbar = ({ show }) =>
         </Transition>
       </nav>
     </header>
+      <DeviceLeft/>
+    </>
   );
 };
 

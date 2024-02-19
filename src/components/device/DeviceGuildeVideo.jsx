@@ -5,21 +5,25 @@ export const DeviceGuildeVideo = ({ banner, guideVideos, title }) =>
 {
   return (
     <section>
-    
+
       <div className="my-10">
-        {/*<h2>*/}
-        {/*  { title }*/}
-        {/*</h2>*/}
-        {/*<p>*/}
-        {/*  طريقة التركيب للخزان العلوي والسفلي*/}
-        {/*</p>*/}
+        <h2 className="text-center">طريقة التركيب</h2>
+
         <ul
-          className="flex justify-between general-padding gap-20 my-14 flex-col sm:flex-row">
+          className="flex justify-between general-padding gap-4 my-14 flex-col sm:flex-row">
           {
             guideVideos.map((video, i) => (
-              <li key={ i } className="h-80 sm:w-6/12 w-full relative">
+              <>
+                <li>
+                  <p>
+                     الخزان { i ===0? "السفلي" : "العلوي"}
+                  </p>
+                </li>
+                <li key={ i } className="h-60 sm:w-6/12 w-full relative my-5">
                 <YoutubeIframe link={ video.link } title={video.title} />
               </li>
+
+              </>
             ))
           }
         </ul>

@@ -1,7 +1,7 @@
 export const WaterLevel = () =>
 {
   return (
-    <svg width="80" height="80" viewBox="0 0 108 108" fill="none"
+    <svg width="70" height="70" viewBox="0 0 108 108" fill="none"
          xmlns="http://www.w3.org/2000/svg">
       <path
         d="M52.5246 13.8157H93.3935C97.5246 13.8157 100.918 17.5296 100.918 21.9862V98.4924C100.918 102.949 97.5246 106.663 93.3935 106.663H14.6066C10.4754 106.663 7.08197 102.949 7.08197 98.4924V21.9862"

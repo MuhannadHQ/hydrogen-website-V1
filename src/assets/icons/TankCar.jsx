@@ -1,7 +1,7 @@
 export const TankCar = () =>
 {
   return (
-    <svg width="90" height="90" viewBox="0 0 107 75" fill="none"
+    <svg width="75" height="75" viewBox="0 0 107 75" fill="none"
          xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_292_467)">
         <path

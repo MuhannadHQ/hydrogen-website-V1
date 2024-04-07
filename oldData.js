@@ -123,7 +123,7 @@ export let product = {
       "value": "installationMethod",
       "fieldValue": "installationCompany",
       "name": "التركيب",
-      "note": "* التركيب متاح داخل مدينة الرياض ومكة المكرمة و جدة و المنطقة الشرقية",
+      "note": "* التركيب متاح داخل مدينة الرياض ومكة المكرمة وجدة والطائف والمنطقة الشرقية",
       "type": "radio",
       selected: [],
       "options": [

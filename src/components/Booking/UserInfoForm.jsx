@@ -23,7 +23,7 @@ const cities = {
   ryiadh: "الرياض",
   jeddah: "جدة",
   makkah: "مكة",
-  dammam: "الطائف",
+  taif: "الطائف",
   dammam: "الدمام",
   khobar: "الخبر",
   dhahran: "الظهران",

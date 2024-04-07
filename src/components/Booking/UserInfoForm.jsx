@@ -23,10 +23,12 @@ const cities = {
   ryiadh: "الرياض",
   jeddah: "جدة",
   makkah: "مكة",
+  qatif: "الطائف",
   dammam: "الدمام",
   khobar: "الخبر",
   dhahran: "الظهران",
-  qatif: "القطيف",
+  qatif: "القطيف"
+
 }
 
 const howDidYouKnow = {

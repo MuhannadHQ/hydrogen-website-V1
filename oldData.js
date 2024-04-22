@@ -48,7 +48,7 @@ export let product = {
     {
       "name": "الباقة الأساسية",
       value: "regular",
-      "price": 799,
+      "price": 899,
 
       values: [
         "بدون اشتراك",

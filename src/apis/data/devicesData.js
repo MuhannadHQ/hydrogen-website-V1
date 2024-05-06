@@ -1,3 +1,5 @@
+
+
 import { Devices } from "assets/icons/Devices"
 import { Notification } from "assets/icons/Notification"
 import { TankCar } from "assets/icons/TankCar"
@@ -14,12 +16,17 @@ export const lastDateUpdated = "10/2/2023"
 export const devices = {
   lamda: {
     _id: "device-2",
+
     name: "lamda",
     path: "/lamda",
     buy_path: "cart",
     title: "جهاز لامدا",
     description: "تحكم بفاتورة الماء بكل سهولة",
     price: "399 ر.س",
+    productImage: lamda.src,
+    deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
+    priceDescription: "499 ريال",
+    devicePrice: 0,
     images: [
       // {
       //   src: lamdaApp.src,
@@ -30,12 +37,13 @@ export const devices = {
         width: "390px",
       },
     ],
-    productImage: lamda.src,
+
     guarantees: [
       "ضمان لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
       "ضمان توصيل وتركيب مجاني",
     ],
+
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
@@ -139,13 +147,6 @@ export const devices = {
       },
     ],
   },
-  //  packages: [ { title: "الباقة الأساسية",
-  // name: "لامدا - الأساسية (بدون اشتراك)",  price: 1299, features: {
-  // MonthlySubscription: "بدون اشتراك", DeliveryAndInstallation: "✓️",
-  // LowWaterAlerts: "✓️", WaterLevelStatistics: "✓️", CubicMeterReadings:
-  // "✓️", LeakDetection: "✓️", ControlOfThePump: "✓️", ControlOfTheFloat:
-  // "✓️", NumberOfUsers: "+5", }, } ], packagesFeaturesTitles: {
-  // MonthlySubscription: "الاشتراك الشهري", DeliveryAndInstallation: "التوصيل والتركيب", LowWaterAlerts: "تنبيهات بإنخفاض الماء", WaterLevelStatistics: "إحصائيات لمستوى الماء", CubicMeterReadings: "قراءات بالمتر المكعب", ControlOfThePump: "التحكم بالمضخة", ControlOfTheFloat: "التحكم بالعوامة", LeakDetection: "كشف التسريب داخل الخزان", NumberOfUsers: "عدد المستخدمين",  } },
   alpha: {
     _id: "device-1",
     name: "alpha",
@@ -160,6 +161,8 @@ export const devices = {
     packagePriceDescription: "499 ريال",
     devicePrice: 0,
     price: "499 ريال",
+    guideBook: alphaBook.src,
+    productImage: alpha.src,
     images: [
       {
         src: alphaApp.src,
@@ -172,7 +175,7 @@ export const devices = {
       //   width: "w-5/12",
       // },
     ],
-    productImage: alpha.src,
+
     guarantees: [
       "توصيل وتركيب مجاني",
       "ضمان شامل لمدة سنتين",
@@ -249,7 +252,7 @@ export const devices = {
         value: "8 امتار",
       },
     ],
-    guideBook: alphaBook.src,
+
     packages: [
       {
         id: "basic",

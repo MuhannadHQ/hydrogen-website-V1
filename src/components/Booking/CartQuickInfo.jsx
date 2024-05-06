@@ -1,6 +1,6 @@
 export const CartQuickInfo = ({ cart, total, coupon, type }) =>
 {
-  return (
+   return (
     <div className="px-10 md:px-20">
       <div className="text-start w-full h-full">
         <div className="">

@@ -109,7 +109,7 @@ export const Navbar = ({ show }) =>
         </Transition>
       </nav>
     </header>
-      <DeviceLeft/>
+      {/* <DeviceLeft/> */}
     </>
   );
 };

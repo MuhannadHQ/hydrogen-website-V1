@@ -6,52 +6,79 @@ import { WaterLevel } from "assets/icons/WaterLevel"
 import alphaApp from "assets/images/alpha-1.png"
 import alpha from "assets/images/alpha-2.png"
 import alphaBook from "assets/images/alpha-guide.png"
+import lamdaApp from "assets/images/lamda-app.png"
+import lamda from "assets/images/lamda.png"
 // import guideBookFile from "assets/guide-book.pdf"
 export const lastDateUpdated = "10/2/2023"
 
 export const devices = {
-  // lamda: {
-  //   _id: "device-2",
-  //   name: "lamda",
-  //   path: "/lamda",
-  //   buy_path: "cart",
-  //   title: "جهاز لامدا",
-  //   description: "تحكم بفاتورة الماء بكل سهولة",
-  //   price: "399 ر.س",
-  //   images: [
-  //     {
-  //       src: lamdaApp.src,
-  //       width: "196px",
-  //     },
-  //     {
-  //       src: lamda.src,
-  //       width: "390px",
-  //     },
-  //   ],
-  //   guarantees: [
-  //     "ضمان لمدة سنتين",
-  //     "أحقية استرجاع كامل المبلغ خلال 30 يوم",
-  //     "ضمان توصيل وتركيب مجاني",
-  //   ],
-  //   features: [
-  //     {
-  //       title: "مراقبة لمستوى ماء الخزان",
-  //       icon: <WaterLevel />,
-  //       description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق
-  // الجوال", }, { title: "تحكم بتدفق ماء الخزان", icon: <ControlWaterStream
-  // />, description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق
-  // هيدروجين", }, { title: "تنبيه عند انخفاض مستوى الماء", icon: <Notification
-  // />, description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله
-  // إليه", }, { title: "إمكانية طلب صهريج مياه", icon: <TankCar />,
-  // description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين", }, {
-  // title: "كشف التسريبات", icon: <LeakDetection />, description: "يمكنك عبر
-  // التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج", }, { title:
-  // "تحكم في المضخة", icon: <ControlPump />, description: "بإمكانك التحكم
-  // بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين", }, { title:
-  // "تنبيه عند عطل العوامة", icon: <Warning />, description: "سيصلك تنبيه على
-  // التطبيق عند عطل عوامة الخزان الأرضي", }, { title: "مراقبة عدة أجهزة من
-  // حساب واحد", icon: <Devices />, description: "باستطاعتك مراقبة أكثر من جهاز
-  // من حساب واحد على التطبيق", }, ], packages: [ { title: "الباقة الأساسية",
+  lamda: {
+    _id: "device-2",
+    name: "lamda",
+    path: "/lamda",
+    buy_path: "cart",
+    title: "جهاز لامدا",
+    description: "تحكم بفاتورة الماء بكل سهولة",
+    price: "399 ر.س",
+    images: [
+      // {
+      //   src: lamdaApp.src,
+      //   width: "196px",
+      // },
+      {
+        src: lamda.src,
+        width: "390px",
+      },
+    ],
+    guarantees: [
+      "ضمان لمدة سنتين",
+      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+      "ضمان توصيل وتركيب مجاني",
+    ],
+    features: [
+  {
+    title: "مراقبة لمستوى ماء الخزان",
+    icon: <WaterLevel />,
+    description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال"
+  }, 
+  // { 
+  //   title: "تحكم بتدفق ماء الخزان", 
+  //   icon: <ControlWaterStream />, 
+  //   description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين" 
+  // }, 
+  { 
+    title: "تنبيه عند انخفاض مستوى الماء", 
+    icon: <Notification />, 
+    description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه" 
+  }, 
+  { 
+    title: "إمكانية طلب صهريج مياه", 
+    icon: <TankCar />, 
+    description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين" 
+  }, 
+  // {
+  //   title: "كشف التسريبات", 
+  //   icon: <LeakDetection />, 
+  //   description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج" 
+  // }, 
+  // { 
+  //   title: "تحكم في المضخة", 
+  //   icon: <ControlPump />, 
+  //   description: "بإمكانك التحكم بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين" 
+  // }, 
+  { 
+    title: "تنبيه عند عطل العوامة", 
+    icon: <Warning />, 
+    description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي" 
+  }, 
+  { 
+    title: "مراقبة عدة أجهزة من حساب واحد", 
+    icon: <Devices />, 
+    description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق" 
+  }
+]
+  },
+  //  packages: [ { title: "الباقة الأساسية",
   // name: "لامدا - الأساسية (بدون اشتراك)",  price: 1299, features: {
   // MonthlySubscription: "بدون اشتراك", DeliveryAndInstallation: "✓️",
   // LowWaterAlerts: "✓️", WaterLevelStatistics: "✓️", CubicMeterReadings:

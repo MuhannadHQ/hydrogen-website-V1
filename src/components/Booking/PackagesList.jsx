@@ -24,8 +24,9 @@ export const PackagesList = ({
       {/*    }}*/}
       {/*  />*/}
       {/*</div>*/}
+
       <h2 className="text-center text-2xl my-10 ">
-        الباقات
+         باقات { itemData.title }
       </h2>
       <ul
         className="flex overflow-x-auto items-start justify-center gap-3 sm:gap-5 md:gap-10 my-5 ">

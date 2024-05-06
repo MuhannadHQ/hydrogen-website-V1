@@ -95,7 +95,11 @@ const reducer = (state, action) =>
       }
     case "SET_ITEM_PLAN":
       const newBookingCart = state.bookingCart.map((item, index) =>
-        ( {
+
+        {
+          
+          return index === action.payload.index ? 
+           {
           ...item,
           plan: action.payload.plan,
           price: action.payload.price,
@@ -103,7 +107,8 @@ const reducer = (state, action) =>
           id: action.payload.id,
           packagePriceDescription: action.payload.packagePriceDescription,
           option: item.options?.[ 0 ]?.value || "",
-        } ))
+        } : item
+      })
       return {
         ...state,
         bookingCart: newBookingCart,

@@ -6,8 +6,10 @@ export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
   return (
     <li>
       <div
-        onClick={ () => setItemPlan &&
-          setItemPlan(index, name, price, type, id, packagePriceDescription) }
+        onClick={ () => {
+          console.log("index", index, name, price, type, id, packagePriceDescription)
+          setItemPlan &&
+          setItemPlan(index, name, price, type, id, packagePriceDescription) }}
         className={ `bg-secondary w-18 rounded ${ picked === name &&
         "border border-primary" }` }>
         <div

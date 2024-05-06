@@ -13,21 +13,21 @@ export const NavbarItems = ({setMenuOpen= ()=>{}}) =>
           className="hover:text-primary transition-colors">
           <Link href={ "/" }>الرئيسية</Link>
         </li>
-      <li
+      {/* <li
         onClick={()=>setMenuOpen(false)}
         className="hover:text-primary transition-colors">
         <Link href={ "/alpha" }>
           جهاز ألفا
         </Link>
+      </li> */}
+      <li>
+       <DropDown title={"منتجاتنا"} paths={paths} handleClose={() => setMenuOpen(false)}/>
       </li>
-      {/*<li>*/}
-      {/*  <DropDown title={"منتجاتنا"} paths={paths} handleClose={() => setMenuOpen(false)}/>*/}
-      {/*</li>*/}
-      {/*  <li*/}
-      {/*    onClick={()=>setMenuOpen(false)}*/}
-      {/*    className="hover:text-primary transition-colors">*/}
-      {/*    <Link href={"/aboutus"}>عن هيدروجين</Link>*/}
-      {/*  </li>*/}
+        <li
+          onClick={()=>setMenuOpen(false)}
+          className="hover:text-primary transition-colors">
+          <Link href={"/aboutus"}>عن هيدروجين</Link>
+        </li>
       <li
         onClick={()=>setMenuOpen(false)}
         className="hover:text-primary transition-colors">

@@ -18,14 +18,14 @@ setItemOption,
     <>
       {
         bookingCart.map((item, index) =>
-          index === 0 ?
+          
           <PackagesList
             key={ index }
            itemData={ item }
             setItemPlan={ setItemPlan }
             index={ index }
             setItemOption={ setItemOption }
-          /> : null
+          />
         )
       }
 

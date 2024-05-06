@@ -30,53 +30,114 @@ export const devices = {
         width: "390px",
       },
     ],
+    productImage: lamda.src,
     guarantees: [
       "ضمان لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
       "ضمان توصيل وتركيب مجاني",
     ],
     features: [
-  {
-    title: "مراقبة لمستوى ماء الخزان",
-    icon: <WaterLevel />,
-    description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال"
-  }, 
-  // { 
-  //   title: "تحكم بتدفق ماء الخزان", 
-  //   icon: <ControlWaterStream />, 
-  //   description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين" 
-  // }, 
-  { 
-    title: "تنبيه عند انخفاض مستوى الماء", 
-    icon: <Notification />, 
-    description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه" 
-  }, 
-  { 
-    title: "إمكانية طلب صهريج مياه", 
-    icon: <TankCar />, 
-    description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين" 
-  }, 
-  // {
-  //   title: "كشف التسريبات", 
-  //   icon: <LeakDetection />, 
-  //   description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج" 
-  // }, 
-  // { 
-  //   title: "تحكم في المضخة", 
-  //   icon: <ControlPump />, 
-  //   description: "بإمكانك التحكم بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين" 
-  // }, 
-  { 
-    title: "تنبيه عند عطل العوامة", 
-    icon: <Warning />, 
-    description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي" 
-  }, 
-  { 
-    title: "مراقبة عدة أجهزة من حساب واحد", 
-    icon: <Devices />, 
-    description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق" 
-  }
-]
+      {
+        title: "مراقبة لمستوى ماء الخزان",
+        icon: <WaterLevel />,
+        description:
+          "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
+      },
+      // {
+      //   title: "تحكم بتدفق ماء الخزان",
+      //   icon: <ControlWaterStream />,
+      //   description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين"
+      // },
+      {
+        title: "تنبيه عند انخفاض مستوى الماء",
+        icon: <Notification />,
+        description:
+          "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
+      },
+      {
+        title: "إمكانية طلب صهريج مياه",
+        icon: <TankCar />,
+        description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
+      },
+      // {
+      //   title: "كشف التسريبات",
+      //   icon: <LeakDetection />,
+      //   description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج"
+      // },
+      // {
+      //   title: "تحكم في المضخة",
+      //   icon: <ControlPump />,
+      //   description: "بإمكانك التحكم بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين"
+      // },
+      {
+        title: "تنبيه عند عطل العوامة",
+        icon: <Warning />,
+        description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي",
+      },
+      {
+        title: "مراقبة عدة أجهزة من حساب واحد",
+        icon: <Devices />,
+        description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق",
+      },
+    ],
+    packages: [
+      {
+        id: "basic",
+        title: "الباقة البدائية",
+        name: "اشتراك بيانات شهري",
+        type: "subscription",
+        price: 699,
+        packagePriceDescription: "699",
+        features: {
+          DeliveryAndInstallation: "✓️",
+          Subscription: "29 ريال/الشهر",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
+          deviceWatch: "❌",
+          NumberOfUsers: "1",
+        },
+      },
+
+      {
+        id: "regular",
+        title: "الباقة الاساسية",
+        type: "one-time",
+        name: `اشتراك بيانات مفتوحه 
+         مدى الحياة`,
+        price: 999,
+        packagePriceDescription: "999 ريال",
+        features: {
+          DeliveryAndInstallation: "✓️",
+          Subscription: "بدون أي اشتراك",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
+          deviceWatch: "❌",
+          NumberOfUsers: "3",
+        },
+      },
+      {
+        id: "withoutSIM",
+        title: "الباقة الاحترافية",
+        type: "one-time",
+        name: `الباقة الاحترافية`,
+        price: 1599,
+        packagePriceDescription: "1599 ريال",
+        features: {
+          DeliveryAndInstallation: "✓️",
+          Subscription: "بدون أي اشتراك",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
+          deviceWatch: "✓️",
+          NumberOfUsers: "+5",
+        },
+      },
+    ],
   },
   //  packages: [ { title: "الباقة الأساسية",
   // name: "لامدا - الأساسية (بدون اشتراك)",  price: 1299, features: {
@@ -116,18 +177,19 @@ export const devices = {
       "توصيل وتركيب مجاني",
       "ضمان شامل لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
-
     ],
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
         icon: <WaterLevel />,
-        description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
+        description:
+          "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
       },
       {
         title: "تنبيه عند انخفاض مستوى الماء",
         icon: <Notification />,
-        description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
+        description:
+          "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
       },
       {
         title: "إمكانية طلب صهريج مياه",
@@ -189,7 +251,6 @@ export const devices = {
     ],
     guideBook: alphaBook.src,
     packages: [
-
       {
         id: "basic",
         title: "الباقة البدائية",
@@ -206,7 +267,6 @@ export const devices = {
           LeakDetection: "✓️",
           deviceWatch: "❌",
           NumberOfUsers: "1",
-
         },
       },
 
@@ -248,10 +308,8 @@ export const devices = {
         },
       },
     ],
-
   },
-
-}
+};
 export const packagesFeaturesTitles = {
   DeliveryAndInstallation: "التوصيل والتركيب",
   Subscription: "اشتراك شهري",

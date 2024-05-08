@@ -76,11 +76,11 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 20px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 16px;
 }
 p {
   color: var(--p-color);

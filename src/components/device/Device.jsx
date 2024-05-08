@@ -4,6 +4,7 @@ import { DeviceGuildeVideo } from "components/device/DeviceGuildeVideo"
 import { DeviceHeader } from "components/device/DeviceHeader"
 import { DeviceMain } from "components/device/DeviceMain"
 import YoutubeIframe from "components/global/YoutubeIframe"
+import DeviceBanner from "./DeviceBanner"
 
 export const Device = ({ device }) =>
 {
@@ -22,12 +23,7 @@ export const Device = ({ device }) =>
       <DeviceMain moreLink={false} device={device} />
       {
         banner && (
-          <div className="mx-5">
-        <h2 className="mt-8 mb-8 ">فيديو تعريفي</h2>
-        <div className=" relative my-5 Device-video">
-          <YoutubeIframe link={banner?.link} title={banner?.title} />
-        </div>
-      </div>
+       <DeviceBanner banner={banner} />
         )
         
       }

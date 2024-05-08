@@ -23,14 +23,14 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
                   { item.title }
                 </td>
                 <td>
-                  { item.quantity + item.devicePrice || 0 }
+                  { item.quantity   || 0 }
                 </td>
-                {/*<td>*/}
-                {/*  { item.devicePrice } ر.س*/}
-                {/*</td>*/}
                 <td>
+                 { item.devicePrice } ر.س
+                 </td>
+                {/* <td>
                   { item.packagePriceDescription }
-                </td>
+                </td> */}
               </tr>
             )) }
             {

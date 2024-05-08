@@ -14,7 +14,7 @@ const refineCart = (cart, bookingCart) => {
         title: item.data.title,
         quantity: item.quantity,
         devicePrice: device?.devicePrice,
-        packagePriceDescription: device.packagePriceDescription,
+        // packagePriceDescription: device.packagePriceDescription,
 
         price: device?.price,
       };
@@ -23,7 +23,7 @@ const refineCart = (cart, bookingCart) => {
 };
 const calculateTotalPrice = (bookingCart) =>
   bookingCart.reduce(
-    (acc, item) => acc + (item.price + item.devicePrice) || 0,
+    (acc, item) => acc + ( item.devicePrice) || 0,
     0
   );
 const getType = (bookingCart = []) => bookingCart[0]?.type;
@@ -42,16 +42,16 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
     discount: coupon?.discount,
     installationCompany: "",
     scSCi: "",
-    packageID: bookingCart[0]?.id,
+    // packageID: bookingCart[0]?.id,
     orderTotal: total,
     products: bookingCart.map((item) => ({
-      package: item.plan,
+      // package: item.plan,
       tankType: item.tankType || "none",
       qty: 1,
       price: item.price,
       devicePrice: item.devicePrice,
       id: item.id,
-      option: item.option,
+      // option: item.option,
     })),
     utm: localStorage.getItem("UTM"),
   };

@@ -26,13 +26,13 @@ export const DropDown = ({ title = "", paths, handleClose }) =>
           { (state) => (
         <div
           className={`sm:absolute whitespace-nowrap top-full rounded max-w-fit  -right-3 sm:-right-1/2 z-100 bg-white transition-all duration-300 ease-in-out overflow-hidden
-          ${state === "entered" ? "sm:h-20 h-16 sm:py-1 py-2 sm:border sm:shadow" : "h-0"} `}>
+          ${state === "entered" ? "sm:h-16 h-16 sm:py-1 py-2 sm:border sm:shadow" : "h-0"} `}>
           <ul className="flex flex-col bg-white  sm:divide-y  ">
             {
               paths.map((path, index) =>
                 <li
                   onClick={ ()=> setShow(false) }
-                  className="py-1 px-1 sm:px-5  hover:text-primary transition-colors  " key={ index }>
+                  className="py-0.5 px-1 sm:px-5  hover:text-primary transition-colors  " key={ index }>
                   <Link
                     onClick={ handleClose }
                     href={ path.href } >

@@ -10,6 +10,9 @@ import alpha from "assets/images/alpha-2.png"
 import alphaBook from "assets/images/alpha-guide.png"
 import lamdaApp from "assets/images/lamda-app.png"
 import lamda from "assets/images/lamda.png"
+import { ControlPump } from "assets/icons/ControlPump"
+import { ControlWaterStream } from "assets/icons/ControlWaterStream"
+import { LeakDetection } from "assets/icons/LeakDetection"
 // import guideBookFile from "assets/guide-book.pdf"
 export const lastDateUpdated = "10/2/2023"
 
@@ -22,11 +25,11 @@ export const devices = {
     buy_path: "cart",
     title: "جهاز لامدا",
     description: "تحكم بفاتورة الماء بكل سهولة",
-    price: "399 ر.س",
+    price: "1399 ر.س",
     productImage: lamda.src,
-    deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "499 ريال",
-    devicePrice: 0,
+    deviceDescription: "جهاز لامدا + توصيل وتركيب مجاني",
+    priceDescription: "1399 ريال",
+    devicePrice: 1399,
     images: [
       // {
       //   src: lamdaApp.src,
@@ -39,9 +42,9 @@ export const devices = {
     ],
 
     guarantees: [
+      "توصيل وتركيب مجاني", 
       "ضمان لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
-      "ضمان توصيل وتركيب مجاني",
     ],
 
     features: [
@@ -51,11 +54,11 @@ export const devices = {
         description:
           "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
       },
-      // {
-      //   title: "تحكم بتدفق ماء الخزان",
-      //   icon: <ControlWaterStream />,
-      //   description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين"
-      // },
+      {
+        title: "تحكم بتدفق ماء الخزان",
+        icon: <ControlWaterStream />,
+        description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين"
+      },
       {
         title: "تنبيه عند انخفاض مستوى الماء",
         icon: <Notification />,
@@ -67,16 +70,16 @@ export const devices = {
         icon: <TankCar />,
         description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
       },
-      // {
-      //   title: "كشف التسريبات",
-      //   icon: <LeakDetection />,
-      //   description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج"
-      // },
-      // {
-      //   title: "تحكم في المضخة",
-      //   icon: <ControlPump />,
-      //   description: "بإمكانك التحكم بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين"
-      // },
+      {
+        title: "كشف التسريبات",
+        icon: <LeakDetection />,
+        description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج"
+      },
+      {
+        title: "تحكم في المضخة",
+        icon: <ControlPump />,
+        description: "بإمكانك التحكم بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين"
+      },
       {
         title: "تنبيه عند عطل العوامة",
         icon: <Warning />,
@@ -156,11 +159,11 @@ export const devices = {
 
     description: "راقب خزان الماء بكل سهولة",
 
-    deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "499 ريال",
-    packagePriceDescription: "499 ريال",
-    devicePrice: 0,
-    price: "499 ريال",
+    deviceDescription: "جهاز ألفا + توصيل مجاني",
+    priceDescription: "899 ريال",
+    packagePriceDescription: "899 ريال",
+    devicePrice: 899,
+    price: "899 ريال",
     guideBook: alphaBook.src,
     productImage: alpha.src,
     images: [
@@ -177,7 +180,7 @@ export const devices = {
     ],
 
     guarantees: [
-      "توصيل وتركيب مجاني",
+      "توصيل مجاني",
       "ضمان شامل لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
@@ -259,7 +262,7 @@ export const devices = {
         title: "الباقة البدائية",
         name: "اشتراك بيانات شهري",
         type: "subscription",
-        price: 499,
+        price: 899,
         packagePriceDescription: "499",
         features: {
           DeliveryAndInstallation: "✓️",

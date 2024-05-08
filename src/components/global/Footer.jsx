@@ -30,7 +30,7 @@ export const Footer = () =>
       </div>
 
       <div>
-        <p>هيدروجين 2023</p>
+        <p>هيدروجين 2024</p>
       </div>
     </footer>
   )

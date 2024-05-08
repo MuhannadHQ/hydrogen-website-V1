@@ -1,5 +1,6 @@
 "use client"
 import contactUs from "apis/contact_us"
+import Call from "assets/icons/Call"
 import { Email } from "assets/icons/Email"
 import { Location } from "assets/icons/Location"
 import { Whattsapp } from "assets/icons/Whattsapp"
@@ -58,7 +59,7 @@ export const ContactUs = ({ onlyform }) =>
           <div className="w-11/12 md:w-5/12 flex flex-col gap-20 mb-6">
             <ul className=" flex flex-col justify-center gap-10">
               <li className="flex items-center gap-3 ">
-                <Whattsapp/>
+                <Call/>
                 <span>0504281941</span>
               </li>
               <li className="flex items-center gap-3 ">

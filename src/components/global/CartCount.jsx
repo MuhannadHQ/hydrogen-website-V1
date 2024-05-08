@@ -19,7 +19,7 @@ export const CartCount = () =>
   return ( parseInt(count) <= 0 ) ? null : (
     <>
       <div
-        className="absolute top-0.5 -left-2.5 sm:-left-0.5 ml-4 flex items-center justify-center text-primary text-md w-full h-full mt-0.5">
+        className="absolute top-0.5 -left-2.5 sm:-left-2 ml-6 flex items-center justify-center text-primary text-md w-full h-full mt-0.5">
               <span>
                 { parseInt(count) }
               </span>

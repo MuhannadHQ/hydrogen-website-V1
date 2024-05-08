@@ -7,8 +7,8 @@ export const DeviceGuideBook = ({ title, guideBook, file, technicalSpecification
   return (
     <section className="general-padding my-10">
    
-      <TechnicalSpecifications
-        technicalSpecifications={ technicalSpecifications }/>
+      {/* <TechnicalSpecifications
+        technicalSpecifications={ technicalSpecifications }/> */}
       <div
         className="flex justify-center items-center gap-14 my-14 flex-col sm:flex-row">
 

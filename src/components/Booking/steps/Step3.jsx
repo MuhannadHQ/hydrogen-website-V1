@@ -48,7 +48,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
       // package: item.plan,
       tankType: item.tankType || "none",
       qty: 1,
-      price: item.price,
+      // price: item.price,
       devicePrice: item.devicePrice,
       id: item.id,
       // option: item.option,

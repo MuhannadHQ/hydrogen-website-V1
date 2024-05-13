@@ -6,7 +6,7 @@ export const Email = () => {
         // style="enable-background:new 0 0 1691 1407;"
         version="1.1"
         viewBox="0 0 1691 1407"
-        width="33px"
+        width="25px"
         xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"

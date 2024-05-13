@@ -22,7 +22,7 @@ export const DeviceMain = ({
         <div className="">
 
             <>
-          <h2 className=" text-3xl mb-3">
+          <h2 className=" text-2xl mb-3">
             { title }
           </h2><p>
           { description }

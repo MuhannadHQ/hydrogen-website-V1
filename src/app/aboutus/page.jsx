@@ -24,9 +24,14 @@ const page = () =>
   return (
     <>
       {aboutUSData.map((item, index) => (
-        <div key={index} className="flex flex-col items-center gap-5 my-20">
-          <div className="w-28 h-28">{item.icon}</div>
-          <h2 className=" text-2xl font-bold">{item.title}</h2>
+        <div
+          key={index}
+          className={`flex flex-col items-center py-10 ${
+            index % 2 === 0 ? "" : "bg-gray-100"
+          }`}
+        >
+          <div className="w-24 h-24">{item.icon}</div>
+          <h2 className=" text-2xl pb-8 font-bold">{item.title}</h2>
           <p className="text-l">{item.description}</p>
         </div>
       ))}

@@ -145,7 +145,7 @@ li {
 
 .Device-video {
   width: 100%;
-  height: 600px;
+  height: 650px;
 }
 
 @media screen and (max-width: 768px) {

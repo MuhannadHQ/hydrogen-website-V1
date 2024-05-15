@@ -6,7 +6,7 @@ function Vision() {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       zoomAndPan="magnify"
-      viewBox="0 0 2250 2250.000011"
+      viewBox="0 0 2000 2000.000011"
       preserveAspectRatio="xMidYMid meet"
       version="1.0"
     >
@@ -24,20 +24,7 @@ function Vision() {
           />
         </clipPath>
       </defs>
-      <g clip-path="url(#ebfd87b1cd)">
-        <path
-          fill="#ffffff"
-          d="M 0.5 0 L 2249.5 0 L 2249.5 2249 L 0.5 2249 Z M 0.5 0 "
-          fill-opacity="1"
-          fill-rule="nonzero"
-        />
-        <path
-          fill="#ffffff"
-          d="M 0.5 0 L 2249.5 0 L 2249.5 2249 L 0.5 2249 Z M 0.5 0 "
-          fill-opacity="1"
-          fill-rule="nonzero"
-        />
-      </g>
+      
       <g clip-path="url(#38effe8f50)">
         <path
           fill="#0074fb"

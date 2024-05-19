@@ -23,18 +23,26 @@ const page = () =>
 {
   return (
     <>
-      {aboutUSData.map((item, index) => (
-        <div
-          key={index}
-          className={`flex flex-col items-center py-10 ${
-            index % 2 === 0 ? "" : "bg-gray-100"
-          }`}
-        >
-          <div className="w-24 h-24">{item.icon}</div>
-          <h2 className=" text-2xl pb-8 font-bold">{item.title}</h2>
-          <p className="text-l">{item.description}</p>
+      <section>
+        <div className="flex-wrap h-64 text-base text-gray-800 bg-secondary px-5 pt-5  flex items-center justify-center">
+          <h2 className="">
+            <p className="text-primary  px-1"> تعرف على هيدروجين </p>
+            <p className="text-base py-1"> حيث يلتقي الابتكار بالبساطة</p>
+          </h2>
         </div>
-      ))}
+        {aboutUSData.map((item, index) => (
+          <div
+            key={index}
+            className={`flex flex-col items-center py-10 ${
+              index % 2 === 0 ? "" : "bg-secondary"
+            }`}
+          >
+            <div className="w-24 h-24">{item.icon}</div>
+            <h2 className=" text-2xl pb-8 font-bold">{item.title}</h2>
+            <p className="text-l">{item.description}</p>
+          </div>
+        ))}
+      </section>
     </>
   );
 }

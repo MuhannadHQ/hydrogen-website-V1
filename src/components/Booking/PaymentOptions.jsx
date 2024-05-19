@@ -109,7 +109,7 @@ export const PaymentOptions = ({
                 </li>
               ))}
             </ul>
-            <Agreement setChecked={setChecked} checked={checked} />
+            {/* <Agreement setChecked={setChecked} checked={checked} /> */}
             {paymentMethod === "cod" ? (
               <>
                 <div className="px-5 flex justify-center items-center gap-4 mt-2">
@@ -137,7 +137,7 @@ export const PaymentOptions = ({
                 onClick={handleCreateOrder}
                 disabled={paymentMethod === ""}
                 className={`btn btn-primary-contained w-28 mt-2 ${
-                  (!paymentMethod || !checked) &&
+                  (!paymentMethod ) &&
                   "opacity-50 cursor-not-allowed"
                 }`}
               >

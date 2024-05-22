@@ -13,11 +13,11 @@ const aboutUSData = [
     description: "رفع الإنتاجية إلى مستويات غير مسبوقة",
     icon: <Vision />,
   },
-  {
-    title: "قيمنا",
-    description: "الابتكار - النزاهة - الجودة - رضا العملاء - التأقلم",
-    icon: <Value />,
-  },
+  // {
+  //   title: "قيمنا",
+  //   description: "الابتكار - النزاهة - الجودة - رضا العملاء - التأقلم",
+  //   icon: <Value />,
+  // },
 ];
 const page = () =>
 {
@@ -34,7 +34,7 @@ const page = () =>
           <div
             key={index}
             className={`flex flex-col items-center py-10 ${
-              index % 2 === 0 ? "" : "bg-secondary"
+              index % 2 === 1 ? "" : "bg-secondary"
             }`}
           >
             <div className="w-24 h-24">{item.icon}</div>

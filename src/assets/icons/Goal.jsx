@@ -25,18 +25,7 @@ function Goal() {
         </clipPath>
       </defs>
       <g clip-path="url(#2bf7f076ca)">
-        <path
-          fill="#ffffff"
-          d="M 0.5 0 L 2249.5 0 L 2249.5 2249 L 0.5 2249 Z M 0.5 0 "
-          fill-opacity="1"
-          fill-rule="nonzero"
-        />
-        <path
-          fill="#ffffff"
-          d="M 0.5 0 L 2249.5 0 L 2249.5 2249 L 0.5 2249 Z M 0.5 0 "
-          fill-opacity="1"
-          fill-rule="nonzero"
-        />
+       
       </g>
       <path
         fill="#0074fb"

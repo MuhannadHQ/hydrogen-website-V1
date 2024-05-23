@@ -56,7 +56,7 @@ export const Navbar = ({ show }) =>
             </Link>
 
           </div>
-          <ul className="hidden gap-4 sm:flex items-center">
+          <ul className="hidden gap-4 md:flex items-center">
             <NavbarItems/>
           </ul>
         </div>
@@ -68,7 +68,7 @@ export const Navbar = ({ show }) =>
             </Link>
           </div>
           <button
-            className="sm:hidden block text-4xl"
+            className="md:hidden block text-4xl"
             onClick={ toggleMenu }
             aria-label="Toggle Menu"
           >

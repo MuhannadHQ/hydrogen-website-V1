@@ -24,7 +24,7 @@ const page = () =>
   return (
     <>
       <section>
-        <div className="flex-wrap h-64 text-base text-gray-800 bg-secondary px-5 pt-5  flex items-center justify-center">
+        <div className="flex-wrap h-64 text-base text-gray-800 bg- px-5 pt-5  flex items-center justify-center">
           <h2 className="">
             <p className="text-primary  px-1"> تعرف على هيدروجين </p>
             <p className="text-base py-1"> حيث يلتقي الابتكار بالبساطة</p>

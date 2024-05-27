@@ -33,7 +33,7 @@ export const NavbarItems = ({ setMenuOpen = () => {} }) => {
       >
         <Link href={"/aboutus"}>عن هيدروجين</Link>
       </li>
-      <li
+      {/* <li
         onClick={() => setMenuOpen(false)}
         className="hover:text-primary transition-colors"
       >
@@ -46,7 +46,7 @@ export const NavbarItems = ({ setMenuOpen = () => {} }) => {
         <Link href={"/installation"}>
             طريقه التركيب
            </Link>
-      </li>
+      </li> */}
       <li
         onClick={() => setMenuOpen(false)}
         className="hover:text-primary transition-colors"

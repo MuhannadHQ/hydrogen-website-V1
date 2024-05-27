@@ -61,7 +61,7 @@ export default function RootLayout ( { children } )
         <Navbar />
         
         <main style={ {
-          minHeight: "calc(100vh - 306px)",
+          // minHeight: "calc(100vh - 306px)",
 
         } }>
           { children }

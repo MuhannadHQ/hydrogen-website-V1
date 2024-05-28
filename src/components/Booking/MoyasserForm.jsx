@@ -11,10 +11,11 @@ function MoyasarForm ({ callbackUrl, amount })
       currency: "SAR",
       description: "Device Order #1",
 
-      publishable_api_key: process.env.MOYASER_API_KEY,
+      // publishable_api_key: process.env.MOYASER_API_KEY,
+      publishable_api_key: "pk_test_7CPyM7HCNY6HhUtRdnb6LMUSDDzAsyN7hXpCYMb9",
       callback_url: callbackUrl,
-      methods: [ "applepay", "creditcard" ],
-      supported_networks:['mada'],
+      methods: ["applepay", "creditcard"],
+      supported_networks: ["mada"],
       apple_pay: {
         country: "SA",
         label: "Hydrogen",

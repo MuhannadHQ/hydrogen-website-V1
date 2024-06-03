@@ -4,7 +4,8 @@ import Accordion from "components/global/Accordion";
 
 export const InstallmentsPlan = ({ total, callbackUrl }) => {
   const amount = total;
-  const installmentAmount = Math.round(amount / 3);
+  //round the amount to the nearest .100
+  const installmentAmount = (amount / 3  ).toFixed(2);
   const now = new Date();
   const getInstallmentDate = (month) =>
     new Date(now.getFullYear(), now.getMonth() + month, now.getDate());

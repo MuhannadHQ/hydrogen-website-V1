@@ -27,7 +27,7 @@ export const devices = {
     description: "تحكم بفاتورة الماء بكل سهولة",
     price: "1399 ر.س",
     productImage: lamda.src,
-    deviceDescription: "جهاز لامدا + توصيل وتركيب مجاني",
+    deviceDescription: "جهاز لامدا + شحن وتركيب مجاني",
     priceDescription: "1399 ريال",
     devicePrice: 1399,
     images: [
@@ -42,7 +42,7 @@ export const devices = {
     ],
 
     guarantees: [
-      "توصيل وتركيب مجاني",
+      "شحن وتركيب مجاني",
       "ضمان لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
@@ -161,7 +161,7 @@ export const devices = {
 
     description: "راقب خزان الماء بكل سهولة",
 
-    deviceDescription: "جهاز ألفا + توصيل مجاني",
+    deviceDescription: "جهاز ألفا + شحن مجاني",
     priceDescription: "899 ريال",
     packagePriceDescription: "899 ريال",
     devicePrice: 899,
@@ -182,7 +182,7 @@ export const devices = {
     ],
     guideBookFile: "/AlphaDataSheet.pdf",
     guarantees: [
-      "توصيل مجاني",
+      "شحن مجاني",
       "ضمان شامل لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
@@ -319,7 +319,7 @@ export const devices = {
   },
 };
 export const packagesFeaturesTitles = {
-  DeliveryAndInstallation: "التوصيل والتركيب",
+  DeliveryAndInstallation: "الشحن والتركيب",
   Subscription: "اشتراك شهري",
   waterLevelMonitoring: "مراقبه مستوى الماء",
   LowWaterAlerts: "تنبيهات بإنخفاض الماء",

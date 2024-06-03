@@ -3,6 +3,7 @@ import { PaymentOptions } from "components/Booking/PaymentOptions";
 import { UserInfoForm } from "components/Booking/UserInfoForm";
 import { useEffect, useState } from "react";
 import { setCallbackUrl } from "utils/helpers/helpers";
+import { product } from "../../../../oldData";
 
 const refineCart = (cart, bookingCart) => {
   return cart.map((item) => {
@@ -46,6 +47,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
     orderTotal: total,
     products: bookingCart.map((item) => ({
       // package: item.plan,
+      productModel:cart.find((cartItem) => cartItem.data.title === item.title).data.name,
       tankType: item.tankType || "none",
       qty: 1,
       // price: item.price,
@@ -55,7 +57,6 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
     })),
     utm: localStorage.getItem("UTM"),
   };
-
   const disablePayment =
     !userInfo.firstName ||
     !userInfo.lastName ||
@@ -68,7 +69,6 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  console.log("cart", bookingCart, "\n", cart);
   return (
     <>
       <UserInfoForm

@@ -50,7 +50,7 @@ export const BuyBtn = ({type, device}) =>
         addToCart(device)
         router.push("/cart")
       }}
-      className={`btn ${type} relative add-to-cart`}>
+      className={`btn ${type} relative add-to-cart `}>
      {/*<CartPopup open={open} setOpen={setOpen}/>*/}
       اطلب الآن
     </button>

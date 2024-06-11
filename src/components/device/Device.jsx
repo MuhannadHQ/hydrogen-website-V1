@@ -3,9 +3,8 @@ import { DeviceGuideBook } from "components/device/DeviceGuideBook"
 import { DeviceGuildeVideo } from "components/device/DeviceGuildeVideo"
 import { DeviceHeader } from "components/device/DeviceHeader"
 import { DeviceMain } from "components/device/DeviceMain"
-import {
-  TechnicalSpecifications
-} from "components/device/TechnicalSpecifications"
+import YoutubeIframe from "components/global/YoutubeIframe"
+import DeviceBanner from "./DeviceBanner"
 
 export const Device = ({ device }) =>
 {
@@ -15,25 +14,40 @@ export const Device = ({ device }) =>
     guideBook,
     guideVideos,
     banner,
+    guideBookFile,
   } = device || {}
   return (
     <>
+      {/*<DeviceLeft />*/}
       <DeviceHeader device={ device }/>
-      <DeviceMain
-        moreLink={ false }
-        device={ device }/>
-      <DeviceFeatures
-        features={ features } title={ title }/>
-      <TechnicalSpecifications technicalSpecifications={ device.technicalSpecifications }/>
+      <DeviceMain moreLink={false} device={device} />
+      {
+        banner && (
+       <DeviceBanner banner={banner} />
+        )
+        
+      }
+      
+
+      <DeviceFeatures features={features} title={title} />
+
+      {guideVideos && (
+        <DeviceGuildeVideo
+          banner={banner}
+          guideVideos={guideVideos}
+          title={title}
+        />
+      )}
       {/*{*/}
-      {/*  guideVideos &&*/}
-      {/*  <DeviceGuildeVideo*/}
-      {/*    banner={ banner } guideVideos={ guideVideos }*/}
-      {/*    title={ title }/>*/}
-      {/*}*/}
-      {/*{*/}
-      {/*  guideBook && <DeviceGuideBook title={ title } guideBook={ guideBook }/>*/}
+      {guideBook && (
+        <DeviceGuideBook
+          title={title}
+          guideBook={guideBook}
+          technicalSpecifications={device.technicalSpecifications}
+          file={guideBookFile}
+        />
+      )}
       {/*}*/}
     </>
-  )
+  );
 }

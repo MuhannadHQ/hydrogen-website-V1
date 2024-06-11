@@ -11,7 +11,7 @@ export const Step1 = ({
   const handleMoveToStep2 = () =>
   {
     cloneBookingCart()
-    setStep(1)
+    setStep(2)
   }
   return (
     <>

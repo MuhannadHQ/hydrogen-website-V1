@@ -4,6 +4,7 @@ const YouTubeVideo = ({ link, title }) =>
   return (
 
     <iframe
+    
       className={ "w-full h-full absolute top-0 left-0" }
       src={ link }
       frameBorder="0"

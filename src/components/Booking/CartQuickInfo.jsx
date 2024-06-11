@@ -1,6 +1,6 @@
 export const CartQuickInfo = ({ cart, total, coupon, type }) =>
 {
-  return (
+   return (
     <div className="px-10 md:px-20">
       <div className="text-start w-full h-full">
         <div className="">
@@ -23,14 +23,14 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) =>
                   { item.title }
                 </td>
                 <td>
-                  { item.quantity + item.devicePrice || 0 }
+                  { item.quantity   || 0 }
                 </td>
-                {/*<td>*/}
-                {/*  { item.devicePrice } ر.س*/}
-                {/*</td>*/}
                 <td>
+                 { item.devicePrice } ر.س
+                 </td>
+                {/* <td>
                   { item.packagePriceDescription }
-                </td>
+                </td> */}
               </tr>
             )) }
             {

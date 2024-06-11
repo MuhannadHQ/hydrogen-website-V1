@@ -55,12 +55,13 @@ export default function RootLayout ( { children } )
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
 
-      <body className={ inter.className }>
+      <body className={ `${inter.className} ` }>
         {/*<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS6MLSG"*/}
         {/*  style={ { display: 'none', visibility: 'hidden' } }></iframe></noscript>*/}
         <Navbar />
+        
         <main style={ {
-          minHeight: "calc(100vh - 306px)",
+          // minHeight: "calc(100vh - 306px)",
 
         } }>
           { children }

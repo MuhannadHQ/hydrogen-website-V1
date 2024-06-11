@@ -1,5 +1,6 @@
 "use client"
 import contactUs from "apis/contact_us"
+import Call from "assets/icons/Call"
 import { Email } from "assets/icons/Email"
 import { Location } from "assets/icons/Location"
 import { Whattsapp } from "assets/icons/Whattsapp"
@@ -46,75 +47,82 @@ export const ContactUs = ({ onlyform }) =>
 
   }
 
-  return ( <section className="general-padding ">
+  return (
+    <section className="general-padding ">
       <div className="my-5">
-        <h2>
-          تواصل معنا
-        </h2>
-        {/*<p>يسعدنا تواصلك معنا في حال وجود أي استفسار أو ملاحظة</p>*/ }
+        <h2>تواصل معنا</h2>
+        {/*<p>يسعدنا تواصلك معنا في حال وجود أي استفسار أو ملاحظة</p>*/}
       </div>
       <div className="flex items-center justify-center flex-col md:flex-row ">
-        { !onlyform &&
+        {!onlyform && (
           <div className="w-11/12 md:w-5/12 flex flex-col gap-20 mb-6">
             <ul className=" flex flex-col justify-center gap-10">
-              <li className="flex items-center gap-3 ">
-                <Whattsapp/>
+              <li className="flex items-center gap-3 text-gray-700">
+                <Call />
                 <span>0504281941</span>
               </li>
-              <li className="flex items-center gap-3 ">
-                <Email/>
-                <span>info@hydrojeen.com</span></li>
-              <li className="flex items-center gap-3 whitespace-nowrap">
-                <Location/>
-                <span>
-
-            الكراج - الرياض، المملكة العربية السعودية
-          </span></li>
-
+              <li className="flex items-center gap-3  text-gray-700">
+                <Email />
+                <span>info@hydrojeen.com</span>
+              </li>
+              <li className="flex items-center gap-3 whitespace-nowrap text-gray-700">
+                <Location />
+                <span>الكراج - الرياض، المملكة العربية السعودية</span>
+              </li>
             </ul>
-            {/*<div className="w-fit">*/ }
-            {/*  <h3 className="text-primary  mb-10">أو عن طريق وسائل التواصل الاجتماعي:</h3>*/ }
-            {/*  <SocialMedia />*/ }
-            {/*</div>*/ }
-
-          </div> }
+            {/*<div className="w-fit">*/}
+            {/*  <h3 className="text-primary  mb-10">أو عن طريق وسائل التواصل الاجتماعي:</h3>*/}
+            {/*  <SocialMedia />*/}
+            {/*</div>*/}
+          </div>
+        )}
 
         <div className="w-full md:w-7/12 ">
-          <form onSubmit={ (e) => submitTheForm(e) } className="contact-form">
+          <form onSubmit={(e) => submitTheForm(e)} className="contact-form">
             <input
-              value={ formInfo.name || "" }
-              placeholder="الاسم" type="text" name="name"
-              onChange={ handleFormInfoChange }/>
-            {/* <input placeholder="الاسم الأخير" type="text"/> */ }
-            {/* <input placeholder="الايميل" type="text"/> */ }
+              value={formInfo.name || ""}
+              placeholder="الاسم"
+              type="text"
+              name="name"
+              onChange={handleFormInfoChange}
+            />
+            {/* <input placeholder="الاسم الأخير" type="text"/> */}
+            {/* <input placeholder="الايميل" type="text"/> */}
             <input
-              value={ formInfo.phoneNumber || "" }
-              placeholder="رقم الجوال" type="text" name="phoneNumber"
-              onChange={ handleFormInfoChange }/>
-            {/*<input*/ }
-            {/*  value={formInfo.type || ""}*/ }
-            {/*  placeholder="نوع الاستفسار" type="text" name="type" onChange={handleFormInfoChange}/>*/ }
+              value={formInfo.phoneNumber || ""}
+              placeholder="رقم الجوال"
+              type="text"
+              name="phoneNumber"
+              onChange={handleFormInfoChange}
+            />
+            {/*<input*/}
+            {/*  value={formInfo.type || ""}*/}
+            {/*  placeholder="نوع الاستفسار" type="text" name="type" onChange={handleFormInfoChange}/>*/}
             <textarea
-              value={ formInfo.message || "" }
+              value={formInfo.message || ""}
               placeholder="الرسالة"
-              name="message" id="" cols="30" rows="3"
-              onChange={ handleFormInfoChange }></textarea>
+              name="message"
+              id=""
+              cols="30"
+              rows="3"
+              onChange={handleFormInfoChange}
+            ></textarea>
             <div className="relative">
-              <button
-                className="rounded-lg py-2 px-5 btn-primary-contained w-full flex items-center gap-2 justify-center">
+              <button className="rounded-lg py-2 px-5 btn-primary-contained w-full flex items-center gap-2 justify-center">
                 <span>إرسال</span>
-
               </button>
               <div
-                className={ `text-2xl absolute top-0 -left-8 pt-1 ${ classes[ status ] }` }>
-                { responseStatus[ status ] }
+                className={`text-2xl absolute top-0 -left-8 pt-1 ${classes[status]}`}
+              >
+                {responseStatus[status]}
               </div>
             </div>
-            <p className={ `text-sm mt-1 h-6 ${ classes[ status ] }` }>
-              { messages[ status ] }
+            <p className={`text-sm mt-1 h-6 ${classes[status]}`}>
+              {messages[status]}
             </p>
           </form>
         </div>
       </div>
-    </section> )
+    </section>
+  );
 }

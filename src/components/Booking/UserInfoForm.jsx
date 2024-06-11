@@ -26,6 +26,8 @@ const cities = {
   madina: "المدينة المنورة",
   taif: "الطائف",
   yanbu: "ينبع",
+  makkah: "مكة",
+  taif: "الطائف",
   dammam: "الدمام",
   khobar: "الخبر",
   dhahran: "الظهران",

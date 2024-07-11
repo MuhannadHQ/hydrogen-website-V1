@@ -23,7 +23,7 @@ console.log("cart", cart)
             <div>
               <h4 className="text-primary  text-xl mb-1">{item.data.title}</h4>
 
-              <p>{item.data.devicePrice} ريال شامل الضريبة
+              <p>سعر الجهاز فقط {item.data.devicePrice} ريال شامل الضريبة
               </p>
             </div>
             <ul className="list-disc list-inside text-start whitespace-nowrap font-normal">

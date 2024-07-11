@@ -162,10 +162,10 @@ export const devices = {
     description: "راقب خزان الماء بكل سهولة",
 
     deviceDescription: "جهاز ألفا + شحن مجاني",
-    priceDescription: "899 ريال",
-    packagePriceDescription: "899 ريال",
-    devicePrice: 899,
-    price: "899 ريال",
+    priceDescription: "199 ريال",
+    packagePriceDescription: "199 ريال",
+    devicePrice: 199,
+    price: "199 ريال",
     guideBook: alphaBook.src,
     productImage: alpha.src,
     images: [
@@ -183,6 +183,8 @@ export const devices = {
     guideBookFile: "/AlphaDataSheet.pdf",
     guarantees: [
       "شحن مجاني",
+      "اشتراك مجاني لمدة ٣٠ يوم",
+      " قيمة الاشتراك 468 ريال/سنة فقط",
       "ضمان شامل لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
@@ -264,7 +266,7 @@ export const devices = {
         title: "الباقة البدائية",
         name: "اشتراك بيانات شهري",
         type: "subscription",
-        price: 899,
+        price: 199,
         packagePriceDescription: "499",
         features: {
           DeliveryAndInstallation: "✓️",
@@ -284,8 +286,8 @@ export const devices = {
         type: "one-time",
         name: `اشتراك بيانات مفتوحه 
          مدى الحياة`,
-        price: 899,
-        packagePriceDescription: "899 ريال",
+        price: 199,
+        packagePriceDescription: "199 ريال",
         features: {
           DeliveryAndInstallation: "✓️",
           Subscription: "بدون أي اشتراك",

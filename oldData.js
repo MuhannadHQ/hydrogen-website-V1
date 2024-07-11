@@ -48,7 +48,7 @@ export let product = {
     {
       "name": "الباقة الأساسية",
       value: "regular",
-      "price": 799,
+      "price": 699,
 
       values: [
         "بدون اشتراك",
@@ -123,7 +123,7 @@ export let product = {
       "value": "installationMethod",
       "fieldValue": "installationCompany",
       "name": "التركيب",
-      "note": "* التركيب متاح داخل مدينة الرياض ومكة المكرمة وجدة  والطائف والمنطقة الشرقية",
+      "note": "* التركيب متاح داخل مدينة الرياض ومكة المكرمة و جدة و المنطقة الشرقية",
       "type": "radio",
       selected: [],
       "options": [

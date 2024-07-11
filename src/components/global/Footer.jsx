@@ -19,8 +19,9 @@ export const Footer = () =>
     <footer className="bg-secondary pb-2 pt-10 px-3 h-56">
       <ul
         className="text-primary flex items-center justify-center gap-5 flex-wrap xs:flex-nowrap">
-        {/*<li><Link href={"/lamda"}>جهاز لامدا</Link></li>*/}
+        <li><Link href={"/lamda"}>جهاز لامدا</Link></li>
         <li><Link href={"/alpha"}>جهاز ألفا</Link></li>
+
         <li><Link href={"/questions"}>الأسئلة الشائعة</Link></li>
         <li><Link href={"/contactus"}>اتصل بنا</Link></li>
       </ul>
@@ -29,7 +30,7 @@ export const Footer = () =>
       </div>
 
       <div>
-        <p>هيدروجين 2023</p>
+        <p>هيدروجين 2024</p>
       </div>
     </footer>
   )

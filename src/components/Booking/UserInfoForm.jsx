@@ -31,6 +31,7 @@ const cities = {
   khobar: "الخبر",
   dhahran: "الظهران",
   qatif: "القطيف",
+  alahsa: "الأحساء"
 }
 
 const howDidYouKnow = {

@@ -228,25 +228,7 @@ export const devices = {
           deviceWatch: "❌",
           NumberOfUsers: "3",
         },
-      },
-      {
-        id: "withoutSIM",
-        title: "الباقة الاحترافية",
-        type: "one-time",
-        name: `الباقة الاحترافية`,
-        price: 1199,
-        packagePriceDescription: "1199 ريال",
-        features: {
-          DeliveryAndInstallation: "✓️",
-          Subscription: "بدون أي اشتراك",
-          LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "✓️",
-          waterLevelMonitoring: "✓️",
-          LeakDetection: "✓️",
-          deviceWatch: "✓️",
-          NumberOfUsers: "+5",
-        },
-      },
+      }
     ],
 
   },

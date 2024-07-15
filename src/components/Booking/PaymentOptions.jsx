@@ -114,9 +114,9 @@ export const PaymentOptions = ({
                 <Link href={ `${ callbackUrl }&&status=paid` }>
                   <button
                     id="purchase"
-                    disabled={ !checked }
+                    // disabled={ !checked }
                     onClick={ () => setStatus("loading") }
-                    className={`btn btn-primary w-64 ${ !checked && "opacity-50 cursor-not-allowed" }`}>
+                    className={`btn btn-primary w-64`}>
                     إتمام الطلب
                   </button>
                 </Link>
@@ -130,7 +130,7 @@ export const PaymentOptions = ({
                 id="start-checkout"
                 onClick={ handleCreateOrder }
                 disabled={ paymentMethod === ""   }
-                className={ `btn btn-primary-contained w-28 mt-2 ${ (!paymentMethod || !checked) &&
+                className={ `btn btn-primary-contained w-28 mt-2 ${ (!paymentMethod) &&
                 "opacity-50 cursor-not-allowed" }` }
               >
                 متابعة

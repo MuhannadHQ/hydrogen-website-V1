@@ -223,7 +223,7 @@ export const devices = {
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
-          NumberOfUsers: "3",
+          NumberOfUsers: "+5",
         },
       }
     ],

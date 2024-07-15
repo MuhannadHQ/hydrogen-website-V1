@@ -192,40 +192,37 @@ export const devices = {
 
       {
         id: "basic",
-        title: "الباقة البدائية",
-        name: "اشتراك بيانات شهري",
+        title: "اشتراك",
+        name: "اشتراك",
         type: "subscription",
-        price: 499,
-        packagePriceDescription: "499",
+        price: 199,
+        packagePriceDescription: "199",
         features: {
           DeliveryAndInstallation: "✓️",
-          Subscription: "29 ريال/الشهر",
+          Subscription: "39 ريال/الشهر",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
-          deviceWatch: "❌",
-          NumberOfUsers: "1",
+          NumberOfUsers: "+5",
 
         },
       },
 
       {
         id: "regular",
-        title: "الباقة الاساسية",
+        title: "بدون اشتراك",
         type: "one-time",
-        name: `اشتراك بيانات مفتوحه 
-         مدى الحياة`,
+        name: "بدون اشتراك",
         price: 899,
         packagePriceDescription: "899 ريال",
         features: {
           DeliveryAndInstallation: "✓️",
-          Subscription: "بدون أي اشتراك",
+          Subscription: "بدون اشتراك",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
-          deviceWatch: "❌",
           NumberOfUsers: "3",
         },
       }
@@ -235,12 +232,12 @@ export const devices = {
 
 }
 export const packagesFeaturesTitles = {
-  DeliveryAndInstallation: "التوصيل والتركيب",
+  DeliveryAndInstallation: "شحن مجاني",
   Subscription: "اشتراك شهري",
   waterLevelMonitoring: "مراقبه مستوى الماء",
   LowWaterAlerts: "تنبيهات بإنخفاض الماء",
   WaterLevelStatistics: "إحصائيات لمستوى الماء",
-  deviceWatch: "مراقبه الجهاز عبر الحاسب الشخصي",
+  // deviceWatch: "مراقبه الجهاز عبر الحاسب الشخصي",
   NumberOfUsers: "عدد المستخدمين"
 }
 export const paths = Object.keys( devices ).map( ( device ) => ( {

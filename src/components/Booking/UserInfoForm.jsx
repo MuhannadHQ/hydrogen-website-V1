@@ -27,6 +27,13 @@ const cities = {
   khobar: "الخبر",
   dhahran: "الظهران",
   qatif: "القطيف",
+  alahsa: "الأحساء",
+  taif: "الطائف",
+  abha: "أبها",
+  albaha: "الباحة",
+  khames: "خميس مشيط",
+  tabuk: "تبوك",
+  jazan:"جازان"
 }
 
 const howDidYouKnow = {

@@ -33,7 +33,17 @@ const cities = {
   albaha: "الباحة",
   khames: "خميس مشيط",
   tabuk: "تبوك",
-  jazan:"جازان"
+  jazan:"جازان",
+  unizah:"عنيزة",
+  buridah:"بريدة",
+  jubail:"الجبيل",
+  yunbu:"ينبع",
+  albaha:"الباحة",
+  najran:"نجران",
+  alkharj:"الخرج",
+  madenia:"المدينة المنورة",
+  hafuf:"الهفوف"
+
 }
 
 const howDidYouKnow = {

@@ -24,7 +24,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) =>
     installationCompany: "",
     scSCi: "",
     packageID: bookingCart[ 0 ]?.id,
-    orderTotal: total ,
+    orderTotal: total - (coupon?.discount || 0),
     products: bookingCart.map(item => ( {
       package: item.plan,
       tankType: item.tankType || "none", 

@@ -34,7 +34,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   const [paymentMethod, setPaymentMethod] = useState("");
   const [currentStep, setCurrentStep] = useState(0);
   const [checked, setChecked] = useState(false);
-  const total = calculateTotalPrice(bookingCart);
+  const total = calculateTotalPrice(bookingCart) ;
   const orderData = {
     ...userInfo,
     phoneNumber: userInfo?.phoneNumber?.replace("966", ""),
@@ -44,7 +44,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
     installationCompany: "",
     scSCi: "",
     // packageID: bookingCart[0]?.id,
-    orderTotal: total,
+    orderTotal: total - (coupon?.discount || 0),
     products: bookingCart.map((item) => ({
       // package: item.plan,
       productModel:cart.find((cartItem) => cartItem.data.title === item.title).data.name,

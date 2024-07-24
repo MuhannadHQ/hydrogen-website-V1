@@ -7,10 +7,10 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 
 const subscriptionPaymentOptions = [
-  // {
-  //   title: "الدفع عند الاستلام",
-  //   name: "cod",
-  // },
+  {
+    title: "الدفع عند الاستلام",
+    name: "cod",
+  },
   {
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",
@@ -18,10 +18,10 @@ const subscriptionPaymentOptions = [
 
 ]
 const paymentOptions = [
-  // {
-  //   title: "الدفع عند الاستلام",
-  //   name: "cod",
-  // }, 
+  {
+    title: "الدفع عند الاستلام",
+    name: "cod",
+  }, 
   {
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",

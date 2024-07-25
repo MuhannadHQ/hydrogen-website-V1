@@ -1,15 +1,15 @@
-import { Devices } from "assets/icons/Devices"
-import { Notification } from "assets/icons/Notification"
-import { TankCar } from "assets/icons/TankCar"
-import { Warning } from "assets/icons/Warning"
-import { WaterLevel } from "assets/icons/WaterLevel"
-import alphaApp from "assets/images/alpha-1.png"
-import alpha from "assets/images/alpha-2.png"
-import alphaBook from "assets/images/alpha-guide.png"
-import lamdaApp from "assets/images/lamda-app.png"
-import lamda from "assets/images/lamda.png"
+import { Devices } from "assets/icons/Devices";
+import { Notification } from "assets/icons/Notification";
+import { TankCar } from "assets/icons/TankCar";
+import { Warning } from "assets/icons/Warning";
+import { WaterLevel } from "assets/icons/WaterLevel";
+import alphaApp from "assets/images/alpha-1.png";
+import alpha from "assets/images/alpha-2.png";
+import alphaBook from "assets/images/alpha-guide.png";
+import lamdaApp from "assets/images/lamda-app.png";
+import lamda from "assets/images/lamda.png";
 // import guideBookFile from "assets/guide-book.pdf"
-export const lastDateUpdated = "10/2/2023"
+export const lastDateUpdated = "10/2/2023";
 
 export const devices = {
   lamda: {
@@ -36,47 +36,49 @@ export const devices = {
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
     features: [
-  {
-    title: "مراقبة لمستوى ماء الخزان",
-    icon: <WaterLevel />,
-    description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال"
-  }, 
-  // { 
-  //   title: "تحكم بتدفق ماء الخزان", 
-  //   icon: <ControlWaterStream />, 
-  //   description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين" 
-  // }, 
-  { 
-    title: "تنبيه عند انخفاض مستوى الماء", 
-    icon: <Notification />, 
-    description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه" 
-  }, 
-  { 
-    title: "إمكانية طلب صهريج مياه", 
-    icon: <TankCar />, 
-    description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين" 
-  }, 
-  // {
-  //   title: "كشف التسريبات", 
-  //   icon: <LeakDetection />, 
-  //   description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج" 
-  // }, 
-  // { 
-  //   title: "تحكم في المضخة", 
-  //   icon: <ControlPump />, 
-  //   description: "بإمكانك التحكم بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين" 
-  // }, 
-  { 
-    title: "تنبيه عند عطل العوامة", 
-    icon: <Warning />, 
-    description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي" 
-  }, 
-  { 
-    title: "مراقبة عدة أجهزة من حساب واحد", 
-    icon: <Devices />, 
-    description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق" 
-  }
-]
+      {
+        title: "مراقبة لمستوى ماء الخزان",
+        icon: <WaterLevel />,
+        description:
+          "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
+      },
+      // {
+      //   title: "تحكم بتدفق ماء الخزان",
+      //   icon: <ControlWaterStream />,
+      //   description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين"
+      // },
+      {
+        title: "تنبيه عند انخفاض مستوى الماء",
+        icon: <Notification />,
+        description:
+          "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
+      },
+      {
+        title: "إمكانية طلب صهريج مياه",
+        icon: <TankCar />,
+        description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
+      },
+      // {
+      //   title: "كشف التسريبات",
+      //   icon: <LeakDetection />,
+      //   description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج"
+      // },
+      // {
+      //   title: "تحكم في المضخة",
+      //   icon: <ControlPump />,
+      //   description: "بإمكانك التحكم بتشغيل المضخة او ربطها بمنسوب المياه عبر تطبيق هيدروجين"
+      // },
+      {
+        title: "تنبيه عند عطل العوامة",
+        icon: <Warning />,
+        description: "سيصلك تنبيه على التطبيق عند عطل عوامة الخزان الأرضي",
+      },
+      {
+        title: "مراقبة عدة أجهزة من حساب واحد",
+        icon: <Devices />,
+        description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق",
+      },
+    ],
   },
   //  packages: [ { title: "الباقة الأساسية",
   // name: "لامدا - الأساسية (بدون اشتراك)",  price: 1299, features: {
@@ -95,10 +97,10 @@ export const devices = {
     description: "راقب خزان الماء بكل سهولة",
 
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "199 ريال",
-    packagePriceDescription: "199 ريال",
+    priceDescription: "899 ريال",
+    packagePriceDescription: "899 ريال",
     devicePrice: 0,
-    price: "199 ريال",
+    price: "899 ريال",
     images: [
       {
         src: alphaApp.src,
@@ -116,18 +118,19 @@ export const devices = {
       "شحن مجاني",
       "ضمان شامل لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
-
     ],
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
         icon: <WaterLevel />,
-        description: "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
+        description:
+          "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
       },
       {
         title: "تنبيه عند انخفاض مستوى الماء",
         icon: <Notification />,
-        description: "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
+        description:
+          "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
       },
       {
         title: "إمكانية طلب صهريج مياه",
@@ -189,25 +192,24 @@ export const devices = {
     ],
     guideBook: alphaBook.src,
     packages: [
+      // {
+      //   id: "basic",
+      //   title: "اشتراك",
+      //   name: "اشتراك",
+      //   type: "subscription",
+      //   price: 199,
+      //   packagePriceDescription: "199",
+      //   features: {
+      //     DeliveryAndInstallation: "✓️",
+      //     Subscription: "39 ريال/الشهر",
+      //     LowWaterAlerts: "✓️",
+      //     WaterLevelStatistics: "✓️",
+      //     waterLevelMonitoring: "✓️",
+      //     LeakDetection: "✓️",
+      //     NumberOfUsers: "+5",
 
-      {
-        id: "basic",
-        title: "اشتراك",
-        name: "اشتراك",
-        type: "subscription",
-        price: 199,
-        packagePriceDescription: "199",
-        features: {
-          DeliveryAndInstallation: "✓️",
-          Subscription: "39 ريال/الشهر",
-          LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "✓️",
-          waterLevelMonitoring: "✓️",
-          LeakDetection: "✓️",
-          NumberOfUsers: "+5",
-
-        },
-      },
+      //   },
+      // },
 
       {
         id: "regular",
@@ -225,12 +227,10 @@ export const devices = {
           LeakDetection: "✓️",
           NumberOfUsers: "+5",
         },
-      }
+      },
     ],
-
   },
-
-}
+};
 export const packagesFeaturesTitles = {
   DeliveryAndInstallation: "شحن مجاني",
   Subscription: "اشتراك شهري",
@@ -238,11 +238,10 @@ export const packagesFeaturesTitles = {
   LowWaterAlerts: "تنبيهات بإنخفاض الماء",
   WaterLevelStatistics: "إحصائيات لمستوى الماء",
   // deviceWatch: "مراقبه الجهاز عبر الحاسب الشخصي",
-  NumberOfUsers: "عدد المستخدمين"
-}
-export const paths = Object.keys( devices ).map( ( device ) => ( {
-  href: devices[ device ].path,
-  name: devices[ device ].name,
-  title: devices[ device ].title,
-} ) )
-
+  NumberOfUsers: "عدد المستخدمين",
+};
+export const paths = Object.keys(devices).map((device) => ({
+  href: devices[device].path,
+  name: devices[device].name,
+  title: devices[device].title,
+}));

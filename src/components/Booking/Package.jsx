@@ -1,39 +1,68 @@
-import { packagesFeaturesTitles } from "apis/data/devicesData"
+import { packagesFeaturesTitles } from "apis/data/devicesData";
 
-export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
-{
-  const {title, name, price, type, id, packagePriceDescription, options, features } = item
+export const Package = ({
+  picked,
+  item,
+  setItemPlan,
+  index,
+  setItemOption,
+}) => {
+  const {
+    title,
+    name,
+    price,
+    type,
+    id,
+    packagePriceDescription,
+    options,
+    features,
+  } = item;
   return (
     <li>
       <div
-        onClick={ () => setItemPlan &&
-          setItemPlan(index, name, price, type, id, packagePriceDescription) }
-        className={ `bg-secondary w-18 rounded ${ picked === name &&
-        "border border-primary" }` }>
+        onClick={() =>
+          setItemPlan &&
+          setItemPlan(index, name, price, type, id, packagePriceDescription)
+        }
+        className={`bg-secondary w-18 rounded ${
+          picked === name && "border border-primary"
+        }`}
+      >
         <div
-          className={ `h-32  py-5 px-3 flex flex-col justify-center ${ picked ===
-          name &&
-          "text-white bg-primary" } p-4 rounded` }>
+          className={`h-32  py-5 px-3 flex flex-col justify-center ${
+            picked === name && "text-white bg-primary"
+          } p-4 rounded`}
+        >
           {/* <h3>
            { title }
-           </h3> */ }
-          <p className={ `text-sm text-black py-2 ${ picked === name &&
-          "text-white bg-primary " } ` }>
-            { title }
+           </h3> */}
+          <p
+            className={`text-sm text-black py-2 ${
+              picked === name && "text-white bg-primary "
+            } `}
+          >
+            {title}
           </p>
-          <p className={ `text-sm ${ picked === name &&
-          "text-white bg-primary " }` }>
-            { packagePriceDescription }
+          <p
+            className={`text-sm ${picked === name && "text-white bg-primary "}`}
+          >
+            {packagePriceDescription}
           </p>
         </div>
-        {features && <ul className="p-3 divide-y">
-          { Object.keys(packagesFeaturesTitles).map((featureKey, i) => (
-            <li
-              className={`h-16 flex items-center justify-center text-sm ${features[ featureKey ] === "✓️" && "text-green-500 text-xl"}`}
-              key={ i }>
-              { features[ featureKey ] }</li>
-          )) }
-        </ul> }
+        {features && (
+          <ul className="p-3 divide-y">
+            {Object.keys(packagesFeaturesTitles).map((featureKey, i) => (
+              <li
+                className={`h-16 flex items-center justify-center text-sm ${
+                  features[featureKey] === "✓️" && "text-green-500 text-xl"
+                }`}
+                key={i}
+              >
+                {features[featureKey]}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       {/*{*/}
       {/*  name === picked && options && <div className="w-42 rounded my-3">*/}
@@ -68,5 +97,5 @@ export const Package = ({ picked, item, setItemPlan, index, setItemOption }) =>
       {/*  </div>*/}
       {/*}*/}
     </li>
-  )
-}
+  );
+};

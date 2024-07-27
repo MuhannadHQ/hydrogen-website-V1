@@ -11,8 +11,8 @@ export const DeviceHeader = ({  device }) =>
       </h3>
       <div className="flex gap-5 items-center">
        <div>
-       <span className="text-xs"> ابتداء من</span>
-        <br/>
+       {/* <span className="text-xs"> ابتداء من</span> */}
+        {/* <br/> */}
         { price } 
        </div> 
       <BuyBtn device={ device } type={ "btn-secondary" }/>

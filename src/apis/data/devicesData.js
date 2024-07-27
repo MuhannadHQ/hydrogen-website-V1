@@ -282,8 +282,8 @@ export const devices = {
         type: "one-time",
         name: `اشتراك بيانات مفتوحه 
          مدى الحياة`,
-        price: 899,
-        packagePriceDescription: "899 ريال",
+        price: 199,
+        packagePriceDescription: "199 ريال",
         features: {
           DeliveryAndInstallation: "✓️",
           Subscription: "بدون اشتراك",

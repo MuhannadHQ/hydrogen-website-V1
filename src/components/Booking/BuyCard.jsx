@@ -19,7 +19,7 @@ export const BuyCard = ({ cart, removeFromCart, editQuantity }) => {
 
           <div className="flex flex-col gap-5 md:gap-15 ">
             <div>
-              <h4 className="text-primary  text-xl">{item.data.title}</h4>
+              <h4 className="text-primary  text-xl">{item.data.deviceModel}</h4>
 
               <p>{item.data.packagePriceDescription} شاملة الضريبة </p>
             </div>

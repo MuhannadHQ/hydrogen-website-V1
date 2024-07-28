@@ -95,6 +95,7 @@ export const devices = {
     path: "/alpha",
     buy_path: "/cart",
     title: "وداعاً لمفاجآت اتقطاع المياه",
+    deviceModel:"جهاز ألفا",
 
     description: "معلومات خزان المياه بين يديك",
 
@@ -118,7 +119,9 @@ export const devices = {
     productImage: alpha.src,
     guarantees: [
       "شحن مجاني",
-      "ضمان شامل لمدة سنتين",
+      "اشتراك مجاني لمدة شهر",
+      "قيمة الاشتراك 39 ريال/شهر",
+      "ضمان لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
     features: [

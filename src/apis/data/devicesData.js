@@ -94,8 +94,8 @@ export const devices = {
     name: "alpha",
     path: "/alpha",
     buy_path: "/cart",
-    title: "وداعاً لمفاجآت اتقطاع المياه",
-    deviceModel:"جهاز ألفا",
+    title: "وداعاً لمفاجآت انقطاع المياه",
+    deviceModel: "جهاز ألفا",
 
     description: "معلومات خزان المياه بين يديك",
 
@@ -156,12 +156,11 @@ export const devices = {
     guideVideos: [
       {
         title: "طريقة تركيب جهاز ألفا - الخزان السفلي",
-        link: "https://www.youtube.com/embed/7GeIGsEoltU",
+        link: "https://youtu.be/7GeIGsEoltU",
       },
       {
         title: "طريقة تركيب جهاز ألفا - الخزان العلوي",
-
-        link: "https://www.youtube.com/embed/2g__q2PSc3k",
+        link: "https://youtu.be/2g__q2PSc3k",
       },
     ],
 

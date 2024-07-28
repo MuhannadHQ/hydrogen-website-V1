@@ -97,10 +97,10 @@ export const devices = {
     description: "راقب خزان الماء بكل سهولة",
 
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "899 ريال",
-    packagePriceDescription: "899 ريال",
+    priceDescription: "199 ريال",
+    packagePriceDescription: "199 ريال",
     devicePrice: 0,
-    price: "899 ريال",
+    price: "199 ريال",
     images: [
       {
         src: alphaApp.src,
@@ -216,8 +216,8 @@ export const devices = {
         title: "بدون اشتراك",
         type: "one-time",
         name: "بدون اشتراك",
-        price: 899,
-        packagePriceDescription: "899 ريال",
+        price: 199,
+        packagePriceDescription: "199 ريال",
         features: {
           DeliveryAndInstallation: "✓️",
           Subscription: "بدون اشتراك",

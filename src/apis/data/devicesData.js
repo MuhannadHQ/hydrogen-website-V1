@@ -32,6 +32,8 @@ export const devices = {
     ],
     guarantees: [
       "شحن مجاني",
+      "اشتراك مجاني لمدة شهر",
+      "قيمة الاشتراك 39 ريال/شهر",
       "ضمان لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
@@ -92,9 +94,9 @@ export const devices = {
     name: "alpha",
     path: "/alpha",
     buy_path: "/cart",
-    title: "جهاز ألفــا",
+    title: "وداعاً لمفاجآت اتقطاع المياه",
 
-    description: "راقب خزان الماء بكل سهولة",
+    description: "معلومات خزان المياه بين يديك",
 
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
     priceDescription: "199 ريال",

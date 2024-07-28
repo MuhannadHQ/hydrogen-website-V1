@@ -1,3 +1,5 @@
+"use client";
+
 import { DeviceFeatures } from "components/device/DeviceFeatures";
 import { DeviceGuideBook } from "components/device/DeviceGuideBook";
 import { DeviceGuildeVideo } from "components/device/DeviceGuildeVideo";

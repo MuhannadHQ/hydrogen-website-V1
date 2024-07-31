@@ -94,11 +94,9 @@ export const devices = {
     name: "alpha",
     path: "/alpha",
     buy_path: "/cart",
-    title: "وداعاً لمفاجآت انقطاع المياه",
     deviceModel: "جهاز ألفا",
-
+    title: "وداعاً لمفاجآت انقطاع المياه",
     description: "معلومات خزان المياه بين يديك",
-
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
     priceDescription: "199 ريال",
     packagePriceDescription: "199 ريال",

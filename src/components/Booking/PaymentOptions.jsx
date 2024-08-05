@@ -25,10 +25,10 @@ const paymentOptions = [
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",
   },
-  {
-    title: "الدفع على 3 دفعات",
-    name: "installment",
-  },
+  // {
+  //   title: "الدفع على 3 دفعات",
+  //   name: "installment",
+  // },
 ];
 
 const responseStatus = {

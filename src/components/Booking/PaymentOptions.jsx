@@ -5,6 +5,7 @@ import { Coupon } from "components/Booking/steps/Coupon";
 import { Loader } from "components/global/Loader";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import amplitude from "utils/amplitude";
 
 const subscriptionPaymentOptions = [
   {
@@ -54,6 +55,11 @@ export const PaymentOptions = ({
   const [status, setStatus] = useState("");
   const handleCreateOrder = async () => {
     setCurrentStep(currentStep + 1);
+
+    amplitude.logCheckoutStep(3, {
+      paymentMethod: paymentMethod,
+      total: total,
+    });
   };
   useEffect(() => {
     setPaymentMethod(paymentMethods[0].name);

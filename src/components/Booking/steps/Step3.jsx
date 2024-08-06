@@ -2,6 +2,7 @@ import { CompleteBooking } from "components/Booking/CompleteBooking";
 import { PaymentOptions } from "components/Booking/PaymentOptions";
 import { UserInfoForm } from "components/Booking/UserInfoForm";
 import { useEffect, useState } from "react";
+import amplitude from "utils/amplitude";
 import { setCallbackUrl } from "utils/helpers/helpers";
 
 const calculateTotalPrice = (bookingCart) =>
@@ -50,6 +51,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    amplitude.logCheckoutStep(1);
   }, []);
   return (
     <>

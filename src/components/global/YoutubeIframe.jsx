@@ -1,18 +1,15 @@
-const YouTubeVideo = ({ link, title }) =>
-{
+import amplitude from "utils/amplitude";
 
+const YouTubeVideo = ({ link, title }) => {
   return (
-
     <iframe
-    
-      className={ "w-full h-full absolute top-0 left-0" }
-      src={ link }
+      className="w-full h-full absolute top-0 left-0"
+      src={link}
       frameBorder="0"
       allowFullScreen
-      title={ title }
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
+      title={title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     ></iframe>
-
   );
 };
 

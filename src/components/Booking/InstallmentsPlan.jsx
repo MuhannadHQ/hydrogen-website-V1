@@ -1,11 +1,10 @@
 import { Arrow } from "assets/icons/Arrow";
-import MoyasarForm from "components/Booking/MoyasserForm";
+import MoyasarForm from "components/booking/MoyasserForm";
 import Accordion from "components/global/Accordion";
 
 export const InstallmentsPlan = ({ total, callbackUrl }) => {
   const amount = total;
-  //round the amount to the nearest .100
-  const installmentAmount = (amount / 3  ).toFixed(2);
+  const installmentAmount = Math.round(amount / 3);
   const now = new Date();
   const getInstallmentDate = (month) =>
     new Date(now.getFullYear(), now.getMonth() + month, now.getDate());
@@ -15,36 +14,31 @@ export const InstallmentsPlan = ({ total, callbackUrl }) => {
       <div className="flex flex-col justify-start  px-3 items-center md:px-10 mt-5 md:items-start">
         <div>
           <div className="flex flex-wrap gap-4 max-w-5xl justify-center ">
-            {/* <div
-              className={ `flex gap-2 flex-col  items-center justify-center rounded-md shadow w-48 p-2 bg-primary text-white` }>
-              <div>
-                يبدأ أول دفعة في
-              </div>
-              <div>
-                { getInstallmentDate(0).toLocaleDateString() }
-              </div>
+            <div
+              className={`flex gap-2 flex-col  items-center justify-center rounded-md shadow w-48 p-2 bg-primary text-white`}
+            >
+              <div>يبدأ أول دفعة في</div>
+              <div>{getInstallmentDate(0).toLocaleDateString()}</div>
             </div>
             <div
-              className={ `flex gap-2 flex-col items-center justify-center rounded-md shadow w-48 p-2 bg-primary text-white` }>
-              <div>
-                تنتهي الدفعة الأخيرة في
-              </div>
-              <div>
-                { getInstallmentDate(2).toLocaleDateString() }
-              </div>
-            </div> */}
-            {new Array(3).fill(0).map((item, index) => (
-              <div
-                key={index}
-                className={`flex gap-2 flex-col  items-center justify-center rounded-md border border-gray-600 w-48 p-2`}
-              >
-                <div className="text-primary">
-                  <span>قسط {index + 1}:</span>
-                  <span> {installmentAmount} ر.س</span>
-                </div>
-                <div className=" text-gray-600">{getInstallmentDate(index).toLocaleDateString()}</div>
-              </div>
-            ))}
+              className={`flex gap-2 flex-col items-center justify-center rounded-md shadow w-48 p-2 bg-primary text-white`}
+            >
+              <div>تنتهي الدفعة الأخيرة في</div>
+              <div>{getInstallmentDate(2).toLocaleDateString()}</div>
+            </div>
+            {/*{*/}
+            {/*  new Array(12).fill(0).map((item, index) =>*/}
+            {/*    <div*/}
+            {/*      key={ index }*/}
+            {/*      className={`flex gap-2  items-center justify-center rounded-md shadow w-48 p-2 ${index === 0 ? "bg-primary text-white" : "bg-white"}`}>*/}
+            {/*      <div>*/}
+            {/*        { getInstallmentDate(index ).toLocaleDateString() }*/}
+            {/*      </div>*/}
+            {/*      <div >*/}
+            {/*        { installmentAmount } ر.س*/}
+            {/*      </div>*/}
+            {/*    </div>,*/}
+            {/*  ) }*/}
           </div>
         </div>
 

@@ -1,10 +1,11 @@
 import create_order from "apis/create_order";
-import Agreement from "components/Booking/Agreement";
-import { CartQuickInfo } from "components/Booking/CartQuickInfo";
-import { Coupon } from "components/Booking/steps/Coupon";
+import Agreement from "components/booking/Agreement";
+import { CartQuickInfo } from "components/booking/CartQuickInfo";
+import { Coupon } from "components/booking/steps/Coupon";
 import { Loader } from "components/global/Loader";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import amplitude from "utils/amplitude";
 
 const subscriptionPaymentOptions = [
   {
@@ -17,15 +18,14 @@ const subscriptionPaymentOptions = [
   },
 ];
 const paymentOptions = [
-  // {
-  //   title: "الدفع عند الاستلام",
-  //   name: "cod",
-  // },
+  {
+    title: "الدفع عند الاستلام",
+    name: "cod",
+  },
   {
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",
-  }
-  // ,
+  },
   // {
   //   title: "الدفع على 3 دفعات",
   //   name: "installment",
@@ -50,15 +50,20 @@ export const PaymentOptions = ({
   checked,
   disablePayment,
 }) => {
-
   const paymentMethods =
     type === "subscription" ? subscriptionPaymentOptions : paymentOptions;
   const [status, setStatus] = useState("");
   const handleCreateOrder = async () => {
     setCurrentStep(currentStep + 1);
+
+    amplitude.logCheckoutStep(3, {
+      paymentMethod: paymentMethod,
+      total: total,
+    });
   };
   useEffect(() => {
     setPaymentMethod(paymentMethods[0].name);
+    console.log(cart);
   }, []);
   return (
     <section className="bg-secondary rounded-lg shadow py-8 my-5 ">
@@ -110,18 +115,16 @@ export const PaymentOptions = ({
                 </li>
               ))}
             </ul>
-            {/* <Agreement setChecked={setChecked} checked={checked} /> */}
+            {/* <Agreement setChecked={setChecked} checked={checked}/> */}
             {paymentMethod === "cod" ? (
               <>
                 <div className="px-5 flex justify-center items-center gap-4 mt-2">
                   <Link href={`${callbackUrl}&&status=paid`}>
                     <button
                       id="purchase"
-                      disabled={!checked}
+                      // disabled={ !checked }
                       onClick={() => setStatus("loading")}
-                      className={`btn btn-primary w-64 ${
-                        !checked && "opacity-50 cursor-not-allowed"
-                      }`}
+                      className={`btn btn-primary w-64`}
                     >
                       إتمام الطلب
                     </button>
@@ -138,8 +141,7 @@ export const PaymentOptions = ({
                 onClick={handleCreateOrder}
                 disabled={paymentMethod === ""}
                 className={`btn btn-primary-contained w-28 mt-2 ${
-                  (!paymentMethod ) &&
-                  "opacity-50 cursor-not-allowed"
+                  !paymentMethod && "opacity-50 cursor-not-allowed"
                 }`}
               >
                 متابعة

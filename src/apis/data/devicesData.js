@@ -1,20 +1,15 @@
-
-
-import { Devices } from "assets/icons/Devices"
-import { Notification } from "assets/icons/Notification"
-import { TankCar } from "assets/icons/TankCar"
-import { Warning } from "assets/icons/Warning"
-import { WaterLevel } from "assets/icons/WaterLevel"
-import alphaApp from "assets/images/alpha-1.png"
-import alpha from "assets/images/alpha-2.png"
-import alphaBook from "assets/images/alpha-guide.png"
-import lamdaApp from "assets/images/lamda-app.png"
-import lamda from "assets/images/lamda.png"
-import { ControlPump } from "assets/icons/ControlPump"
-import { ControlWaterStream } from "assets/icons/ControlWaterStream"
-import { LeakDetection } from "assets/icons/LeakDetection"
+import { Devices } from "assets/icons/Devices";
+import { Notification } from "assets/icons/Notification";
+import { TankCar } from "assets/icons/TankCar";
+import { Warning } from "assets/icons/Warning";
+import { WaterLevel } from "assets/icons/WaterLevel";
+import alphaApp from "assets/images/alpha-1.png";
+import alpha from "assets/images/alpha-2.png";
+import alphaBook from "assets/images/alpha-guide.png";
+import lamdaApp from "assets/images/lamda-app.png";
+import lamda from "assets/images/lamda.png";
 // import guideBookFile from "assets/guide-book.pdf"
-export const lastDateUpdated = "10/2/2023"
+export const lastDateUpdated = "10/2/2023";
 
 export const devices = {
   lamda: {
@@ -42,7 +37,9 @@ export const devices = {
     ],
 
     guarantees: [
-      "شحن وتركيب مجاني",
+      "شحن مجاني",
+      "اشتراك مجاني لمدة شهر",
+      "قيمة الاشتراك 39 ريال/شهر",
       "ضمان لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
@@ -54,29 +51,27 @@ export const devices = {
         description:
           "يقوم الجهاز بإرسال مستوى الماء بشكل دوري عبر تطبيق الجوال",
       },
-      {
-        title: "تحكم بتدفق ماء الخزان",
-        icon: <ControlWaterStream />,
-        description:
-          "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين",
-      },
+      // {
+      //   title: "تحكم بتدفق ماء الخزان",
+      //   icon: <ControlWaterStream />,
+      //   description: "بإمكانك التحكم بتدفق مياه الخزان أو جدولتها عبر تطبيق هيدروجين"
+      // },
       {
         title: "تنبيه عند انخفاض مستوى الماء",
         icon: <Notification />,
         description:
           "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
       },
-      // {
-      //   title: "إمكانية طلب صهريج مياه",
-      //   icon: <TankCar />,
-      //   description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
-      // },
       {
-        title: "كشف التسريبات",
-        icon: <LeakDetection />,
-        description:
-          "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج",
+        title: "إمكانية طلب صهريج مياه",
+        icon: <TankCar />,
+        description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
       },
+      // {
+      //   title: "كشف التسريبات",
+      //   icon: <LeakDetection />,
+      //   description: "يمكنك عبر التطبيق إجراء اختبار لكشف التسريبات وسيتم تزويدك بالنتائج"
+      // },
       // {
       //   title: "تحكم في المضخة",
       //   icon: <ControlPump />,
@@ -93,81 +88,29 @@ export const devices = {
         description: "باستطاعتك مراقبة أكثر من جهاز من حساب واحد على التطبيق",
       },
     ],
-    packages: [
-      {
-        id: "basic",
-        title: "الباقة البدائية",
-        name: "اشتراك بيانات شهري",
-        type: "subscription",
-        price: 699,
-        packagePriceDescription: "699",
-        features: {
-          DeliveryAndInstallation: "✓️",
-          Subscription: "29 ريال/الشهر",
-          LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "✓️",
-          waterLevelMonitoring: "✓️",
-          LeakDetection: "✓️",
-          deviceWatch: "❌",
-          NumberOfUsers: "1",
-        },
-      },
-
-      {
-        id: "regular",
-        title: "الباقة الاساسية",
-        type: "one-time",
-        name: `اشتراك بيانات مفتوحه 
-         مدى الحياة`,
-        price: 999,
-        packagePriceDescription: "999 ريال",
-        features: {
-          DeliveryAndInstallation: "✓️",
-          Subscription: "بدون أي اشتراك",
-          LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "✓️",
-          waterLevelMonitoring: "✓️",
-          LeakDetection: "✓️",
-          deviceWatch: "❌",
-          NumberOfUsers: "3",
-        },
-      },
-      {
-        id: "withoutSIM",
-        title: "الباقة الاحترافية",
-        type: "one-time",
-        name: `الباقة الاحترافية`,
-        price: 1599,
-        packagePriceDescription: "1599 ريال",
-        features: {
-          DeliveryAndInstallation: "✓️",
-          Subscription: "بدون أي اشتراك",
-          LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "✓️",
-          waterLevelMonitoring: "✓️",
-          LeakDetection: "✓️",
-          deviceWatch: "✓️",
-          NumberOfUsers: "+5",
-        },
-      },
-    ],
   },
   alpha: {
     _id: "device-1",
     name: "alpha",
     path: "/alpha",
     buy_path: "/cart",
-    title: "جهاز ألفــا",
-
-    description: "راقب خزان الماء بكل سهولة",
-
-    deviceDescription: "جهاز ألفا + شحن مجاني",
+    deviceModel: "جهاز ألفا",
+    title: "وداعاً لمفاجآت انقطاع المياه",
+    description: "معلومات خزان المياه بين يديك",
+    deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
     priceDescription: "199 ريال",
     packagePriceDescription: "199 ريال",
-    devicePrice: 199,
+    devicePrice: 0,
     price: "199 ريال",
-    guideBook: alphaBook.src,
-    productImage: alpha.src,
+    guarantees: [
+      "شحن مجاني",
+      "اشتراك مجاني لمدة شهر",
+      "قيمة الاشتراك 39 ريال/شهر",
+      "ضمان لمدة سنتين",
+      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+      "شريحة بيانات مدمجة داخل الجهاز",
+      "يتحمل إلى حرارة 60 درجة مئوية",
+    ],
     images: [
       {
         src: alphaApp.src,
@@ -180,14 +123,7 @@ export const devices = {
       //   width: "w-5/12",
       // },
     ],
-    guideBookFile: "/AlphaDataSheet.pdf",
-    guarantees: [
-      "شحن مجاني",
-      "اشتراك مجاني لمدة 30 يوم",
-      " قيمة الاشتراك 39 ريال/شهر ",
-      "ضمان شامل لمدة سنتين",
-      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
-    ],
+    productImage: alpha.src,
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
@@ -220,12 +156,11 @@ export const devices = {
     guideVideos: [
       {
         title: "طريقة تركيب جهاز ألفا - الخزان السفلي",
-        link: "https://www.youtube.com/embed/7GeIGsEoltU",
+        link: "https://youtu.be/7GeIGsEoltU",
       },
       {
         title: "طريقة تركيب جهاز ألفا - الخزان العلوي",
-
-        link: "https://www.youtube.com/embed/2g__q2PSc3k",
+        link: "https://youtu.be/2g__q2PSc3k",
       },
     ],
 
@@ -260,60 +195,57 @@ export const devices = {
       },
     ],
 
+    guideBook: alphaBook.src,
     packages: [
       {
         id: "basic",
-        title: "الباقة البدائية",
-        name: "اشتراك بيانات شهري",
+        title: "اشتراك",
+        name: "اشتراك",
         type: "subscription",
         price: 199,
-        packagePriceDescription: "499",
+        packagePriceDescription: "199",
+        guarantees: [
+          "شحن مجاني",
+          "اشتراك مجاني لمدة شهر",
+          "قيمة الاشتراك 39 ريال/شهر",
+          "ضمان لمدة سنتين",
+          "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+          "شريحة بيانات مدمجة داخل الجهاز",
+          "يتحمل إلى حرارة 60 درجة مئوية",
+        ],
         features: {
           DeliveryAndInstallation: "✓️",
-          Subscription: "29 ريال/الشهر",
+          Subscription: "39 ريال/الشهر",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
-          deviceWatch: "❌",
-          NumberOfUsers: "1",
+          NumberOfUsers: "+5",
         },
       },
 
       {
         id: "regular",
-        title: "الباقة الاساسية",
+        title: "بدون اشتراك",
         type: "one-time",
-        name: `اشتراك بيانات مفتوحه 
-         مدى الحياة`,
-        price: 199,
-        packagePriceDescription: "199 ريال",
+        name: "بدون اشتراك",
+        price: 899,
+        packagePriceDescription: "899 ريال",
+        guarantees: [
+          "شحن مجاني",
+          "بدون أي اشتراك شهري",
+          "ضمان لمدة سنتين",
+          "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+          "شريحة بيانات مدمجة داخل الجهاز",
+          "يتحمل إلى حرارة 60 درجة مئوية",
+        ],
         features: {
           DeliveryAndInstallation: "✓️",
-          Subscription: "بدون أي اشتراك",
+          Subscription: "بدون اشتراك",
           LowWaterAlerts: "✓️",
           WaterLevelStatistics: "✓️",
           waterLevelMonitoring: "✓️",
           LeakDetection: "✓️",
-          deviceWatch: "❌",
-          NumberOfUsers: "3",
-        },
-      },
-      {
-        id: "withoutSIM",
-        title: "الباقة الاحترافية",
-        type: "one-time",
-        name: `الباقة الاحترافية`,
-        price: 1199,
-        packagePriceDescription: "1199 ريال",
-        features: {
-          DeliveryAndInstallation: "✓️",
-          Subscription: "بدون أي اشتراك",
-          LowWaterAlerts: "✓️",
-          WaterLevelStatistics: "✓️",
-          waterLevelMonitoring: "✓️",
-          LeakDetection: "✓️",
-          deviceWatch: "✓️",
           NumberOfUsers: "+5",
         },
       },
@@ -321,17 +253,16 @@ export const devices = {
   },
 };
 export const packagesFeaturesTitles = {
-  DeliveryAndInstallation: "الشحن والتركيب",
+  DeliveryAndInstallation: "شحن مجاني",
   Subscription: "اشتراك شهري",
   waterLevelMonitoring: "مراقبه مستوى الماء",
   LowWaterAlerts: "تنبيهات بإنخفاض الماء",
   WaterLevelStatistics: "إحصائيات لمستوى الماء",
-  deviceWatch: "مراقبه الجهاز عبر الحاسب الشخصي",
-  NumberOfUsers: "عدد المستخدمين"
-}
-export const paths = Object.keys( devices ).map( ( device ) => ( {
-  href: devices[ device ].path,
-  name: devices[ device ].name,
-  title: devices[ device ].title,
-} ) )
-
+  // deviceWatch: "مراقبه الجهاز عبر الحاسب الشخصي",
+  NumberOfUsers: "عدد المستخدمين",
+};
+export const paths = Object.keys(devices).map((device) => ({
+  href: devices[device].path,
+  name: devices[device].name,
+  title: devices[device].title,
+}));

@@ -1,30 +1,13 @@
-import { CompleteBooking } from "components/Booking/CompleteBooking";
-import { PaymentOptions } from "components/Booking/PaymentOptions";
-import { UserInfoForm } from "components/Booking/UserInfoForm";
+import { CompleteBooking } from "components/booking/CompleteBooking";
+import { PaymentOptions } from "components/booking/PaymentOptions";
+import { UserInfoForm } from "components/booking/UserInfoForm";
 import { useEffect, useState } from "react";
+import amplitude from "utils/amplitude";
 import { setCallbackUrl } from "utils/helpers/helpers";
-import { product } from "../../../../oldData";
 
-const refineCart = (cart, bookingCart) => {
-  return cart.map((item) => {
-    const device = bookingCart.find(
-      (bookingItem) => bookingItem.title === item.data.title
-    );
-    if (device) {
-      return {
-        title: item.data.title,
-        quantity: item.quantity,
-        devicePrice: device?.devicePrice,
-        // packagePriceDescription: device.packagePriceDescription,
-
-        price: device?.price,
-      };
-    }
-  });
-};
 const calculateTotalPrice = (bookingCart) =>
   bookingCart.reduce(
-    (acc, item) => acc + ( item.devicePrice) || 0,
+    (acc, item) => acc + (item.price + item.devicePrice) || 0,
     0
   );
 const getType = (bookingCart = []) => bookingCart[0]?.type;
@@ -34,7 +17,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   const [paymentMethod, setPaymentMethod] = useState("");
   const [currentStep, setCurrentStep] = useState(0);
   const [checked, setChecked] = useState(false);
-  const total = calculateTotalPrice(bookingCart) ;
+  const total = calculateTotalPrice(bookingCart);
   const orderData = {
     ...userInfo,
     phoneNumber: userInfo?.phoneNumber?.replace("966", ""),
@@ -43,20 +26,20 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
     discount: coupon?.discount,
     installationCompany: "",
     scSCi: "",
-    // packageID: bookingCart[0]?.id,
+    packageID: bookingCart[0]?.id,
     orderTotal: total - (coupon?.discount || 0),
     products: bookingCart.map((item) => ({
-      // package: item.plan,
-      productModel:cart.find((cartItem) => cartItem.data.title === item.title).data.name,
+      package: item.plan,
       tankType: item.tankType || "none",
       qty: 1,
       // price: item.price,
       devicePrice: item.devicePrice,
       id: item.id,
-      // option: item.option,
+      option: item.option,
     })),
     utm: localStorage.getItem("UTM"),
   };
+
   const disablePayment =
     !userInfo.firstName ||
     !userInfo.lastName ||
@@ -68,6 +51,8 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    amplitude.logCheckoutStep(1);
+    console.log(cart);
   }, []);
   return (
     <>
@@ -92,7 +77,20 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
         setPaymentMethod={setPaymentMethod}
         setChecked={setChecked}
         checked={checked}
-        cart={refineCart(cart, bookingCart)}
+        cart={cart.map((item) => ({
+          title: item.data.title,
+          deviceModel: item.data.deviceModel,
+          quantity: item.quantity,
+          devicePrice: bookingCart[0]?.devicePrice,
+          packagePriceDescription: bookingCart[0]?.packagePriceDescription,
+          // .filter(
+          //   (cartItem) => cartItem._id === item.data._id).
+          // reduce((acc, item) => acc + item.devicePrice, 0),
+          price: bookingCart[0]?.price,
+          // .filter(
+          //   (cartItem) => cartItem._id === item.data._id).
+          // reduce((acc, item) => acc + item.price, 0),
+        }))}
         disablePayment={disablePayment}
         callbackUrl={callbackUrl}
         coupon={coupon}

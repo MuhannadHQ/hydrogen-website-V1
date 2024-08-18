@@ -2,6 +2,7 @@ import create_payment from "apis/create_payment";
 import { Loader } from "components/global/Loader";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
+import amplitude from "utils/amplitude";
 
 const responseStatus = {
   loading: <Loader />,
@@ -31,8 +32,23 @@ const cities = {
   khobar: "الخبر",
   dhahran: "الظهران",
   qatif: "القطيف",
-  alahsa: "الأحساء"
-}
+  alahsa: "الأحساء",
+  taif: "الطائف",
+  abha: "أبها",
+  albaha: "الباحة",
+  khames: "خميس مشيط",
+  tabuk: "تبوك",
+  jazan: "جازان",
+  unizah: "عنيزة",
+  buridah: "بريدة",
+  jubail: "الجبيل",
+  yunbu: "ينبع",
+  albaha: "الباحة",
+  najran: "نجران",
+  alkharj: "الخرج",
+  madenia: "المدينة المنورة",
+  hafuf: "الهفوف",
+};
 
 const howDidYouKnow = {
   facebook: "فيسبوك",
@@ -91,6 +107,7 @@ export const UserInfoForm = ({
       ...userInfo,
     });
     setCurrentStep(currentStep + 1);
+    amplitude.logCheckoutStep(2, userInfo);
   };
   return (
     <div className="bg-secondary rounded-lg shadow py-10 my-5 ">

@@ -18,20 +18,20 @@ const cloneToBookingCart = (cart) => {
       title: item.data.title,
       deviceModel: item.data.deviceModel,
       packages: item.data.packages,
-      tankType: "",
+      tankType: item.data.selectedPackage?.tankType || "",
       devicePrice: item.data.devicePrice,
       deviceDescription: item.data.deviceDescription,
       priceDescription: item.data.priceDescription,
       packagesFeaturesTitles: item.data.packagesFeaturesTitles,
-      id: item.data.packages[1]?.id || item.data.packages[0]?.id,
-      plan: item.data.packages[1]?.name || item.data.packages[0]?.name,
-      price: item.data.packages[1]?.price || item.data.packages[0]?.price,
+      id: item.data.selectedPackage?.id || item.data.packages[0]?.id,
+      plan: item.data.selectedPackage?.name || item.data.packages[0]?.name,
+      price: item.data.selectedPackage?.price || item.data.packages[0]?.price,
       packagePriceDescription:
-        item.data.packages[1]?.packagePriceDescription ||
+        item.data.selectedPackage?.packagePriceDescription ||
         item.data.packages[0]?.packagePriceDescription,
-      type: item.data.packages[1]?.type || item.data.packages[0]?.type,
+      type: item.data.selectedPackage?.type || item.data.packages[0]?.type,
       option:
-        item.data.packages[1]?.options?.[0]?.value ||
+        item.data.selectedPackage?.options?.[0]?.value ||
         item.data.packages[0]?.options?.[0]?.value,
     });
     bookingCart = [...bookingCart, ...arr];

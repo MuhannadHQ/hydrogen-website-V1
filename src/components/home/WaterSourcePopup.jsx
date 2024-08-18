@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const Popup = () => {
+const WaterSourcePopup = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showPromo, setShowPromo] = useState(false);
 
@@ -74,4 +74,4 @@ const Popup = () => {
   );
 };
 
-export default Popup;
+export default WaterSourcePopup;

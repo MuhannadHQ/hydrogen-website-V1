@@ -1,12 +1,12 @@
-"use client"
-import { Cart } from "components/Booking/Cart"
+"use client";
+import { Cart } from "components/booking/Cart";
 
-const page = () =>
-{
+const page = () => {
+  return (
+    <>
+      <Cart />
+    </>
+  );
+};
 
-  return <>
-   <Cart />
-  </>
-}
-
-export default page
+export default page;

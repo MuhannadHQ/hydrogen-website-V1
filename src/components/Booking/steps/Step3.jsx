@@ -1,6 +1,6 @@
-import { CompleteBooking } from "components/Booking/CompleteBooking";
-import { PaymentOptions } from "components/Booking/PaymentOptions";
-import { UserInfoForm } from "components/Booking/UserInfoForm";
+import { CompleteBooking } from "components/booking/CompleteBooking";
+import { PaymentOptions } from "components/booking/PaymentOptions";
+import { UserInfoForm } from "components/booking/UserInfoForm";
 import { useEffect, useState } from "react";
 import amplitude from "utils/amplitude";
 import { setCallbackUrl } from "utils/helpers/helpers";
@@ -52,6 +52,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     amplitude.logCheckoutStep(1);
+    console.log(cart);
   }, []);
   return (
     <>

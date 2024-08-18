@@ -1,7 +1,7 @@
-import { Steps } from "components/Booking/Steps";
-import { Step1 } from "components/Booking/steps/Step1";
-import { Step2 } from "components/Booking/steps/Step2";
-import { Step3 } from "components/Booking/steps/Step3";
+import { Steps } from "components/booking/Steps";
+import { Step1 } from "components/booking/steps/Step1";
+import { Step2 } from "components/booking/steps/Step2";
+import { Step3 } from "components/booking/steps/Step3";
 import Head from "next/head";
 import { useState } from "react";
 import useCart from "utils/hooks/cartController";
@@ -32,11 +32,11 @@ export const Cart = () => {
       removeFromCart={removeFromCart}
     />,
     // <Step2
-    //   key={ 1 }
-    //   setStep={ setStep }
-    //   bookingCart={ bookingCart }
-    //   setItemPlan={ setItemPlan }
-    //   setItemOption={ setItemOption }
+    //   key={1}
+    //   setStep={setStep}
+    //   bookingCart={bookingCart}
+    //   setItemPlan={setItemPlan}
+    //   setItemOption={setItemOption}
     // />,
     <Step3
       key={2}

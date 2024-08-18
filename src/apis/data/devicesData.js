@@ -102,6 +102,15 @@ export const devices = {
     packagePriceDescription: "199 ريال",
     devicePrice: 0,
     price: "199 ريال",
+    guarantees: [
+      "شحن مجاني",
+      "اشتراك مجاني لمدة شهر",
+      "قيمة الاشتراك 39 ريال/شهر",
+      "ضمان لمدة سنتين",
+      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+      "شريحة بيانات مدمجة داخل الجهاز",
+      "يتحمل إلى حرارة 60 درجة مئوية",
+    ],
     images: [
       {
         src: alphaApp.src,
@@ -115,13 +124,6 @@ export const devices = {
       // },
     ],
     productImage: alpha.src,
-    guarantees: [
-      "شحن مجاني",
-      "اشتراك مجاني لمدة شهر",
-      "قيمة الاشتراك 39 ريال/شهر",
-      "ضمان لمدة سنتين",
-      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
-    ],
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
@@ -192,34 +194,51 @@ export const devices = {
         value: "8 امتار",
       },
     ],
+
     guideBook: alphaBook.src,
     packages: [
-      // {
-      //   id: "basic",
-      //   title: "اشتراك",
-      //   name: "اشتراك",
-      //   type: "subscription",
-      //   price: 199,
-      //   packagePriceDescription: "199",
-      //   features: {
-      //     DeliveryAndInstallation: "✓️",
-      //     Subscription: "39 ريال/الشهر",
-      //     LowWaterAlerts: "✓️",
-      //     WaterLevelStatistics: "✓️",
-      //     waterLevelMonitoring: "✓️",
-      //     LeakDetection: "✓️",
-      //     NumberOfUsers: "+5",
-
-      //   },
-      // },
+      {
+        id: "basic",
+        title: "اشتراك",
+        name: "اشتراك",
+        type: "subscription",
+        price: 199,
+        packagePriceDescription: "199",
+        guarantees: [
+          "شحن مجاني",
+          "اشتراك مجاني لمدة شهر",
+          "قيمة الاشتراك 39 ريال/شهر",
+          "ضمان لمدة سنتين",
+          "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+          "شريحة بيانات مدمجة داخل الجهاز",
+          "يتحمل إلى حرارة 60 درجة مئوية",
+        ],
+        features: {
+          DeliveryAndInstallation: "✓️",
+          Subscription: "39 ريال/الشهر",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
+          NumberOfUsers: "+5",
+        },
+      },
 
       {
         id: "regular",
         title: "بدون اشتراك",
         type: "one-time",
         name: "بدون اشتراك",
-        price: 199,
-        packagePriceDescription: "199 ريال",
+        price: 899,
+        packagePriceDescription: "899 ريال",
+        guarantees: [
+          "شحن مجاني",
+          "بدون أي اشتراك شهري",
+          "ضمان لمدة سنتين",
+          "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+          "شريحة بيانات مدمجة داخل الجهاز",
+          "يتحمل إلى حرارة 60 درجة مئوية",
+        ],
         features: {
           DeliveryAndInstallation: "✓️",
           Subscription: "بدون اشتراك",

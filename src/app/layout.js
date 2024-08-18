@@ -67,14 +67,7 @@ export default function RootLayout({ children }) {
         </main>
 
         <div className=" fixed bottom-5 right-5 z-100 ">
-          <a
-            className="flex items-center w-12 h-12 justify-center bg-primary rounded-full border shadow"
-            href="https://api.whatsapp.com/send/?phone=%2B966504281941&text&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <WhattsappFloat />
-          </a>
+          <WhattsappFloat />
         </div>
         <GoogleTagManager gtmId="GTM-NS6MLSG" />
         <Footer />

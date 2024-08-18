@@ -9,9 +9,9 @@ const CustomizeProductPopup = () => {
   useEffect(() => {
     // Check if the user has already answered the popup question
     const hasAnswered = localStorage.getItem("helpmeAnswered");
-    // if (!hasAnswered) {
-    setShowPopup(true);
-    // }
+    if (!hasAnswered) {
+      setShowPopup(true);
+    }
   }, []);
 
   const handleAnswer = (answer) => {

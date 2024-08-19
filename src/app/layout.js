@@ -7,6 +7,7 @@ import "styles/global.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { useEffect } from "react";
 import amplitude from "utils/amplitude";
+import CustomizeProductPopup from "components/customize_product/CustomizeProductPopup";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -65,7 +66,7 @@ export default function RootLayout({ children }) {
         >
           {children}
         </main>
-
+        <CustomizeProductPopup />
         <div className=" fixed bottom-5 right-5 z-100 ">
           <WhattsappFloat />
         </div>

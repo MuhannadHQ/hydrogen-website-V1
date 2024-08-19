@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import amplitude from "utils/amplitude";
 
 const CustomizeProductPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -22,6 +23,8 @@ const CustomizeProductPopup = () => {
     // Show promo popup if the answer is 'yes'
     if (answer === "yes") {
       router.push("/alpha/customize");
+    } else {
+      amplitude.logEvent("Declined Customize Product");
     }
   };
 

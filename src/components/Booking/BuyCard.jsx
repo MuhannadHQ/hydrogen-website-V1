@@ -2,8 +2,12 @@ import { Trash } from "assets/icons/Trash";
 import Image from "next/image";
 import { FiVideo, FiFileText } from "react-icons/fi";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export const BuyCard = ({ cart, removeFromCart, editQuantity }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <ul className="bg-white border shadow-md mx-4 rounded-lg my-2 ">
       {cart.map((item, i) => (

@@ -1,7 +1,5 @@
-import create_order from "apis/create_order";
-import Agreement from "components/booking/Agreement";
-import { CartQuickInfo } from "components/booking/CartQuickInfo";
-import { Coupon } from "components/booking/steps/Coupon";
+import { CartQuickInfo } from "components/Booking/CartQuickInfo";
+import { Coupon } from "components/Booking/steps/Coupon";
 import { Loader } from "components/global/Loader";
 import Link from "next/link";
 import { useEffect, useState } from "react";

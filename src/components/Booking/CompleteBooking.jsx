@@ -1,7 +1,7 @@
 "use client";
 
-import { InstallmentsPlan } from "components/booking/InstallmentsPlan";
-import MoyasarForm from "components/booking/MoyasserForm";
+import { InstallmentsPlan } from "components/Booking/InstallmentsPlan";
+import MoyasarForm from "components/Booking/MoyasserForm";
 import { useEffect } from "react";
 import amplitude from "utils/amplitude";
 import { setCallbackUrl } from "utils/helpers/helpers";

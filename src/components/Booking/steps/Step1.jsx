@@ -1,4 +1,4 @@
-import { BuyCard } from "components/booking/BuyCard";
+import { BuyCard } from "components/Booking/BuyCard";
 
 export const Step1 = ({
   setStep,

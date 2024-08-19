@@ -1,4 +1,4 @@
-import { BuyCard } from "components/booking/BuyCard";
+import { BuyCard } from "components/Booking/BuyCard";
 import { useEffect, useState } from "react";
 import { getLocalStorageItem } from "utils/helpers/localstorage";
 import { useRouter } from "next/navigation";

@@ -17,7 +17,7 @@ export const BuyCard = ({ cart, removeFromCart, editQuantity }) => {
         >
           {item.data.isCustomized && (
             <div className="absolute top-0 right-0 bg-blue-500 text-white py-2 px-4  text-sm font-semibold mt-4">
-              االختيار األمثل
+              الاختيار الأمثل{" "}
             </div>
           )}
           <div className="w-12 md:w-1/3 w-48 mt-8">

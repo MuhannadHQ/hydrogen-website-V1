@@ -35,6 +35,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
       price: item.price,
       devicePrice: item.devicePrice,
       id: item.id,
+      deviceModel: item.deviceModel,
       option: item.option,
     })),
     utm: localStorage.getItem("UTM"),
@@ -80,6 +81,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
         cart={cart.map((item) => ({
           title: item.data.title,
           deviceModel: item.data.deviceModel,
+          name: item.data.name,
           quantity: item.quantity,
           devicePrice: bookingCart[0]?.devicePrice,
           packagePriceDescription: bookingCart[0]?.packagePriceDescription,

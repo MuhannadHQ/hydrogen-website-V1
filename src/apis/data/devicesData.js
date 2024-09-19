@@ -9,14 +9,15 @@ import alphaBook from "assets/images/alpha-guide.png";
 import lamdaApp from "assets/images/lamda-app.png";
 import lamda from "assets/images/lamda.png";
 // import guideBookFile from "assets/guide-book.pdf"
-export const lastDateUpdated = "10/2/2023";
+export const lastDateUpdated = "09/10/2024";
 
 export const devices = {
   lamda: {
     _id: "device-2",
-    name: "lamda",
+    deviceModel: "lamda",
     path: "/lamda",
     buy_path: "cart",
+    name: "lamda",
     title: "جهاز لامدا",
     description: "تحكم بفاتورة الماء بكل سهولة",
     price: "399 ر.س",
@@ -91,10 +92,10 @@ export const devices = {
   // MonthlySubscription: "الاشتراك الشهري", DeliveryAndInstallation: "التوصيل والتركيب", LowWaterAlerts: "تنبيهات بإنخفاض الماء", WaterLevelStatistics: "إحصائيات لمستوى الماء", CubicMeterReadings: "قراءات بالمتر المكعب", ControlOfThePump: "التحكم بالمضخة", ControlOfTheFloat: "التحكم بالعوامة", LeakDetection: "كشف التسريب داخل الخزان", NumberOfUsers: "عدد المستخدمين",  } },
   alpha: {
     _id: "device-1",
-    name: "alpha",
+    deviceModel: "alpha",
     path: "/alpha",
     buy_path: "/cart",
-    deviceModel: "جهاز ألفا",
+    name: "جهاز ألفا",
     title: "وداعاً لمفاجآت انقطاع المياه",
     description: "معلومات خزان المياه بين يديك",
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",

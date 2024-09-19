@@ -18,7 +18,7 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) => {
             <tbody>
               {cart.map((item, index) => (
                 <tr key={index} className="h-10 text-primary">
-                  <td>{item.deviceModel}</td>
+                  <td>{item.name}</td>
                   <td>{item.quantity + item.devicePrice || 0}</td>
                   {/*<td>*/}
                   {/*  { item.devicePrice } ر.س*/}

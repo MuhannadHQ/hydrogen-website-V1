@@ -29,7 +29,7 @@ export const BuyCard = ({ cart, removeFromCart, editQuantity }) => {
           </div>
           <div className="flex flex-col gap-5 md:gap-15 mt-8">
             <div>
-              <h4 className="text-primary text-xl">{item.data.deviceModel}</h4>
+              <h4 className="text-primary text-xl">{item.data.name}</h4>
               <p>
                 {item.data.selectedPackage?.packagePriceDescription ||
                   item.data.packagePriceDescription}{" "}
@@ -45,13 +45,13 @@ export const BuyCard = ({ cart, removeFromCart, editQuantity }) => {
             </ul>
             <div className="flex justify-center gap-6 mt-8 w-full md:w-auto">
               <a
-                href={`/${item.data.name}#introduction`}
+                href={`${item.data.path}#introduction`}
                 className="flex items-center gap-2 text-blue-600 underline"
               >
                 <FiVideo /> فيديو تعريفي
               </a>
               <a
-                href={`/${item.data.name}#specifications`}
+                href={`${item.data.path}#specifications`}
                 className="flex items-center gap-2 text-blue-600 underline"
               >
                 <FiFileText /> المواصفات الفنية

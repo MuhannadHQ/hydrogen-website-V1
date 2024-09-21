@@ -9,14 +9,15 @@ import alphaBook from "assets/images/alpha-guide.png";
 import lamdaApp from "assets/images/lamda-app.png";
 import lamda from "assets/images/lamda.png";
 // import guideBookFile from "assets/guide-book.pdf"
-export const lastDateUpdated = "10/2/2023";
+export const lastDateUpdated = "09/10/2024";
 
 export const devices = {
   lamda: {
     _id: "device-2",
-    name: "lamda",
+    deviceModel: "lamda",
     path: "/lamda",
     buy_path: "cart",
+    name: "lamda",
     title: "جهاز لامدا",
     description: "تحكم بفاتورة الماء بكل سهولة",
     price: "399 ر.س",
@@ -91,17 +92,26 @@ export const devices = {
   // MonthlySubscription: "الاشتراك الشهري", DeliveryAndInstallation: "التوصيل والتركيب", LowWaterAlerts: "تنبيهات بإنخفاض الماء", WaterLevelStatistics: "إحصائيات لمستوى الماء", CubicMeterReadings: "قراءات بالمتر المكعب", ControlOfThePump: "التحكم بالمضخة", ControlOfTheFloat: "التحكم بالعوامة", LeakDetection: "كشف التسريب داخل الخزان", NumberOfUsers: "عدد المستخدمين",  } },
   alpha: {
     _id: "device-1",
-    name: "alpha",
+    deviceModel: "alpha",
     path: "/alpha",
     buy_path: "/cart",
-    deviceModel: "جهاز ألفا",
+    name: "جهاز ألفا",
     title: "وداعاً لمفاجآت انقطاع المياه",
     description: "معلومات خزان المياه بين يديك",
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "199 ريال",
-    packagePriceDescription: "199 ريال",
+    priceDescription: "299 ريال",
+    packagePriceDescription: "299 ريال",
     devicePrice: 0,
-    price: "199 ريال",
+    price: "299 ريال",
+    guarantees: [
+      "شحن مجاني",
+      "اشتراك مجاني لمدة شهر",
+      "قيمة الاشتراك 39 ريال/شهر",
+      "ضمان لمدة سنتين",
+      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+      "شريحة بيانات مدمجة داخل الجهاز",
+      "يتحمل إلى حرارة 60 درجة مئوية",
+    ],
     images: [
       {
         src: alphaApp.src,
@@ -115,13 +125,6 @@ export const devices = {
       // },
     ],
     productImage: alpha.src,
-    guarantees: [
-      "شحن مجاني",
-      "اشتراك مجاني لمدة شهر",
-      "قيمة الاشتراك 39 ريال/شهر",
-      "ضمان لمدة سنتين",
-      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
-    ],
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
@@ -192,34 +195,51 @@ export const devices = {
         value: "8 امتار",
       },
     ],
+
     guideBook: alphaBook.src,
     packages: [
-      // {
-      //   id: "basic",
-      //   title: "اشتراك",
-      //   name: "اشتراك",
-      //   type: "subscription",
-      //   price: 199,
-      //   packagePriceDescription: "199",
-      //   features: {
-      //     DeliveryAndInstallation: "✓️",
-      //     Subscription: "39 ريال/الشهر",
-      //     LowWaterAlerts: "✓️",
-      //     WaterLevelStatistics: "✓️",
-      //     waterLevelMonitoring: "✓️",
-      //     LeakDetection: "✓️",
-      //     NumberOfUsers: "+5",
-
-      //   },
-      // },
+      {
+        id: "basic",
+        title: "اشتراك",
+        name: "اشتراك",
+        type: "subscription",
+        price: 299,
+        packagePriceDescription: "299 ريال",
+        guarantees: [
+          "شحن مجاني",
+          "اشتراك مجاني لمدة شهر",
+          "قيمة الاشتراك 39 ريال/شهر",
+          "ضمان لمدة سنتين",
+          "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+          "شريحة بيانات مدمجة داخل الجهاز",
+          "يتحمل إلى حرارة 60 درجة مئوية",
+        ],
+        features: {
+          DeliveryAndInstallation: "✓️",
+          Subscription: "39 ريال/الشهر",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
+          NumberOfUsers: "+5",
+        },
+      },
 
       {
         id: "regular",
         title: "بدون اشتراك",
         type: "one-time",
         name: "بدون اشتراك",
-        price: 199,
-        packagePriceDescription: "199 ريال",
+        price: 899,
+        packagePriceDescription: "899 ريال",
+        guarantees: [
+          "شحن مجاني",
+          "بدون أي اشتراك شهري",
+          "ضمان لمدة سنتين",
+          "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+          "شريحة بيانات مدمجة داخل الجهاز",
+          "يتحمل إلى حرارة 60 درجة مئوية",
+        ],
         features: {
           DeliveryAndInstallation: "✓️",
           Subscription: "بدون اشتراك",

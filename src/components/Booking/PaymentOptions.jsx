@@ -1,10 +1,9 @@
-import create_order from "apis/create_order";
-import Agreement from "components/Booking/Agreement";
 import { CartQuickInfo } from "components/Booking/CartQuickInfo";
 import { Coupon } from "components/Booking/steps/Coupon";
 import { Loader } from "components/global/Loader";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import amplitude from "utils/amplitude";
 
 const subscriptionPaymentOptions = [
   {
@@ -25,6 +24,10 @@ const paymentOptions = [
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",
   },
+  // {
+  //   title: "الدفع على 3 دفعات",
+  //   name: "installment",
+  // },
   // {
   //   title: "الدفع على 3 دفعات",
   //   name: "installment",
@@ -54,6 +57,11 @@ export const PaymentOptions = ({
   const [status, setStatus] = useState("");
   const handleCreateOrder = async () => {
     setCurrentStep(currentStep + 1);
+
+    amplitude.logCheckoutStep(3, {
+      paymentMethod: paymentMethod,
+      total: total,
+    });
   };
   useEffect(() => {
     setPaymentMethod(paymentMethods[0].name);

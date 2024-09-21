@@ -1,33 +1,25 @@
-import { PackagesList } from "components/Booking/PackagesList"
-import { useEffect } from "react"
+import { PackagesList } from "components/Booking/PackagesList";
+import { useEffect } from "react";
 
-const calculateTotalPrice = (bookingCart) => bookingCart.reduce(
-  (acc, item) => acc + item.price || 0, 0)
-export const Step2 = ({
-  setStep,
-  bookingCart,
-  setItemPlan,
-setItemOption,
-}) =>
-{
-  useEffect(() =>
-  {
-    window.scrollTo(0, 0)
+const calculateTotalPrice = (bookingCart) =>
+  bookingCart.reduce((acc, item) => acc + item.price || 0, 0);
+export const Step2 = ({ setStep, bookingCart, setItemPlan, setItemOption }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      {
-        bookingCart.map((item, index) =>
-          index === 0 ?
+      {bookingCart.map((item, index) =>
+        index === 0 ? (
           <PackagesList
-            key={ index }
-           itemData={ item }
-            setItemPlan={ setItemPlan }
-            index={ index }
-            setItemOption={ setItemOption }
-          /> : null
-        )
-      }
+            key={index}
+            itemData={item}
+            setItemPlan={setItemPlan}
+            index={index}
+            setItemOption={setItemOption}
+          />
+        ) : null
+      )}
 
       {/*<p className="text-primary">*/}
       {/*  خدمة التركيب متاحة داخل مدينة الرياض ومكة المكرمة وجدة والمنطقة الشرقية*/}
@@ -52,19 +44,17 @@ setItemOption,
 
       {/*</div>*/}
       <div className="my-5 flex gap-10 justify-center">
-        <button
-          onClick={ () => setStep(0) }
-          className="btn btn-secondary">
+        <button onClick={() => setStep(0)} className="btn btn-secondary">
           الرجوع
         </button>
         <button
-          disabled={ bookingCart.length === 0  }
-          onClick={ () => setStep(2) }
-          className={`btn btn-primary-contained w-60 `}>
+          disabled={bookingCart.length === 0}
+          onClick={() => setStep(2)}
+          className={`btn btn-primary-contained w-60 `}
+        >
           استمرار
         </button>
       </div>
-
     </>
-  )
-}
+  );
+};

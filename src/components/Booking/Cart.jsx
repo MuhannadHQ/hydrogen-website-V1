@@ -32,11 +32,11 @@ export const Cart = () => {
       removeFromCart={removeFromCart}
     />,
     // <Step2
-    //   key={ 1 }
-    //   setStep={ setStep }
-    //   bookingCart={ bookingCart }
-    //   setItemPlan={ setItemPlan }
-    //   setItemOption={ setItemOption }
+    //   key={1}
+    //   setStep={setStep}
+    //   bookingCart={bookingCart}
+    //   setItemPlan={setItemPlan}
+    //   setItemOption={setItemOption}
     // />,
     <Step3
       key={2}

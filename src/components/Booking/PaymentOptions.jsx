@@ -16,10 +16,10 @@ const subscriptionPaymentOptions = [
   },
 ];
 const paymentOptions = [
-  {
-    title: "الدفع عند الاستلام",
-    name: "cod",
-  },
+  // {
+  //   title: "الدفع عند الاستلام",
+  //   name: "cod",
+  // },
   {
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",

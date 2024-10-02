@@ -41,6 +41,7 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) => {
               {type === "installment" ? total : total - (coupon?.discount || 0)}
               ر.س
             </span>
+            <span className="w-24 inline-block"> التاريخ المتوقع لشحن الجهاز هو ٢٠ أكتوبر ٢٠٢٤</span>
           </div>
           {coupon?.code && coupon?.code == "wtu24" && (
             <div>

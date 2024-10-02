@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import amplitude from "utils/amplitude";
 
 const subscriptionPaymentOptions = [
-  {
-    title: "الدفع عند الاستلام",
-    name: "cod",
-  },
+  // {
+  //   title: "الدفع عند الاستلام",
+  //   name: "cod",
+  // },
   {
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",

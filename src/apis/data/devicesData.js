@@ -20,7 +20,7 @@ export const devices = {
     name: "lamda",
     title: "جهاز لامدا",
     description: "تحكم بفاتورة الماء بكل سهولة",
-    price: "399 ر.س",
+    price: "1499 ر.س",
     images: [
       // {
       //   src: lamdaApp.src,
@@ -99,10 +99,10 @@ export const devices = {
     title: "وداعاً لمفاجآت انقطاع المياه",
     description: "معلومات خزان المياه بين يديك",
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "299 ريال",
-    packagePriceDescription: "299 ريال",
+    priceDescription: "499 ريال",
+    packagePriceDescription: "499 ريال",
     devicePrice: 0,
-    price: "299 ريال",
+    price: "499 ريال",
     guarantees: [
       "شحن مجاني",
       "اشتراك مجاني لمدة شهر",
@@ -203,8 +203,8 @@ export const devices = {
         title: "اشتراك",
         name: "اشتراك",
         type: "subscription",
-        price: 299,
-        packagePriceDescription: "299 ريال",
+        price: 499,
+        packagePriceDescription: "499 ريال",
         guarantees: [
           "شحن مجاني",
           "اشتراك مجاني لمدة شهر",

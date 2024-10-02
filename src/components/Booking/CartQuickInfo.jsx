@@ -37,11 +37,13 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) => {
           </table>
           <div>
             <span className="w-24 inline-block"> إجمالي السعر: </span>
-            <span className="text-primary  ">
+            <span className="text-primary ">
               {type === "installment" ? total : total - (coupon?.discount || 0)}
               ر.س
             </span>
-            <span className="w-24 inline-block"> التاريخ المتوقع لشحن الجهاز هو ٢٠ أكتوبر ٢٠٢٤</span>
+            <br/>
+            <br/>
+            <div>التاريخ المتوقع لشحن الجهاز هو يوم الأحد 20 أكتوبر </div>
           </div>
           {coupon?.code && coupon?.code == "wtu24" && (
             <div>

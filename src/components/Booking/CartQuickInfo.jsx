@@ -43,7 +43,7 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) => {
             </span>
             <br/>
             <br/>
-            <div>التاريخ المتوقع لشحن الجهاز هو يوم الأحد 20 أكتوبر </div>
+            {/* <div>التاريخ المتوقع لشحن الجهاز هو يوم الأحد 20 أكتوبر </div> */}
           </div>
           {coupon?.code && coupon?.code == "wtu24" && (
             <div>

@@ -42,12 +42,15 @@ const page = () => {
           <li className="w-64">
             <button
               onClick={() => {
-                window.open("/hydrojeen.apk", "_blank");
+                window.open(
+                  "https://play.google.com/store/apps/details?id=com.hydrojeen.iot",
+                  "_blank"
+                );
                 amplitude.logEvent("App Download (Android)");
               }}
               className={`btn btn-primary w-full`}
             >
-              Android (Direct Download)
+              Android (Play Store)
             </button>
           </li>
         </ul>

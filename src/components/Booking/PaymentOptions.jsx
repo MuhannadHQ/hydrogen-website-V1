@@ -6,9 +6,13 @@ import { useEffect, useState } from "react";
 import amplitude from "utils/amplitude";
 
 const subscriptionPaymentOptions = [
+  {
+    title: "تحويل بنكي",
+    name: "cod",
+  },
   // {
-  //   title: "الدفع عند الاستلام",
-  //   name: "cod",
+  //   title: "تحويل بنكي",
+  //   name: "bankTransffer",
   // },
   {
     title: "الدفع عبر مدى / ابل باي",
@@ -16,18 +20,23 @@ const subscriptionPaymentOptions = [
   },
 ];
 const paymentOptions = [
-  // {
-  //   title: "الدفع عند الاستلام",
-  //   name: "cod",
-  // },
+  {
+    title: "تحويل بنكي",
+    name: "cod",
+  },
+
+    // {
+    //   title: "تحويل بنكي",
+    //   name: "bankTransffer",
+    // },
   {
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",
   },
-  // {
-  //   title: "الدفع على 3 دفعات",
-  //   name: "installment",
-  // },
+  {
+    title: "الدفع على 3 دفعات",
+    name: "installment",
+  },
   // {
   //   title: "الدفع على 3 دفعات",
   //   name: "installment",

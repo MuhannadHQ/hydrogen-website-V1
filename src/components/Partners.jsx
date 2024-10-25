@@ -2,7 +2,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 import AliceCarousel from "react-alice-carousel";
 import { Arrow } from "assets/icons/Arrow";
-import alzamil from "assets/images/alzamil.png";
+// import alzamil from "assets/images/alzamil.png";
 import crownPlaza from "assets/images/crowne_plaza.png";
 import fitnessTime from "assets/images/fitness-time.png";
 import ministryOfToursim from "assets/images/mt.png";

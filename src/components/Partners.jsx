@@ -6,7 +6,7 @@ import { Arrow } from "assets/icons/Arrow";
 import crownPlaza from "assets/images/crowne_plaza.png";
 import fitnessTime from "assets/images/fitness-time.png";
 import ministryOfToursim from "assets/images/mt.png";
-import najm from "assets/images/najmn.png";
+import najm from "assets/images/najm.png";
 import optimo from "assets/images/optimo.jpg";
 import ministryofdefense from "assets/images/ministry_of_defense.png";
 

@@ -1,4 +1,5 @@
 import { BuyCard } from "components/Booking/BuyCard";
+import { PackSelector } from "components/Booking/PackSelector";
 
 export const Step1 = ({
   setStep,
@@ -19,6 +20,7 @@ export const Step1 = ({
         editQuantity={editQuantity}
         removeFromCart={removeFromCart}
       />
+      <PackSelector />
       <button
         disabled={cart.some((item) => !item.quantity) || !cart.length}
         onClick={handleMoveToStep2}

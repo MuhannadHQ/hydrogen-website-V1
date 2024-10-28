@@ -1,0 +1,55 @@
+import { IoIosArrowDropleftCircle } from "react-icons/io";
+
+export const PackSelector = () => {
+
+    return (
+        <div className=" flex justify-center flex-row gap-3 flex-wrap mt-14 mb-6">
+
+            {/* Pack 1 */}
+            <div className="relative mt-5" key={0}>
+                <input value={0} className="peer hidden" id={`radio_0`} type="radio" name="radio" />
+
+                <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:border-3 peer-checked:border-4 min-w-[250px] min-h-[130px]" htmlFor={`radio_0`}>
+                    <h1 dir="rtl" className="self-start font-extrabold mt-3">769 ريال</h1>
+                    <div className="flex justify-between gap-4">
+                        <div className="font-bold">اشتراك لمدة 3 سنوات</div>
+                        <IoIosArrowDropleftCircle className="text-4xl" />
+                    </div>
+
+                    <span className="absolute bg-primary py-2 px-3  rounded-lg text-white -top-[20px] text-sm font-extrabold">الأفضل قيمة</span>
+                </label>
+            </div>
+
+            {/* Pack 2 */}
+            <div className="relative mt-5" key={1}>
+                <input value={1} className="peer hidden" id={`radio_1`} type="radio" name="radio" />
+
+                <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:border-3 peer-checked:border-4 min-w-[250px] min-h-[130px]" htmlFor={`radio_1`}>
+                    <h1 dir="rtl" className="self-start font-extrabold mt-3">389 ريال</h1>
+                    <div className="flex justify-between gap-4">
+                        <div className="font-bold">اشتراك لمدة سنة</div>
+                        <IoIosArrowDropleftCircle className="text-4xl" />
+                    </div>
+
+                    <span className="absolute bg-primary py-2 px-3  rounded-lg text-white -top-[20px] text-sm font-extrabold">الأكثر مبيعًا</span>
+                </label>
+            </div>
+
+            {/* Pack 3 */}
+            <div className="relative mt-5" key={2}>
+                <input value={2} className="peer hidden" id={`radio_2`} type="radio" name="radio" />
+
+                <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:border-3 peer-checked:border-4 min-w-[250px] min-h-[130px]" htmlFor={`radio_2`}>
+                    <h1 dir="rtl" className="self-start font-extrabold mt-3">0 ريال</h1>
+                    <div className="flex justify-between gap-4">
+                        <div className="font-bold">تجربة لمدة أسبوعين</div>
+                        <IoIosArrowDropleftCircle className="text-4xl" />
+                    </div>
+
+                    <span className="absolute bg-gray-500 py-2 px-3  rounded-lg text-white -top-[20px] text-sm font-extrabold">تجربة مجانية</span>
+                </label>
+            </div>
+
+        </div>
+    )
+}

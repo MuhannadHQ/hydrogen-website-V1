@@ -32,7 +32,7 @@ export const Packs = ({ bookingCart }) => {
 
             {/* Pack 2 */}
             <div className="relative mt-5" key={1}>
-                <input onChange={(e) => { setSelectedPack({ plan: e.target.value, price: 389 }); }} value="oneYear" className="peer hidden" id={`radio_1`} type="radio" name="radio" />
+                <input defaultChecked onChange={(e) => { setSelectedPack({ plan: e.target.value, price: 389 }); }} value="oneYear" className="peer hidden" id={`radio_1`} type="radio" name="radio" />
 
                 <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:bg-primary peer-checked:text-white min-w-[250px] min-h-[130px]" htmlFor={`radio_1`}>
                     <h1 dir="rtl" className="self-start font-extrabold mt-3">389 ريال</h1>

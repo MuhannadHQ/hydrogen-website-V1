@@ -20,8 +20,6 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [checked, setChecked] = useState(false);
   const total = calculateTotalPrice(bookingCart);
-  console.warn("___ Step3.js")
-  console.log(bookingCart)
 
   const orderData = {
     ...userInfo,

@@ -229,11 +229,10 @@ export const devices = {
         title: "بدون اشتراك",
         type: "one-time",
         name: "بدون اشتراك",
-        price: 899,
-        packagePriceDescription: "899 ريال",
+        price: 499,
+        packagePriceDescription: "499 ريال",
         guarantees: [
           "شحن مجاني",
-          "بدون أي اشتراك شهري",
           "ضمان لمدة سنتين",
           "أحقية استرجاع كامل المبلغ خلال 30 يوم",
           "شريحة بيانات مدمجة داخل الجهاز",

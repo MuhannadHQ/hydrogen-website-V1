@@ -33,7 +33,7 @@ export const Cart = () => {
     />,
     <Step4
       key={1}
-      cloneBookingCart={cloneBookingCart}
+      bookingCart={bookingCart}
       setStep={setStep}
       cart={cart}
       editQuantity={editQuantity}

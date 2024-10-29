@@ -1,5 +1,5 @@
 'use client'
-import { Packs } from "./packs.jsx";
+import { Packs } from "./Packs.jsx";
 
 
 export const Step4 = ({
@@ -7,15 +7,15 @@ export const Step4 = ({
     cart,
     editQuantity,
     removeFromCart,
-    cloneBookingCart,
+    bookingCart,
 }) => {
+
     const handleMoveToStep2 = () => {
-        cloneBookingCart();
         setStep(2);
     };
     return (
         <>
-            <Packs />
+            <Packs bookingCart={bookingCart} />
             <button
                 disabled={cart.some((item) => !item.quantity) || !cart.length}
                 onClick={handleMoveToStep2}

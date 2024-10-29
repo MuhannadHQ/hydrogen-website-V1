@@ -10,7 +10,9 @@ const calculateTotalPrice = (bookingCart) =>
     (acc, item) => acc + (item.price + item.devicePrice) || 0,
     0
   );
+
 const getType = (bookingCart = []) => bookingCart[0]?.type;
+
 export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   const [orderId, setOrderId] = useState("");
   const [userInfo, setUserInfo] = useState({});
@@ -18,6 +20,9 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [checked, setChecked] = useState(false);
   const total = calculateTotalPrice(bookingCart);
+  console.warn("___ Step3.js")
+  console.log(bookingCart)
+
   const orderData = {
     ...userInfo,
     phoneNumber: userInfo?.phoneNumber?.replace("966", ""),
@@ -53,7 +58,6 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     amplitude.logCheckoutStep(1);
-    console.log(cart);
   }, []);
   return (
     <>

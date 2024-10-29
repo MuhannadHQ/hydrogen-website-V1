@@ -1,11 +1,24 @@
-export const Packs = () => {
+'use client'
+
+import { useEffect, useState } from "react"
+
+export const Packs = ({ bookingCart }) => {
+
+    const [selectedPack, setSelectedPack] = useState({ plan: "oneYear", price: 389 });
+    const [defaultPrice] = useState(bookingCart[0].price)
+
+    useEffect(() => {
+        bookingCart[0].plan = selectedPack.plan;
+        bookingCart[0].price = defaultPrice + selectedPack.price
+    }, [selectedPack])
+
 
     return (
         <div className=" flex justify-center flex-row gap-3 flex-wrap mt-14 mb-6">
 
             {/* Pack 1 */}
             <div className="relative mt-5" key={0}>
-                <input value={0} className="peer hidden" id={`radio_0`} type="radio" name="radio" />
+                <input onChange={(e) => setSelectedPack({ plan: e.target.value, price: 769 })} value="threeYears" className="peer hidden" id={`radio_0`} type="radio" name="radio" />
 
                 <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:bg-primary peer-checked:text-white min-w-[250px] min-h-[130px]" htmlFor={`radio_0`}>
                     <h1 dir="rtl" className="self-start font-extrabold mt-3">769 ريال</h1>
@@ -19,7 +32,7 @@ export const Packs = () => {
 
             {/* Pack 2 */}
             <div className="relative mt-5" key={1}>
-                <input value={1} className="peer hidden" id={`radio_1`} type="radio" name="radio" />
+                <input onChange={(e) => { setSelectedPack({ plan: e.target.value, price: 389 }); }} value="oneYear" className="peer hidden" id={`radio_1`} type="radio" name="radio" />
 
                 <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:bg-primary peer-checked:text-white min-w-[250px] min-h-[130px]" htmlFor={`radio_1`}>
                     <h1 dir="rtl" className="self-start font-extrabold mt-3">389 ريال</h1>
@@ -33,7 +46,7 @@ export const Packs = () => {
 
             {/* Pack 3 */}
             <div className="relative mt-5" key={2}>
-                <input value={2} className="peer hidden" id={`radio_2`} type="radio" name="radio" />
+                <input onChange={(e) => setSelectedPack({ plan: e.target.value, price: 0 })} value="freeTrial" className="peer hidden" id={`radio_2`} type="radio" name="radio" />
 
                 <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:bg-primary peer-checked:text-white min-w-[250px] min-h-[130px]" htmlFor={`radio_2`}>
                     <h1 dir="rtl" className="self-start font-extrabold mt-3">0 ريال</h1>

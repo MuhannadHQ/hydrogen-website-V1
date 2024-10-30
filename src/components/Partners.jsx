@@ -6,9 +6,12 @@ import { Arrow } from "assets/icons/Arrow";
 import crownPlaza from "assets/images/crowne_plaza.png";
 import fitnessTime from "assets/images/fitness-time.png";
 import ministryOfToursim from "assets/images/mt.png";
-import najm from "assets/images/najm.png";
-import optimo from "assets/images/optimo.jpg";
+import najm from "assets/images/najm.jpg";
+import optimo from "assets/images/optimo.png";
 import ministryofdefense from "assets/images/ministry_of_defense.png";
+import roseVilla from "assets/images/rosevilla.png";
+import romancya from "assets/images/romance.png";
+import ian from "assets/images/ian.png";
 
 
 
@@ -81,8 +84,22 @@ const partnerssData = [
         id: 6,
         name: "وزارة الدفاع",
         image:  ministryofdefense.src,
+    },
+    {
+      id:7,
+      name:"روز فيلا",
+      image: roseVilla.src
+    },
+    {
+      id:8,
+      name:"الرومانسية",
+      image: romancya.src
+    },
+    {
+      id:9,
+      name:"ايان",
+      image: ian.src
     }
-
 
 
   ];

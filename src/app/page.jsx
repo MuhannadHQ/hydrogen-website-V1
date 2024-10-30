@@ -27,7 +27,7 @@ export default function Home() {
         <DeviceMain device={devices.alpha} bg={true} />
       </div>
       <Partners />
-      <Distributors />
+      {/* <Distributors /> */}
       <AboutUs />
       <Features />
       <Testimonials />

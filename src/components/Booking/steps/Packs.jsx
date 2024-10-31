@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 export const Packs = ({ bookingCart }) => {
 
-    const [selectedPack, setSelectedPack] = useState({ plan: "oneYear", price: 389 });
+    const [selectedPack, setSelectedPack] = useState({ plan: "oneYear", price: 200 });
     const [defaultPrice] = useState(bookingCart[0].price)
 
     useEffect(() => {

@@ -8,7 +8,7 @@ export const DeviceHeader = ({ device }) => {
       <br />
       <div className="flex gap-5 items-center">
         <div>
-          {/* <span className="text-xs"> ابتداء من</span> */}
+          <span className="text-xs">  ابتداء من</span>
           {/* <br/> */}
           {price}
         </div>

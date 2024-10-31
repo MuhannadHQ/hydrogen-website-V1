@@ -26,8 +26,9 @@ export default function Home() {
         {/*<DeviceMain device={ devices.lamda } bg={ true }/>*/}
         <DeviceMain device={devices.alpha} bg={true} />
       </div>
+        <Distributors />
       <Partners />
-      {/* <Distributors /> */}
+    
       <AboutUs />
       <Features />
       <Testimonials />

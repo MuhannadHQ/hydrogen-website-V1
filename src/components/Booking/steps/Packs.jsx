@@ -25,7 +25,7 @@ export const Packs = ({ bookingCart }) => {
                     <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:bg-primary peer-checked:text-white min-w-[250px] min-h-[130px]" htmlFor={`radio_0`}>
                         <h1 dir="rtl" className="self-start text-xl font-normal mt-3">1299 ريال</h1>
                         <div className="flex justify-between gap-4">
-                            <div className="font-bold">جهاز مفتوح + لوحة تحكم للأعمال</div>
+                            <div className="font-bold">جهاز بدون اشتراك + لوحة تحكم للأعمال</div>
                         </div>
 
                         <span className="absolute bg-primary py-2 px-3  rounded-lg text-white -top-[20px] text-sm font-extrabold border border-white">الباقة المميزة</span>
@@ -39,7 +39,7 @@ export const Packs = ({ bookingCart }) => {
                     <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:bg-primary peer-checked:text-white min-w-[250px] min-h-[130px]" htmlFor={`radio_1`}>
                         <h1 dir="rtl" className="self-start text-xl font-normal mt-3">799 ريال</h1>
                         <div className="flex justify-between gap-4">
-                            <div className="font-bold">جهاز مفتوح بدون اشتراك</div>
+                            <div className="font-bold">جهاز بدون اشتراك</div>
                         </div>
 
                         <span className="absolute bg-primary py-2 px-3  rounded-lg text-white -top-[20px] text-sm font-extrabold border border-white">الأكثر مبيعًا</span>

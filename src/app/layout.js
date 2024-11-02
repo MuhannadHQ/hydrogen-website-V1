@@ -8,6 +8,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { useEffect } from "react";
 import amplitude from "utils/amplitude";
 import CustomizeProductPopup from "components/customize_product/CustomizeProductPopup";
+import Script from "next/script";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -52,6 +53,10 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={metadata.description} />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+                rel="stylesheet"
+                href="https://cdn.moyasar.com/mpf/1.11.0/moyasar.css"
+            />
       </head>
 
       <body className={inter.className}>
@@ -72,6 +77,8 @@ export default function RootLayout({ children }) {
         </div>
         <GoogleTagManager gtmId="GTM-NS6MLSG" />
         <Footer />
+        <Script src="https://cdn.moyasar.com/mpf/1.11.0/moyasar.js" ></Script>
+
       </body>
     </html>
   );

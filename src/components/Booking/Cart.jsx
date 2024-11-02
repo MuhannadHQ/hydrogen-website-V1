@@ -50,11 +50,11 @@ export const Cart = () => {
 
   return (
     <>
-      <link
+      {/* <link
         rel="stylesheet"
         href="https://cdn.moyasar.com/mpf/1.11.0/moyasar.css"
-      />
-      <Script src="https://cdn.moyasar.com/mpf/1.11.0/moyasar.js"></Script>
+      /> */}
+      {/* <Script src="https://cdn.moyasar.com/mpf/1.11.0/moyasar.js"></Script> */}
       <section className="general-padding my-10">
         {/*<Steps step={ step }/>*/}
         {steps[step]}

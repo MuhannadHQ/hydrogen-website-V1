@@ -57,6 +57,12 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
     window.scrollTo(0, 0);
     amplitude.logCheckoutStep(1);
   }, []);
+
+  useEffect(() => {
+    console.log(userInfo.city)
+    window.sessionStorage.setItem("city", userInfo.city)
+  }, [userInfo])
+
   return (
     <>
       <UserInfoForm

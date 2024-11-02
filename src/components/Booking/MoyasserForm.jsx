@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 
-function MoyasarForm ({ callbackUrl, amount })
-{
+function MoyasarForm({ callbackUrl, amount }) {
 
-  useEffect(() =>
-  {
+  useEffect(() => {
     Moyasar.init({
       element: ".mysr-form",
       amount: amount * 100,
@@ -13,8 +11,8 @@ function MoyasarForm ({ callbackUrl, amount })
 
       publishable_api_key: process.env.MOYASER_API_KEY,
       callback_url: callbackUrl,
-      methods: [ "applepay", "creditcard" ],
-      supported_networks:['mada'],
+      methods: ["applepay", "creditcard"],
+      supported_networks: ['mada'],
       apple_pay: {
         country: "SA",
         label: "Hydrogen",
@@ -26,7 +24,7 @@ function MoyasarForm ({ callbackUrl, amount })
   }, []);
 
   return <div
-    lang={ "ar" }
+    lang={"ar"}
     className="mysr-form  border shadow border-gray-500 rounded-2xl p-5 my-5 "></div>;
 }
 

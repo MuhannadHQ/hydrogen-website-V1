@@ -3,4 +3,4 @@
 * during the order process to see a button redirecting them to the registration page.
 */
 
-export const cities = ["khames"];
+export const cities = ["ryiadh", "jeddah","dammam","dhahran", "khobar"];

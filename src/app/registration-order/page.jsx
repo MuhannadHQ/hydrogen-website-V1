@@ -14,6 +14,9 @@ export default function Page() {
     formData = JSON.parse(formData);
     formData.paymentMethod = "creditcard";
     formData.orderTotal = amount;
+    formData.products[0].package = "installation"
+    formData.products[0].price = amount
+    console.log(formData)
 
     const callbackUrl = setCallbackUrl(formData, orderId);
 

@@ -4,7 +4,7 @@ export const DeviceFeatures = ({ title, features }) => {
   return (
     <section className="general-padding py-10 bg-secondary">
       <h2 style={{ fontSize: '22px' }}>مزايا الجهاز</h2>
-      <div className="flex justify-center items-center flex-wrap my-10">
+      <div className="flex justify-center items-center flex-wrap">
           <img
               className={`h-60 sm:h-80 pt-3`}
               src={alphaPicture.src}

@@ -23,10 +23,6 @@ const classes = {
 const cities = {
   ryiadh: "الرياض",
   jeddah: "جدة",
-  mecca: "مكة المكرمة",
-  madina: "المدينة المنورة",
-  taif: "الطائف",
-  yanbu: "ينبع",
   makkah: "مكة",
   dammam: "الدمام",
   khobar: "الخبر",
@@ -60,7 +56,6 @@ const howDidYouKnow = {
   tiktok: "تيك توك",
   whatsapp: "واتساب",
   paperPublications: "منشورات ورقية",
-  youTube:"يوتيوب",
   other: "غير ذلك",
 };
 export const UserInfoForm = ({

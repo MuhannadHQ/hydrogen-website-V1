@@ -1,5 +1,5 @@
 import { Arrow } from "assets/icons/Arrow";
-import MoyasarForm from "components/booking/MoyasserForm";
+import MoyasarForm from "components/Booking/MoyasserForm";
 import Accordion from "components/global/Accordion";
 
 export const InstallmentsPlan = ({ total, callbackUrl }) => {

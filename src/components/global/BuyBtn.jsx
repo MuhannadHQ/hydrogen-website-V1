@@ -1,5 +1,5 @@
 "use client";
-import { BuyCard } from "components/booking/BuyCard";
+import { BuyCard } from "components/Booking/BuyCard";
 import { CartPopup } from "components/global/CartPopup";
 import { useState } from "react";
 import { useRouter } from "next/navigation";

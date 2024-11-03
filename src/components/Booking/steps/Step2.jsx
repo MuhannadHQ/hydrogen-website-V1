@@ -1,4 +1,4 @@
-import { PackagesList } from "components/booking/PackagesList";
+import { PackagesList } from "components/Booking/PackagesList";
 import { useEffect } from "react";
 
 const calculateTotalPrice = (bookingCart) =>

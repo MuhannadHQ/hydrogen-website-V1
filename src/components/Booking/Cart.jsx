@@ -1,7 +1,7 @@
-import { Steps } from "components/booking/Steps";
-import { Step1 } from "components/booking/steps/Step1";
-import { Step2 } from "components/booking/steps/Step2";
-import { Step3 } from "components/booking/steps/Step3";
+import { Steps } from "components/Booking/Steps";
+import { Step1 } from "components/Booking/steps/Step1";
+import { Step4 } from "components/Booking/steps/Step4";
+import { Step3 } from "components/Booking/steps/Step3";
 import Head from "next/head";
 import { useState } from "react";
 import useCart from "utils/hooks/cartController";
@@ -31,13 +31,14 @@ export const Cart = () => {
       editQuantity={editQuantity}
       removeFromCart={removeFromCart}
     />,
-    // <Step2
-    //   key={1}
-    //   setStep={setStep}
-    //   bookingCart={bookingCart}
-    //   setItemPlan={setItemPlan}
-    //   setItemOption={setItemOption}
-    // />,
+    <Step4
+      key={1}
+      bookingCart={bookingCart}
+      setStep={setStep}
+      cart={cart}
+      editQuantity={editQuantity}
+      removeFromCart={removeFromCart}
+    />,
     <Step3
       key={2}
       cart={cart}
@@ -49,11 +50,11 @@ export const Cart = () => {
 
   return (
     <>
-      <link
+      {/* <link
         rel="stylesheet"
         href="https://cdn.moyasar.com/mpf/1.11.0/moyasar.css"
-      />
-      <Script src="https://cdn.moyasar.com/mpf/1.11.0/moyasar.js"></Script>
+      /> */}
+      {/* <Script src="https://cdn.moyasar.com/mpf/1.11.0/moyasar.js"></Script> */}
       <section className="general-padding my-10">
         {/*<Steps step={ step }/>*/}
         {steps[step]}

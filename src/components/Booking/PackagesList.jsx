@@ -1,4 +1,4 @@
-import { Package } from "components/booking/Package";
+import { Package } from "components/Booking/Package";
 import { packagesFeaturesTitles } from "apis/data/devicesData";
 export const PackagesList = ({
   itemData,

@@ -4,7 +4,7 @@ export const AboutUs = () =>
 {
   return (
     <section className="general-padding flex flex-col items-center gap-5 my-20">
-      <h2 className="text-primary   ">
+      <h2 className="text-primary text-2xl  ">
         معتمدين في معروف
 
       </h2>

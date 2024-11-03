@@ -1,6 +1,6 @@
-import { CompleteBooking } from "components/booking/CompleteBooking";
-import { PaymentOptions } from "components/booking/PaymentOptions";
-import { UserInfoForm } from "components/booking/UserInfoForm";
+import { CompleteBooking } from "components/Booking/CompleteBooking";
+import { PaymentOptions } from "components/Booking/PaymentOptions";
+import { UserInfoForm } from "components/Booking/UserInfoForm";
 import { useEffect, useState } from "react";
 import amplitude from "utils/amplitude";
 import { setCallbackUrl } from "utils/helpers/helpers";
@@ -10,7 +10,9 @@ const calculateTotalPrice = (bookingCart) =>
     (acc, item) => acc + (item.price + item.devicePrice) || 0,
     0
   );
+
 const getType = (bookingCart = []) => bookingCart[0]?.type;
+
 export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   const [orderId, setOrderId] = useState("");
   const [userInfo, setUserInfo] = useState({});
@@ -18,6 +20,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [checked, setChecked] = useState(false);
   const total = calculateTotalPrice(bookingCart);
+
   const orderData = {
     ...userInfo,
     phoneNumber: userInfo?.phoneNumber?.replace("966", ""),
@@ -32,9 +35,10 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
       package: item.plan,
       tankType: item.tankType || "none",
       qty: 1,
-      // price: item.price,
+      price: item.price,
       devicePrice: item.devicePrice,
       id: item.id,
+      productModel: item.deviceModel,
       option: item.option,
     })),
     utm: localStorage.getItem("UTM"),
@@ -51,9 +55,18 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log(orderData)
     amplitude.logCheckoutStep(1);
-    console.log(cart);
   }, []);
+
+  useEffect(() => {
+    window.sessionStorage.setItem("city", userInfo.city)
+  }, [userInfo])
+
+  // useEffect(() => {
+  //   window.sessionStorage.setItem("orderData", JSON.stringify(orderData))
+  // }, [paymentMethod])
+
   return (
     <>
       <UserInfoForm
@@ -80,6 +93,7 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
         cart={cart.map((item) => ({
           title: item.data.title,
           deviceModel: item.data.deviceModel,
+          name: item.data.name,
           quantity: item.quantity,
           devicePrice: bookingCart[0]?.devicePrice,
           packagePriceDescription: bookingCart[0]?.packagePriceDescription,

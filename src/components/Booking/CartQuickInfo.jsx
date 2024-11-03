@@ -18,7 +18,7 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) => {
             <tbody>
               {cart.map((item, index) => (
                 <tr key={index} className="h-10 text-primary">
-                  <td>{item.deviceModel}</td>
+                  <td>{item.name}</td>
                   <td>{item.quantity + item.devicePrice || 0}</td>
                   {/*<td>*/}
                   {/*  { item.devicePrice } ر.س*/}
@@ -37,10 +37,13 @@ export const CartQuickInfo = ({ cart, total, coupon, type }) => {
           </table>
           <div>
             <span className="w-24 inline-block"> إجمالي السعر: </span>
-            <span className="text-primary  ">
+            <span className="text-primary ">
               {type === "installment" ? total : total - (coupon?.discount || 0)}
               ر.س
             </span>
+            <br/>
+            <br/>
+            {/* <div>التاريخ المتوقع لشحن الجهاز هو يوم الأحد 20 أكتوبر </div> */}
           </div>
           {coupon?.code && coupon?.code == "wtu24" && (
             <div>

@@ -17,7 +17,7 @@ export const Device = ({ device }) => {
       <DeviceMain moreLink={false} device={device} />
       {banner && (
         <div className="mx-5" id="introduction">
-          <h2 className="mt-8 mb-8 ">فيديو تعريفي</h2>
+          <h2 className="mt-8 mb-8" style={{ fontSize: '22px' }}>فيديو تعريفي</h2>
           <div className=" relative my-5 Device-video">
             <YoutubeIframe link={banner?.link} title={banner?.title} />
           </div>

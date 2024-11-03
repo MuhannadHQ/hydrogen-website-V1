@@ -1,8 +1,18 @@
+import alphaPicture from "assets/images/alpha-2.png"
+
 export const DeviceFeatures = ({ title, features }) => {
   return (
     <section className="general-padding py-10 bg-secondary">
-      <h2>مزايا الجهاز</h2>
-      <ul className="flex justify-center items-center flex-wrap my-10">
+      <h2 style={{ fontSize: '22px' }}>مزايا الجهاز</h2>
+      <div className="flex justify-center items-center flex-wrap my-10">
+          <img
+              className={`h-60 sm:h-80 pt-3`}
+              src={alphaPicture.src}
+              alt={"alpha Device"}
+            />
+      </div>
+     
+      <ul className="flex justify-center items-center flex-wrap">
         {features?.map((feature, i) => (
           <li
             key={i}

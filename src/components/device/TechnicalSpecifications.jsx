@@ -4,7 +4,7 @@ export const TechnicalSpecifications = ({ technicalSpecifications }) => {
       className="general-padding text-center flex justify-center flex-col items-center gap-4 my-5"
       id="specifications"
     >
-      <h2>المواصفات الفنية</h2>
+      <h2 style={{ fontSize: '22px' }} >المواصفات الفنية</h2>
       <div className="border-t-2 border-b-2 py-5 border-black xs:w-96 hidden xs:block">
         <table className="w-full ">
           <tbody>

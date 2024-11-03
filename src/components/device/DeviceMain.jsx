@@ -19,10 +19,10 @@ export const DeviceMain = ({
       >
         {moreLink && (
           <div className="pt-3">
-            <>
+            {/* <>
               <h2 className="text-3xl mb-3">{title}</h2>
               <p className="text-2xl">{description}</p>
-            </>
+            </> */}
 
             <div className="mt-20 mb-10 hidden md:flex gap-3 items-center">
               <BuyBtn type={"btn-primary"} device={device} />
@@ -31,7 +31,14 @@ export const DeviceMain = ({
             </div>
           </div>
         )}
+         <div className="">
+              <>
+                <h2 className="text-3xl">{title}</h2>
+                {/* <p className="text-2xl">{description}</p> */}
+              </>
+        </div>
         <div className="">
+            
           {images?.map((image, i) => (
             <img
               className={`h-60 sm:h-80 pt-3`}
@@ -39,8 +46,10 @@ export const DeviceMain = ({
               src={image.src}
               alt={name}
             />
+            
           ))}
         </div>
+       
         {moreLink && (
           <div className="my-8 md:hidden flex gap-3 items-center flex-col">
             <>

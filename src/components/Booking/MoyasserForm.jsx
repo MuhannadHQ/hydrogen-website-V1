@@ -9,8 +9,8 @@ function MoyasarForm({ callbackUrl, amount }) {
       currency: "SAR",
       description: "Device Order #1",
 
-      // publishable_api_key: process.env.MOYASER_API_KEY,
-      publishable_api_key: "pk_live_txEtTr8b5kQ1MLBdW2Wm1GF7bmcjYCoFnZGRqJQU",
+      publishable_api_key: process.env.MOYASER_API_KEY,
+      // publishable_api_key: "pk_live_txEtTr8b5kQ1MLBdW2Wm1GF7bmcjYCoFnZGRqJQU",
       callback_url: callbackUrl,
       methods: ["applepay", "creditcard"],
       supported_networks: ['mada'],

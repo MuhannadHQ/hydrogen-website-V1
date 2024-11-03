@@ -9,18 +9,22 @@ import alphaBook from "assets/images/alpha-guide.png";
 import lamdaApp from "assets/images/lamda-app.png";
 import lamda from "assets/images/lamda.png";
 // import guideBookFile from "assets/guide-book.pdf"
-export const lastDateUpdated = "09/10/2024";
+export const lastDateUpdated = "10/2/2023";
 
 export const devices = {
   lamda: {
     _id: "device-2",
-    deviceModel: "lamda",
+
+    name: "lamda",
     path: "/lamda",
     buy_path: "cart",
-    name: "lamda",
     title: "جهاز لامدا",
     description: "تحكم بفاتورة الماء بكل سهولة",
-    price: "1499 ر.س",
+    price: "1399 ر.س",
+    productImage: lamda.src,
+    deviceDescription: "جهاز لامدا + شحن وتركيب مجاني",
+    priceDescription: "1399 ريال",
+    devicePrice: 1399,
     images: [
       // {
       //   src: lamdaApp.src,
@@ -31,6 +35,7 @@ export const devices = {
         width: "390px",
       },
     ],
+
     guarantees: [
       "شحن مجاني",
       "اشتراك مجاني لمدة شهر",
@@ -38,6 +43,7 @@ export const devices = {
       "ضمان لمدة سنتين",
       "أحقية استرجاع كامل المبلغ خلال 30 يوم",
     ],
+
     features: [
       {
         title: "مراقبة لمستوى ماء الخزان",
@@ -83,33 +89,27 @@ export const devices = {
       },
     ],
   },
-  //  packages: [ { title: "الباقة الأساسية",
-  // name: "لامدا - الأساسية (بدون اشتراك)",  price: 1299, features: {
-  // MonthlySubscription: "بدون اشتراك", DeliveryAndInstallation: "✓️",
-  // LowWaterAlerts: "✓️", WaterLevelStatistics: "✓️", CubicMeterReadings:
-  // "✓️", LeakDetection: "✓️", ControlOfThePump: "✓️", ControlOfTheFloat:
-  // "✓️", NumberOfUsers: "+5", }, } ], packagesFeaturesTitles: {
-  // MonthlySubscription: "الاشتراك الشهري", DeliveryAndInstallation: "التوصيل والتركيب", LowWaterAlerts: "تنبيهات بإنخفاض الماء", WaterLevelStatistics: "إحصائيات لمستوى الماء", CubicMeterReadings: "قراءات بالمتر المكعب", ControlOfThePump: "التحكم بالمضخة", ControlOfTheFloat: "التحكم بالعوامة", LeakDetection: "كشف التسريب داخل الخزان", NumberOfUsers: "عدد المستخدمين",  } },
   alpha: {
     _id: "device-1",
-    deviceModel: "alpha",
+    name: "alpha",
     path: "/alpha",
     buy_path: "/cart",
-    name: "جهاز ألفا",
+    deviceModel: "جهاز ألفا",
     title: "وداعاً لمفاجآت انقطاع المياه",
     description: "معلومات خزان المياه بين يديك",
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
-    priceDescription: "599 ريال",
-    packagePriceDescription: "ابتداءً من 599 ريال",
+    priceDescription: "199 ريال",
+    packagePriceDescription: "199 ريال",
     devicePrice: 0,
-    price: "599 ريال",
+    price: "199 ريال",
     guarantees: [
-      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
       "شحن مجاني",
-      // "بدون أي اشتراك",
+      "اشتراك مجاني لمدة شهر",
+      "قيمة الاشتراك 39 ريال/شهر",
       "ضمان لمدة سنتين",
-      // "شريحة بيانات مجانية مدمجة داخل الجهاز",
-      // "يتحمل إلى حرارة 60 درجة مئوية",
+      "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+      "شريحة بيانات مدمجة داخل الجهاز",
+      "يتحمل إلى حرارة 60 درجة مئوية",
     ],
     images: [
       {
@@ -197,42 +197,43 @@ export const devices = {
 
     guideBook: alphaBook.src,
     packages: [
-      // {
-      //   id: "basic",
-      //   title: "اشتراك",
-      //   name: "اشتراك",
-      //   type: "subscription",
-      //   price: 499,
-      //   packagePriceDescription: "499 ريال",
-      //   guarantees: [
-      //     "شحن مجاني",
-      //     "اشتراك مجاني لمدة شهر",
-      //     "قيمة الاشتراك 39 ريال/شهر",
-      //     "ضمان لمدة سنتين",
-      //     "أحقية استرجاع كامل المبلغ خلال 30 يوم",
-      //     "شريحة بيانات مدمجة داخل الجهاز",
-      //     "يتحمل إلى حرارة 60 درجة مئوية",
-      //   ],
-      //   features: {
-      //     DeliveryAndInstallation: "✓️",
-      //     Subscription: "39 ريال/الشهر",
-      //     LowWaterAlerts: "✓️",
-      //     WaterLevelStatistics: "✓️",
-      //     waterLevelMonitoring: "✓️",
-      //     LeakDetection: "✓️",
-      //     NumberOfUsers: "+5",
-      //   },
-      // },
+      {
+        id: "basic",
+        title: "اشتراك",
+        name: "اشتراك",
+        type: "subscription",
+        price: 199,
+        packagePriceDescription: "199",
+        guarantees: [
+          "شحن مجاني",
+          "اشتراك مجاني لمدة شهر",
+          "قيمة الاشتراك 39 ريال/شهر",
+          "ضمان لمدة سنتين",
+          "أحقية استرجاع كامل المبلغ خلال 30 يوم",
+          "شريحة بيانات مدمجة داخل الجهاز",
+          "يتحمل إلى حرارة 60 درجة مئوية",
+        ],
+        features: {
+          DeliveryAndInstallation: "✓️",
+          Subscription: "39 ريال/الشهر",
+          LowWaterAlerts: "✓️",
+          WaterLevelStatistics: "✓️",
+          waterLevelMonitoring: "✓️",
+          LeakDetection: "✓️",
+          NumberOfUsers: "+5",
+        },
+      },
 
       {
         id: "regular",
         title: "بدون اشتراك",
         type: "one-time",
         name: "بدون اشتراك",
-        price: 599,
-        packagePriceDescription: "599 ريال",
+        price: 899,
+        packagePriceDescription: "899 ريال",
         guarantees: [
           "شحن مجاني",
+          "بدون أي اشتراك شهري",
           "ضمان لمدة سنتين",
           "أحقية استرجاع كامل المبلغ خلال 30 يوم",
           "شريحة بيانات مدمجة داخل الجهاز",

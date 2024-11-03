@@ -56,7 +56,7 @@ export const Coupon = ({ setCoupon, disabled }) =>
           <input
             disabled={ disabled }
             className="border-2 border-primary w-56 px-2 rounded-xl py-3 pl-20 focus:outline-none focus:border-primary"
-            placeholder="اكتب الرمز الترويجي"
+            placeholder=" الرمز الترويجي"
             onChange={ handleSetCouponCode }
             type="text"
             name="coupon"

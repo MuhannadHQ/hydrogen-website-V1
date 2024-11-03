@@ -16,7 +16,6 @@ const cloneToBookingCart = (cart) => {
     const arr = new Array(parseInt(item.quantity)).fill({
       _id: item.data.id,
       title: item.data.title,
-      name: item.data.name || "",
       deviceModel: item.data.deviceModel,
       packages: item.data.packages,
       tankType: item.data.selectedPackage?.tankType || "",

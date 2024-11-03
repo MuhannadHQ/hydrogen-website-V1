@@ -1,5 +1,7 @@
-import { CartQuickInfo } from "components/Booking/CartQuickInfo";
-import { Coupon } from "components/Booking/steps/Coupon";
+import create_order from "apis/create_order";
+import Agreement from "components/booking/Agreement";
+import { CartQuickInfo } from "components/booking/CartQuickInfo";
+import { Coupon } from "components/booking/steps/Coupon";
 import { Loader } from "components/global/Loader";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -7,13 +9,9 @@ import amplitude from "utils/amplitude";
 
 const subscriptionPaymentOptions = [
   {
-    title: "تحويل بنكي",
+    title: "الدفع عند الاستلام",
     name: "cod",
   },
-  // {
-  //   title: "تحويل بنكي",
-  //   name: "bankTransffer",
-  // },
   {
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",
@@ -21,26 +19,17 @@ const subscriptionPaymentOptions = [
 ];
 const paymentOptions = [
   {
-    title: "تحويل بنكي",
+    title: "الدفع عند الاستلام",
     name: "cod",
   },
-
-    // {
-    //   title: "تحويل بنكي",
-    //   name: "bankTransffer",
-    // },
   {
     title: "الدفع عبر مدى / ابل باي",
     name: "creditCard",
   },
-  {
-    title: "الدفع على 3 دفعات",
-    name: "installment",
-  },
   // {
   //   title: "الدفع على 3 دفعات",
   //   name: "installment",
-  // }
+  // },
 ];
 
 const responseStatus = {

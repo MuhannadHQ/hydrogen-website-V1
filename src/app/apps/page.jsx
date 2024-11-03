@@ -1,62 +1,34 @@
-"use client";
+import AndriodFilled from "assets/icons/AndriodFilled";
+import AppleFilled from "assets/icons/AppleFilled";
+import React from 'react'
 
-import { useEffect } from "react";
-import amplitude from "utils/amplitude";
-
-const page = () => {
-  useEffect(() => {
-    // Detect the user's device
-    const userAgent = navigator.userAgent || window.opera;
-
-    if (/android/i.test(userAgent)) {
-      // Redirect to Android APK download link
-      window.location.href = "/hydrojeen.apk";
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      // Redirect to iOS download link
-      window.location.href =
-        "https://apps.apple.com/sa/app/%D9%87%D9%8A%D8%AF%D8%B1%D9%88%D8%AC%D9%8A%D9%86/id1546619911";
-    }
-  }, []);
-
+function page() {
   return (
-    <section>
-      <div className="my-10">
-        <h2 className="text-center">تحميل</h2>
-        <p className="text-center">قم بتنزيل تطبيق هيدروجين الخاص بنا</p>
-        <ul className="flex flex-col items-center general-padding my-8 space-y-4">
-          <li className="w-64">
-            <button
-              onClick={() => {
-                window.open(
-                  "https://apps.apple.com/sa/app/%D9%87%D9%8A%D8%AF%D8%B1%D9%88%D8%AC%D9%8A%D9%86/id1546619911",
-                  "_blank"
-                );
+    <main className="py-16 bg-secondary min-h-full">
+      <h2 className="text-gray-700  font-semibold">تطبيق الجوال</h2>
 
-                amplitude.logEvent("App Download (iOS)");
-              }}
-              className={`btn btn-primary w-full`}
-            >
-              iOS (Apple Store)
-            </button>
-          </li>
-          <li className="w-64">
-            <button
-              onClick={() => {
-                window.open(
-                  "https://play.google.com/store/apps/details?id=com.hydrojeen.iot",
-                  "_blank"
-                );
-                amplitude.logEvent("App Download (Android)");
-              }}
-              className={`btn btn-primary w-full`}
-            >
-              Android (Play Store)
-            </button>
-          </li>
-        </ul>
+      <div className="flex flex-col items-center gap-6 mt-16">
+        <button className="border-primary rounded-xl text-primary font-semibold border py-1 px-6 w-44 flex justify-center">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://apps.apple.com/sa/app/%D9%87%D9%8A%D8%AF%D8%B1%D9%88%D8%AC%D9%8A%D9%86/id1546619911"
+          >
+            <AppleFilled />
+          </a>
+        </button>
+        <button className="border-primary rounded-xl text-primary font-semibold border py-1 px-6 w-44 flex justify-center">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://play.google.com/store/apps/details?id=com.iot.hydrojeen"
+          >
+            <AndriodFilled />
+          </a>
+        </button>
       </div>
-    </section>
+    </main>
   );
-};
+}
 
-export default page;
+export default page

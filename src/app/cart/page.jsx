@@ -1,5 +1,5 @@
 "use client";
-import { Cart } from "components/Booking/Cart";
+import { Cart } from "components/booking/Cart";
 
 const page = () => {
   return (

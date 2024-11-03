@@ -1,10 +1,7 @@
 "use client";
 import { Success } from "assets/icons/Success";
 import { SocialMedia } from "components/global/SocialMedia";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { cities } from "apis/data/cities";
-
 
 const Page = () => {
   const searchParams = useSearchParams();
@@ -28,14 +25,6 @@ const Page = () => {
             {/* {package_id }*/}
             {/* </span>*/}
           </p>
-
-          {
-            cities.includes(window.sessionStorage.getItem("city")) ?
-              <Link href={`/registration-order?order_id=${order_id}&package_id=${package_id}`}>
-                <button className="text-white bg-primary hover:bg-primary-hover focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">طلب خدمة تركيب</button>
-              </Link> : ""
-          }
-
         </div>
 
         <p className="text-xl my-5 text-black leading-relaxed ">

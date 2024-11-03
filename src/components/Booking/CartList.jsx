@@ -1,4 +1,4 @@
-import { BuyCard } from "components/Booking/BuyCard";
+import { BuyCard } from "components/booking/BuyCard";
 
 export const CartList = (cart, setCart) => {
   const handleRemove = (id) => {

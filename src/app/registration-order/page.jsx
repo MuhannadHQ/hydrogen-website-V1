@@ -2,12 +2,17 @@
 import Form from "./form";
 import { setCallbackUrl } from "utils/helpers/helpers";
 import { useSearchParams } from "next/navigation";
+import LzString from "lz-string";
 
 export default function Page() {
 
     const searchParams = useSearchParams();
     const orderId = searchParams.get("order_id");
-    const callbackUrl = setCallbackUrl(JSON.parse(window.sessionStorage.getItem("orderData")), orderId);
+    const orderDetails = searchParams.get("orderDetails");
+    let formData = LzString.decompressFromEncodedURIComponent(orderDetails);
+    formData = JSON.parse(formData);
+
+    const callbackUrl = setCallbackUrl(formData, orderId);
 
 
     return (

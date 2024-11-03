@@ -63,9 +63,9 @@ export const Step3 = ({ cart, bookingCart, coupon, setCoupon }) => {
     window.sessionStorage.setItem("city", userInfo.city)
   }, [userInfo])
 
-  useEffect(() => {
-    window.sessionStorage.setItem("orderData", JSON.stringify(orderData))
-  }, [paymentMethod])
+  // useEffect(() => {
+  //   window.sessionStorage.setItem("orderData", JSON.stringify(orderData))
+  // }, [paymentMethod])
 
   return (
     <>

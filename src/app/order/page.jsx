@@ -30,7 +30,7 @@ function Payment() {
 
         await create_order({ formData })
           .then((response) => {
-            redirect = `/order/success?order_id=${response?.orderID}&package_id=${formData?.packageID}`;
+            redirect = `/order/success?order_id=${response?.orderID}&package_id=${formData?.packageID}&orderDetails=${orderDetails}`;
 
             amplitude.logEvent("Order placed", { orderID: response?.orderID });
           })

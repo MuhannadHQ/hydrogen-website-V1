@@ -11,6 +11,7 @@ export default function Page() {
     const orderDetails = searchParams.get("orderDetails");
     let formData = LzString.decompressFromEncodedURIComponent(orderDetails);
     formData = JSON.parse(formData);
+    formData.paymentMethod = "creditcard"
 
     const callbackUrl = setCallbackUrl(formData, orderId);
 

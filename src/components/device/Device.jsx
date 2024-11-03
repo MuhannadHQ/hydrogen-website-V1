@@ -15,16 +15,24 @@ export const Device = ({ device }) => {
       {/*<DeviceLeft />*/}
       <DeviceHeader device={device} />
       <DeviceMain moreLink={false} device={device} />
+      <div className="mx-5" id="aboutAlpha">
+          <h2 className="mt-8 mb-8 " style={{ fontSize: '22px' }}>عن الجهاز</h2>
+          <h2 className="mt-8 mb-8 text-primary" style={{ fontSize: '20px' }}>جهاز فعال لمراقبة مستوى الماء في الخزان عبر تطبيق على الجوال. الجهاز مناسب لجميع أنواع الخزانات حتى عمق 5 أمتار</h2>
+
+          {/* <div className=" relative my-5 Device-video">
+            <YoutubeIframe link={banner?.link} title={banner?.title} />
+          </div> */}
+        </div>
       {banner && (
         <div className="mx-5" id="introduction">
-          <h2 className="mt-8 mb-8 ">فيديو تعريفي</h2>
+          <h2 className="mt-8 mb-8 " style={{ fontSize: '22px' }}>فيديو تعريفي</h2>
           <div className=" relative my-5 Device-video">
             <YoutubeIframe link={banner?.link} title={banner?.title} />
           </div>
         </div>
       )}
 
-      <DeviceFeatures features={features} title={title} />
+      
 
       {guideVideos && (
         <DeviceGuildeVideo
@@ -42,6 +50,7 @@ export const Device = ({ device }) => {
           file={guideBookFile}
         />
       )}
+      <DeviceFeatures features={features} title={title} />
       {/*}*/}
     </>
   );

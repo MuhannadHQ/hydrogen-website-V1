@@ -56,11 +56,11 @@ export const devices = {
         description:
           "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
       },
-      {
-        title: "إمكانية طلب صهريج مياه",
-        icon: <TankCar />,
-        description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
-      },
+      // {
+      //   title: "إمكانية طلب صهريج مياه",
+      //   icon: <TankCar />,
+      //   description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
+      // },
       // {
       //   title: "كشف التسريبات",
       //   icon: <LeakDetection />,
@@ -96,7 +96,7 @@ export const devices = {
     path: "/alpha",
     buy_path: "/cart",
     name: "جهاز ألفا",
-    title: "وداعاً لمفاجآت انقطاع المياه",
+    title: "لا تشيل هم خزانك",
     description: "معلومات خزان المياه بين يديك",
     deviceDescription: "جهاز ألفا + توصيل وتركيب مجاني",
     priceDescription: "599 ريال",
@@ -137,11 +137,11 @@ export const devices = {
         description:
           "يمكنك تحديد مستوى معين من الماء تود تنبيهك عند وصوله إليه",
       },
-      {
-        title: "إمكانية طلب صهريج مياه",
-        icon: <TankCar />,
-        description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
-      },
+      // {
+      //   title: "إمكانية طلب صهريج مياه",
+      //   icon: <TankCar />,
+      //   description: "بإمكانك طلب صهريج مياه بكل سهولة عبر تطبيق هيدروجين",
+      // },
       {
         title: "تنبيه عند عطل العوامة",
         icon: <Warning />,
@@ -191,7 +191,7 @@ export const devices = {
       },
       {
         title: "طول السلك",
-        value: "8 امتار",
+        value: "13 امتار",
       },
     ],
 

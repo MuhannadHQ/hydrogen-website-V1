@@ -5,9 +5,9 @@ export const DeviceGuildeVideo = ({ banner, guideVideos, title }) => {
   return (
     <section>
       <div className="my-10">
-        <h2 className="text-center">طريقة التركيب</h2>
-        <p className="text-center">
-          يرجى اختيار نوع الخزان الذي ترغب في تركيب الجهاز عليه.
+        <h2 className="text-center" style={{ fontSize: '22px' }}>طريقة التركيب</h2>
+        <p className="text-center my-10">
+         يمكن تركيب الجهاز بكل سهولة خلال 10 دقائق أو الاستعانة بسباك أو كهربائي
         </p>
         <ul className="flex justify-between general-padding my-8 flex-col sm:flex-row">
           {guideVideos.map((video, i) => (
@@ -21,7 +21,7 @@ export const DeviceGuildeVideo = ({ banner, guideVideos, title }) => {
                 }}
                 className={`btn btn-primary`}
               >
-                الخزان {i === 0 ? "السفلي" : "العلوي"}
+                طريقة تركيب الخزان {i === 0 ? "السفلي" : "العلوي"}
               </button>
               {/* <div className="h-60 w-full relative mt-2">
         <YoutubeIframe link={video.link} title={video.title} />

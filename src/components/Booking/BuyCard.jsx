@@ -43,7 +43,7 @@ export const BuyCard = ({ cart, removeFromCart, editQuantity }) => {
                 <li key={i}>{feature}</li>
               ))}
             </ul>
-            <div className="flex justify-center gap-6 mt-8 w-full md:w-auto">
+            {/* <div className="flex justify-center gap-6 mt-8 w-full md:w-auto">
               <a
                 href={`${item.data.path}#introduction`}
                 className="flex items-center gap-2 text-blue-600 underline"
@@ -56,7 +56,7 @@ export const BuyCard = ({ cart, removeFromCart, editQuantity }) => {
               >
                 <FiFileText /> المواصفات الفنية
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="mt-8">
             {editQuantity ? (

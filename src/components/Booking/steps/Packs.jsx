@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 export const Packs = ({ bookingCart }) => {
 
-    const [selectedPack, setSelectedPack] = useState({ plan: "oneYear", price: 200 });
+    const [selectedPack, setSelectedPack] = useState({ plan: "noSubscription", price: 300 });
     const [defaultPrice] = useState(bookingCart[0].price)
 
     useEffect(() => {
@@ -34,7 +34,7 @@ export const Packs = ({ bookingCart }) => {
 
                 {/* Pack 2 */}
                 <div className="relative mt-5" key={1}>
-                    <input defaultChecked onChange={(e) => { setSelectedPack({ plan: e.target.value, price: 300 }); }} value="NoSUbscription" className="peer hidden" id={`radio_1`} type="radio" name="radio" />
+                    <input defaultChecked onChange={(e) => { setSelectedPack({ plan: e.target.value, price: 300 }); }} value="noSubscription" className="peer hidden" id={`radio_1`} type="radio" name="radio" />
 
                     <label className="relative flex cursor-pointer flex-col justify-between box-content rounded-2xl border border-primary p-4 peer-checked:bg-primary peer-checked:text-white min-w-[250px] min-h-[130px]" htmlFor={`radio_1`}>
                         <h1 dir="rtl" className="self-start text-xl font-normal mt-3">899 ريال</h1>

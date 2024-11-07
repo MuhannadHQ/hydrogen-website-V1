@@ -7,7 +7,8 @@ import icon4 from "assets/images/pre-order/4.png";
 import image5 from "assets/images/pre-order/5.png";
 import axios from "axios";
 import { useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Loader2, CheckIcon } from "lucide-react";
+import Alert from '@mui/material/Alert';
 
 
 export default function Page() {
@@ -15,15 +16,26 @@ export default function Page() {
     const [phone, setPhone] = useState("");
     const [city, setCity] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [message, setMessage] = useState("");
+    const [requestStatus, setRequestStatus] = useState("");
 
     function submit() {
         const data = { name, phoneNumber: phone, city }
         setIsLoading(true)
-        
-        axios.post("https://hydrojeenapp.herokuapp.com/api/v2/product-orders/pre-order", data).then(() => {
+
+        axios.post("https://hydrojeenapp.herokuapp.com/api/v2/product-orders/pre-order", data).then((res) => {
             clearInputs();
             setIsLoading(false)
-        }).catch(console.error)
+            setRequestStatus("success")
+            setMessage("تم الارسال بنجاح")
+
+
+
+        }).catch((err) => {
+            console.error(err)
+            setRequestStatus("error")
+            setMessage("حدث خطأ ، المرجو إعادة المحاولة")
+        })
     }
 
     function clearInputs() {
@@ -99,6 +111,7 @@ export default function Page() {
                             <label className="sm:text-sm text-[9px] mr-2" htmlFor="city">المدينة</label>
                             <input value={city} onChange={e => setCity(e.target.value)} className="bg-[#eee]/50 w-full rounded-xl sm:h-10 px-3 outline-none sm:text-sm text-[9px]" id="city" type="text" />
                         </div>
+
                     </div>
                     <button onClick={submit} className="flex justify-center items-center gap-2 m-auto bg-primary text-white rounded-2xl sm:px-10 px-5 py-1 mt-3 font-bold text-sm">تسجيل
                         {
@@ -107,8 +120,16 @@ export default function Page() {
                         }
 
                     </button>
-                </div>
+                    <div className="mt-3">
 
+                        {
+                            message ?
+                                <Alert severity={requestStatus}>
+                                    {message}
+                                </Alert> : ""
+                        }
+                    </div>
+                </div>
 
             </div>
         </div>

@@ -55,25 +55,25 @@ export default function Page() {
                     </div>
                 </div>
 
-                <div className="rounded-lg w-[80%] m-auto mt-7 px-5 py-3 bg-white">
+                <div className="max-w-screen-sm rounded-lg w-[80%] m-auto sm:mt-16 mt-7 px-5 py-3 bg-white">
                     <div className="mb-5">
-                        <h2 className="text-xs text-center text-primary font-bold">سجل اهتمامك</h2>
+                        <h2 className="sm:text-lg text-xs text-center text-primary font-bold">سجل اهتمامك</h2>
                     </div>
                     <div className="flex flex-col gap-3">
                         <div className="flex flex-col justify-center items-start">
-                            <label className="text-[9px] mr-2" htmlFor="">الاسم</label>
-                            <input className="bg-[#eee]/50 w-full rounded-xl" type="text" />
+                            <label className="sm:text-sm text-[9px] mr-2" htmlFor="name">الاسم</label>
+                            <input className="bg-[#eee]/50 w-full rounded-xl sm:h-10 px-3 outline-none sm:text-sm text-[9px]" id="name" type="text" />
                         </div>
                         <div className="flex flex-col justify-center items-start">
-                            <label className="text-[9px] mr-2" htmlFor="">الجوال</label>
-                            <input className="bg-[#eee]/50 w-full rounded-xl" type="text" />
+                            <label className="sm:text-sm text-[9px] mr-2" htmlFor="phone">الجوال</label>
+                            <input className="bg-[#eee]/50 w-full rounded-xl sm:h-10 px-3 outline-none sm:text-sm text-[9px]" id="phone" type="text" />
                         </div>
                         <div className="flex flex-col justify-center items-start">
-                            <label className="text-[9px] mr-2" htmlFor="">المدينة</label>
-                            <input className="bg-[#eee]/50 w-full rounded-xl" type="text" />
+                            <label className="sm:text-sm text-[9px] mr-2" htmlFor="city">المدينة</label>
+                            <input className="bg-[#eee]/50 w-full rounded-xl sm:h-10 px-3 outline-none sm:text-sm text-[9px]" id="city" type="text" />
                         </div>
                     </div>
-                    <button className="m-auto bg-primary text-white rounded-2xl px-5 py-1 mt-3 text-sm">تسجيل</button>
+                    <button className="m-auto bg-primary text-white rounded-2xl sm:px-10 px-5 py-1 mt-3 font-bold text-sm">تسجيل</button>
                 </div>
 
 

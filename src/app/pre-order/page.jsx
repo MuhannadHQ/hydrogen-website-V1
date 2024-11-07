@@ -7,29 +7,29 @@ import icon4 from "assets/images/pre-order/4.png";
 import image5 from "assets/images/pre-order/5.png";
 import axios from "axios";
 import { useState } from "react";
+import { Loader2 } from "lucide-react";
+
 
 export default function Page() {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [city, setCity] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     function submit() {
-        const data = { name, phone, city }
-        clearInputs();
-
+        const data = { name, phoneNumber: phone, city }
+        setIsLoading(true)
+        
         axios.post("https://hydrojeenapp.herokuapp.com/api/v2/product-orders/pre-order", data).then(() => {
-
+            clearInputs();
+            setIsLoading(false)
         }).catch(console.error)
     }
 
     function clearInputs() {
-        const inputElements = document.getElementsByTagName('input');
-
-        for (let i = 0; i < inputElements.length; i++) {
-            if (inputElements[i].type == 'text' || inputElements[i].type == 'number') {
-                inputElements[i].value = '';
-            }
-        }
+        setName("")
+        setPhone("")
+        setCity("")
     }
 
 
@@ -78,7 +78,7 @@ export default function Page() {
                     </div>
                     <div className="w-1/2">
                         <Image className="w-full" src={image5} />
-                        <p className="sm:text-lg text-xs font-semibold text-black">999 ريال شامل التركيب و الضريبة</p>
+                        <p className="sm:text-lg text-xs font-semibold text-black">999 <br /> ريال شامل التركيب و الضريبة</p>
                     </div>
                 </div>
 
@@ -100,7 +100,13 @@ export default function Page() {
                             <input value={city} onChange={e => setCity(e.target.value)} className="bg-[#eee]/50 w-full rounded-xl sm:h-10 px-3 outline-none sm:text-sm text-[9px]" id="city" type="text" />
                         </div>
                     </div>
-                    <button onClick={submit} className="m-auto bg-primary text-white rounded-2xl sm:px-10 px-5 py-1 mt-3 font-bold text-sm">تسجيل</button>
+                    <button onClick={submit} className="flex justify-center items-center gap-2 m-auto bg-primary text-white rounded-2xl sm:px-10 px-5 py-1 mt-3 font-bold text-sm">تسجيل
+                        {
+                            isLoading ?
+                                <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : ""
+                        }
+
+                    </button>
                 </div>
 
 

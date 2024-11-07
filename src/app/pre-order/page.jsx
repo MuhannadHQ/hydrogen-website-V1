@@ -90,7 +90,7 @@ export default function Page() {
                     </div>
                     <div className="w-1/2">
                         <Image className="w-full" src={image5} />
-                        <p className="sm:text-lg text-xs font-semibold text-black">999 <br /> ريال شامل <br /> التركيب و الضريبة</p>
+                        <p className="sm:text-lg text-xs font-semibold text-black">999 ريال <br />شامل التركيب والضريبة</p>
                     </div>
                 </div>
 

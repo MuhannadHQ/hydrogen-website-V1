@@ -33,7 +33,7 @@ export const DeviceMain = ({
         )}
         <div className="">
               <>
-                <h2 className="text-3xl">{title}</h2>
+                <h2 className="text-3xl text-primary" style={{ fontSize: '22px' }}>{title}</h2>
                 {/* <p className="text-2xl">{description}</p> */}
               </>
         </div>

@@ -10,7 +10,7 @@ const page = () => {
 
     if (/android/i.test(userAgent)) {
       // Redirect to Android APK download link
-      window.location.href = "/hydrojeen.apk";
+      window.location.href = "https://play.google.com/store/apps/details?id=com.hydrojeen.iot";
     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       // Redirect to iOS download link
       window.location.href =

@@ -52,7 +52,7 @@ export const SocialMedia = ({ onlySocial, onlyApps }) => {
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="/hydrojeen.apk">
+            <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.hydrojeen.iot">
               <Andriod />
             </a>
           </li>

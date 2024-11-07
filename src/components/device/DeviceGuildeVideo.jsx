@@ -6,7 +6,7 @@ export const DeviceGuildeVideo = ({ banner, guideVideos, title }) => {
     <section>
       <div className="my-10">
         <h2 className="text-center" style={{ fontSize: '22px' }}>طريقة التركيب</h2>
-        <p className="text-center my-10">
+        <p className="text-center my-10" style={{ color: '#5f5f5f' }}>
          يمكن تركيب الجهاز بكل سهولة خلال 10 دقائق أو الاستعانة بسباك أو كهربائي
         </p>
         <ul className="flex justify-between general-padding my-8 flex-col sm:flex-row">

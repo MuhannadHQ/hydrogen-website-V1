@@ -55,23 +55,26 @@ export default function Page() {
                     </div>
                 </div>
 
-                {/* <div>
-                    <div>
-                        <h2>سجل اهتمامك</h2>
+                <div className="rounded-lg w-[80%] m-auto mt-7 px-5 py-3 bg-white">
+                    <div className="mb-5">
+                        <h2 className="text-xs text-center text-primary font-bold">سجل اهتمامك</h2>
                     </div>
-                    <div>
-                        <label htmlFor="">الاسم</label>
-                        <input type="text" />
+                    <div className="flex flex-col gap-3">
+                        <div className="flex flex-col justify-center items-start">
+                            <label className="text-[9px] mr-2" htmlFor="">الاسم</label>
+                            <input className="bg-[#eee]/50 w-full rounded-xl" type="text" />
+                        </div>
+                        <div className="flex flex-col justify-center items-start">
+                            <label className="text-[9px] mr-2" htmlFor="">الجوال</label>
+                            <input className="bg-[#eee]/50 w-full rounded-xl" type="text" />
+                        </div>
+                        <div className="flex flex-col justify-center items-start">
+                            <label className="text-[9px] mr-2" htmlFor="">المدينة</label>
+                            <input className="bg-[#eee]/50 w-full rounded-xl" type="text" />
+                        </div>
                     </div>
-                    <div>
-                        <label htmlFor="">الجوال</label>
-                        <input type="text" />
-                    </div>
-                    <div>
-                        <label htmlFor="">المدينة</label>
-                        <input type="text" />
-                    </div>
-                </div> */}
+                    <button className="m-auto bg-primary text-white rounded-2xl px-5 py-1 mt-3 text-sm">تسجيل</button>
+                </div>
 
 
             </div>

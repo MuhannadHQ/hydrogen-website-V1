@@ -5,7 +5,8 @@ import { devices } from "apis/data/devicesData";
 import { Questions } from "components/Questions";
 import { useEffect } from "react";
 import Amplitude from "utils/amplitude";
-export async function generateStaticParams() {
+
+async function generateStaticParams() {
   return Object.keys(devices).map((device) => ({ params: { device } }));
 }
 const page = ({ params }) => {

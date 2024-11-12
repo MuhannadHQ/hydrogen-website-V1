@@ -27,8 +27,17 @@ export const DeviceGuildeVideo = ({ banner, guideVideos, title }) => {
         <YoutubeIframe link={video.link} title={video.title} />
       </div> */}
             </li>
+            
           ))}
         </ul>
+        <button
+                onClick={() => {
+                  window.open("https://youtu.be/GP_LfHOYeNY", "_blank");
+                }}
+                className={`btn btn-primary`}
+              >
+                طريقة توصيل الحساس 
+            </button>
       </div>
     </section>
   );

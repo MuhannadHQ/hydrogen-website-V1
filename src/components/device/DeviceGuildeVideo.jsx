@@ -23,12 +23,22 @@ export const DeviceGuildeVideo = ({ banner, guideVideos, title }) => {
               >
                 طريقة تركيب الخزان {i === 0 ? "السفلي" : "العلوي"}
               </button>
+
+              
               {/* <div className="h-60 w-full relative mt-2">
         <YoutubeIframe link={video.link} title={video.title} />
       </div> */}
             </li>
           ))}
         </ul>
+            <button
+                onClick={() => {
+                  window.open("https://youtu.be/GP_LfHOYeNY", "_blank");
+                }}
+                className={`btn btn-primary`}
+              >
+                طريقة توصيل الحساس 
+            </button>
       </div>
     </section>
   );

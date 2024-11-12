@@ -161,7 +161,7 @@ export const devices = {
       {
         title: "طريقة تركيب جهاز ألفا - الخزان العلوي",
         link: "https://youtu.be/2g__q2PSc3k",
-      },
+      }
     ],
 
     banner: {

@@ -42,17 +42,17 @@ export const BuyBtn = ({ type, device }) => {
   const router = useRouter();
 
   return (
-    <button
-      id="add-to-cart"
-      onClick={() => {
-        addToCart(device);
-        amplitude.logEvent("Add to cart", device);
-        router.push("/cart");
-      }}
-      className={`btn ${type} relative add-to-cart `}
-    >
-      {/*<CartPopup open={open} setOpen={setOpen}/>*/}
-      اطلب الآن
-    </button>
-  );
+    // <button
+    //   id="add-to-cart"
+    //   onClick={() => {
+    //     addToCart(device);
+    //     amplitude.logEvent("Add to cart", device);
+    //     router.push("/cart");
+    //   }}
+    //   className={`btn ${type} relative add-to-cart `}
+    // >
+    //   {/*<CartPopup open={open} setOpen={setOpen}/>*/}
+    //   اطلب الآن
+    // </button>
+  ); 
 };

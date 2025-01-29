@@ -25,34 +25,23 @@ const addToCart = (newItem) => {
 };
 
 export const BuyBtn = ({ type, device }) => {
-  // const [open, setOpen] = useState(false)
-  //
-  //
-  // const handleClick = () => {
-  // if (addToCart(device))
-  // {
-  //   setOpen(true)
-  //   const timer = setTimeout(() => {
-  //     setOpen(false)
-  //   }, 5000);
-  //   return () => clearTimeout(timer)
-  // }
-  //   else setOpen(false)
-  // }
-  const router = useRouter();
 
-  return (
-    // <button
-    //   id="add-to-cart"
-    //   onClick={() => {
-    //     addToCart(device);
-    //     amplitude.logEvent("Add to cart", device);
-    //     router.push("/cart");
-    //   }}
-    //   className={`btn ${type} relative add-to-cart `}
-    // >
-    //   {/*<CartPopup open={open} setOpen={setOpen}/>*/}
-    //   اطلب الآن
-    // </button>
-  ); 
+
+
+  // const router = useRouter();
+
+  // return (
+  //   <button
+  //     id="add-to-cart"
+  //     onClick={() => {
+  //       addToCart(device);
+  //       amplitude.logEvent("Add to cart", device);
+  //       router.push("/cart");
+  //     }}
+  //     className={`btn ${type} relative add-to-cart `}
+  //   >
+  //     {/*<CartPopup open={open} setOpen={setOpen}/>*/}
+  //     اطلب الآن
+  //   </button>
+  // ); 
 };

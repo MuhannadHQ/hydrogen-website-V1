@@ -29,7 +29,7 @@ export default function Home() {
         <Distributors />
       <Partners />
     
-      <AboutUs />
+      {/* <AboutUs /> */}
       <Features />
       <Testimonials />
       <ContactUs onlyform={true} />

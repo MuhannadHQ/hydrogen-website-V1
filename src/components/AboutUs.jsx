@@ -4,7 +4,7 @@ export const AboutUs = () =>
 {
   return (
     <section className="general-padding flex flex-col items-center gap-5 my-20">
-      <h2 className="text-primary text-2xl  ">
+      {/* <h2 className="text-primary text-2xl  ">
         معتمدين في معروف
 
       </h2>
@@ -14,7 +14,7 @@ export const AboutUs = () =>
       </p>
       <a href="https://maroof.sa/businesses/details/108013"  target="_blank" rel="noopener noreferrer">
       <Image src={ma3roof} alt={"معروف"} width={200} height={200} />
-      </a>
+      </a> */}
     </section>
   )
 }

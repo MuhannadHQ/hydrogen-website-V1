@@ -87,5 +87,5 @@ const inter = Inter({ subsets: ["latin"] });
 const metadata = {
   title: "هيدروجين",
   description:
-    "هيدروجين شركة مسجلة في منصة معروف المقدمة من وزارة التجارة برقم 108013",
+    "",
 };

@@ -36,7 +36,7 @@ export const Features = () =>
                 { feature.description }
               </p>
               <div className="w-fit">
-                <MoreLink link={ "/lamda" } color={ "#000" }/>
+                {/* <MoreLink link={ "/lamda" } color={ "#000" }/> */}
               </div>
             </div>
             <div className="relative w-full sm:w-80 h-72">

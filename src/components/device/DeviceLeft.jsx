@@ -29,7 +29,7 @@ const DeviceLeft = () => {
       </div>
       {/*<div className="flex gap-5 items-center">*/}
 
-      {/*  <BuyBtn  device={ devices["alpha"] } type={ "btn-primary-contained" }/>*/}
+       <BuyBtn  device={ devices["alpha"] } type={ "btn-primary-contained" }/>
       {/*</div>*/}
     </div>
   );

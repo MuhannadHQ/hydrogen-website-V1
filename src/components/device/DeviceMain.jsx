@@ -27,7 +27,7 @@ export const DeviceMain = ({
             <div className="mt-20 mb-10 hidden md:flex gap-3 items-center">
               <BuyBtn type={"btn-primary"} device={device} />
 
-              <MoreLink link={path} color={"text-primary"} />
+              {/* <MoreLink link={path} color={"text-primary"} /> */}
             </div>
           </div>
         )}

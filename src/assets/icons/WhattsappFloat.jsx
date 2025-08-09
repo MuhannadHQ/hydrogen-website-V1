@@ -7,7 +7,7 @@ export const WhattsappFloat = () => {
   return (
     <a
       className="flex items-center p-4 justify-center bg-primary rounded-full border shadow"
-      href="https://api.whatsapp.com/send/?phone=%2B966504281941&text&app_absent=0"
+      href="https://api.whatsapp.com/send/?phone=%2B966559187876&text&app_absent=0"
       target="_blank"
       onClick={handleClick}
       rel="noopener noreferrer"

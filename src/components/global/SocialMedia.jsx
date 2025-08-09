@@ -32,7 +32,7 @@ export const SocialMedia = ({ onlySocial, onlyApps }) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://api.whatsapp.com/send/?phone=%2B966504281941&text&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=%2B966559187876&text&app_absent=0"
               >
                 <Whattsapp color={"#000"} />
               </a>

@@ -63,12 +63,12 @@ export const ContactUs = ({ onlyform }) =>
               </li>
               <li className="flex items-center gap-3 ">
                 <Email/>
-                <span>info@hydrojeen.com</span></li>
+                <span>purity.nectar@gmail.com</span></li>
               <li className="flex items-center gap-3 whitespace-nowrap">
                 <Location/>
                 <span>
 
-            الكراج - الرياض، المملكة العربية السعودية
+             الرياض، المملكة العربية السعودية
           </span></li>
 
             </ul>

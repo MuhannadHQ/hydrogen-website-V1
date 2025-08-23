@@ -28,8 +28,6 @@ export default function Home() {
       </div>
         <Distributors />
       <Partners />
-    
-      <AboutUs />
       <Features />
       <Testimonials />
       <ContactUs onlyform={true} />

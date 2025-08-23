@@ -1,6 +1,6 @@
 import feature1 from "assets/images/feature1.png";
 import feature2 from "assets/images/feature2.png";
-import { MoreLink } from "components/global/MoreLink"
+// import { MoreLink } from "components/global/MoreLink"
 import Image from "next/image"
 
 const features = [

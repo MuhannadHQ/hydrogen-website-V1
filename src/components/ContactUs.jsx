@@ -59,7 +59,7 @@ export const ContactUs = ({ onlyform }) =>
             <ul className=" flex flex-col justify-center gap-10">
               <li className="flex items-center gap-3 ">
                 <Whattsapp/>
-                <span>0504281941</span>
+                <span>0559187876</span>
               </li>
               <li className="flex items-center gap-3 ">
                 <Email/>

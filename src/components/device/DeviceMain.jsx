@@ -5,7 +5,7 @@ export const DeviceMain = ({
   device,
   reverse = false,
   bg,
-  moreLink = true,
+  moreLink = false,
 }) => {
   const { title, description, path, name, images } = device || {};
   return (
@@ -31,6 +31,7 @@ export const DeviceMain = ({
             </div>
           </div>
         )}
+
         <div className="">
           {images?.map((image, i) => (
             <img
@@ -41,11 +42,11 @@ export const DeviceMain = ({
             />
           ))}
         </div>
-        {moreLink && (
+        {(
           <div className="my-8 md:hidden flex gap-3 items-center flex-col">
             <>
               <BuyBtn type={"btn-primary"} device={device} />
-              <MoreLink link={path} color={"text-primary"} />
+              {/* <MoreLink link={path} color={"text-primary"} /> */}
             </>
           </div>
         )}

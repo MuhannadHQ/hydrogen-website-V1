@@ -2,7 +2,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 import AliceCarousel from "react-alice-carousel";
 import { Arrow } from "assets/icons/Arrow";
-import alzamil from "assets/images/alzamil.png";
+import naqa from "assets/images/naqa.png";
 
 
 
@@ -14,8 +14,8 @@ export const Distributors = () => {
       <h3 className=" md:text-2xl">الموزعين المعتمدين</h3>
       <div className="mt-10 general-padding">
         <div className="bg-white mx-3 p-5 rounded-3xl h-40 flex flex-col items-center">
-          <a href="https://bit.ly/4hkLoab" target="_blank" rel="noopener noreferrer">
-            <img src={alzamil.src} alt={"Alzamil"} className="h-32 w-32 object-contain" />
+          <a href="https://bit.ly/4lH4kkq" target="_blank" rel="noopener noreferrer">
+            <img src={naqa.src} alt={"naqa"} className="h-32 w-32 object-contain" />
           </a>
         </div>
      
@@ -33,8 +33,8 @@ export const Distributors = () => {
 const DistributorsData = [
     {
       id: 1,
-      image:  alzamil.src,
-      url: "https://bit.ly/4hkLoab"
+      image:  naqa.src,
+      url: "https://bit.ly/4lH4kkq"
     }
 
 ];
